@@ -261,3 +261,70 @@ body {
     width: 100%;
   }
 }
+
+/* Glass Card for floating elements */
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Floating Animation */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Tagline Highlight Underline */
+.text-accent-highlight {
+  position: relative;
+  display: inline;
+}
+.text-accent-highlight::after {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: var(--color-accent-yellow);
+  opacity: 0.4;
+  z-index: -1;
+  transform: skewX(-5deg);
+  border-radius: 2px;
+}
+
+/* Responsive Typography */
+@media (max-width: 640px) {
+  .font-display.text-4xl {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+}
+
+/* Smooth Scroll Behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Reduced Motion Preference */
+@media (prefers-reduced-motion: reduce) {
+  .animate-float,
+  .animate-pulse,
+  .animate-bounce,
+  .group-hover\:translate-x-1 {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+}
