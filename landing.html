@@ -64,7 +64,73 @@
       };
     </script>
 
-    <style></style>
+    <style>
+      /* Responsive Globe Container */
+      .globe-container {
+        height: 350px;
+        min-height: 350px;
+      }
+
+      @media (min-width: 640px) {
+        .globe-container {
+          height: 450px;
+          min-height: 450px;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .globe-container {
+          height: 550px;
+          min-height: 550px;
+        }
+      }
+
+      @media (min-width: 1280px) {
+        .globe-container {
+          height: 600px;
+          min-height: 600px;
+        }
+      }
+
+      /* Ensure canvas is responsive */
+      #earth-canvas {
+        display: block;
+        width: 100% !important;
+        height: 100% !important;
+      }
+
+      /* Smooth Scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Parallax Elements */
+      .parallax-slow {
+        will-change: transform;
+      }
+
+      .parallax-medium {
+        will-change: transform;
+      }
+
+      /* Custom scrollbar for smooth feel */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: var(--color-gray-100);
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: var(--color-primary);
+        border-radius: 4px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--color-primary-dark);
+      }
+    </style>
   </head>
   <body class="antialiased selection:bg-accent-yellow selection:text-gray-900">
     <div class="grain-overlay"></div>
@@ -121,14 +187,14 @@
       <!-- Ambient Background Elements -->
       <div class="absolute inset-0 overflow-hidden pointer-events-none">
         <div
-          class="absolute top-20 right-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse"
+          class="parallax-slow absolute top-20 right-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse"
         ></div>
         <div
-          class="absolute bottom-20 left-10 w-80 h-80 bg-accent-green/10 rounded-full blur-3xl animate-pulse"
+          class="parallax-medium absolute bottom-20 left-10 w-80 h-80 bg-accent-green/10 rounded-full blur-3xl animate-pulse"
           style="animation-delay: 1s"
         ></div>
         <div
-          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent-yellow/5 rounded-full blur-3xl"
+          class="parallax-slow absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent-yellow/5 rounded-full blur-3xl"
         ></div>
       </div>
 
@@ -175,30 +241,58 @@
 
           <!-- CTA Buttons -->
           <div class="flex flex-col sm:flex-row gap-4 pt-2">
+            <!-- Primary Button: Explore Destinations (Directional Slide) -->
             <a
               href="#explore"
-              class="group inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-semibold rounded-full shadow-lg hover:bg-primary-dark transition-base duration-300 hover:shadow-xl hover:-translate-y-0.5"
+              class="group relative inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-semibold rounded-full shadow-lg transition-base duration-300 hover:shadow-xl hover:-translate-y-0.5 overflow-hidden"
             >
-              Explore Destinations
-              <svg
-                class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-base"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                ></path>
-              </svg>
+              <!-- Slide Background -->
+              <span
+                class="absolute inset-0 bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left will-change-transform"
+              ></span>
+              <!-- Border Overlay -->
+              <span
+                class="absolute inset-0 rounded-full border-2 border-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+              ></span>
+
+              <!-- Content -->
+              <span class="relative z-10 flex items-center">
+                <span
+                  class="transition-colors duration-300 group-hover:text-primary"
+                  >Explore Destinations</span
+                >
+                <svg
+                  class="w-4 h-4 ml-2 transition-all duration-300 text-white group-hover:text-primary group-hover:translate-x-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  ></path>
+                </svg>
+              </span>
             </a>
+
+            <!-- Secondary Button: How It Works (Circular Scale Reveal) -->
             <a
               href="#how-it-works"
-              class="inline-flex items-center justify-center px-8 py-4 bg-white text-gray-900 font-semibold rounded-full border-2 border-gray-300 hover:border-primary hover:text-primary transition-base duration-300"
+              class="group relative inline-flex items-center justify-center px-8 py-4 bg-white text-gray-900 font-semibold rounded-full border-2 border-gray-300 overflow-hidden transition-all duration-300 hover:border-white hover:shadow-primary-glow hover:-translate-y-0.5"
             >
-              How It Works
+              <!-- Circular Scale Background -->
+              <span
+                class="absolute -inset-2 bg-primary scale-0 group-hover:scale-150 transition-transform duration-300 origin-center rounded-full z-0 will-change-transform"
+              ></span>
+
+              <!-- Content -->
+              <span
+                class="relative z-10 flex items-center transition-colors duration-300 group-hover:text-white"
+              >
+                How It Works
+              </span>
             </a>
           </div>
 
@@ -245,68 +339,16 @@
           </div>
         </div>
 
-        <!-- Right Content: 3D Illustration -->
+        <!-- Right Content: Realistic Earth Globe -->
         <div
-          class="relative h-[400px] sm:h-[500px] lg:h-[600px] w-full order-1 lg:order-2"
+          class="relative w-full order-1 lg:order-2 globe-container"
           id="hero-visual"
         >
-          <!-- Three.js Canvas Container -->
+          <!-- Three.js Canvas for Earth -->
           <canvas
-            id="globe-canvas"
-            class="absolute inset-0 w-full h-full"
+            id="earth-canvas"
+            class="absolute inset-0 w-full h-full cursor-grab active:cursor-grabbing"
           ></canvas>
-
-          <!-- Floating Cards Overlay (Decorative) -->
-          <div class="absolute top-4 right-4 lg:top-8 lg:right-8 z-20">
-            <div
-              class="glass-card px-4 py-3 rounded-xl shadow-lg animate-float"
-            >
-              <div class="flex items-center gap-2">
-                <div
-                  class="w-2 h-2 rounded-full bg-accent-green animate-pulse"
-                ></div>
-                <span class="text-xs font-medium text-gray-700">Live Data</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="absolute bottom-8 left-4 lg:bottom-12 lg:left-8 z-20">
-            <div
-              class="glass-card px-4 py-3 rounded-xl shadow-lg animate-float"
-              style="animation-delay: 0.5s"
-            >
-              <div class="flex items-center gap-2">
-                <svg
-                  class="w-4 h-4 text-accent-yellow"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"
-                  ></path>
-                </svg>
-                <span class="text-xs font-medium text-gray-700"
-                  >98% Satisfaction</span
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Scroll Indicator -->
-      <div
-        class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 hidden lg:flex flex-col items-center gap-2"
-      >
-        <span class="text-xs font-medium text-gray-500">Scroll to explore</span>
-        <div
-          class="w-6 h-10 rounded-full border-2 border-gray-400 flex justify-center pt-2"
-        >
-          <div class="w-1 h-2 bg-gray-400 rounded-full animate-bounce"></div>
         </div>
       </div>
     </section>
@@ -326,10 +368,10 @@
 
       <!-- Ambient glow effects -->
       <div
-        class="absolute top-1/4 -left-20 w-72 h-72 bg-accent-green/20 rounded-full blur-3xl"
+        class="parallax-slow absolute top-1/4 -left-20 w-72 h-72 bg-accent-green/20 rounded-full blur-3xl"
       ></div>
       <div
-        class="absolute bottom-1/4 -right-20 w-72 h-72 bg-primary/20 rounded-full blur-3xl"
+        class="parallax-medium absolute bottom-1/4 -right-20 w-72 h-72 bg-primary/20 rounded-full blur-3xl"
       ></div>
 
       <div class="max-w-7xl mx-auto px-6 relative z-10">
@@ -937,173 +979,370 @@
     <!-- Three.js Implementation -->
     <script>
       // Initialize 3D Globe Animation
-      const initHeroGlobe = () => {
-        const canvas = document.getElementById("globe-canvas");
-        if (!canvas) return;
+      // Realistic Earth Globe with Three.js
+      const initRealisticEarth = () => {
+        const canvas = document.getElementById("earth-canvas");
+        const container = document.getElementById("hero-visual");
+        if (!canvas || !container) return;
 
+        // Get container dimensions
+        const getContainerSize = () => ({
+          width: container.clientWidth,
+          height: container.clientHeight,
+        });
+
+        const { width, height } = getContainerSize();
+
+        // Scene setup
         const scene = new THREE.Scene();
+
+        // Responsive camera FOV - smaller screens get higher FOV to see more of globe
+        const getCameraFOV = () => {
+          if (window.innerWidth < 640) return 55;
+          if (window.innerWidth < 1024) return 50;
+          return 45;
+        };
+
         const camera = new THREE.PerspectiveCamera(
-          45,
-          canvas.clientWidth / canvas.clientHeight,
+          getCameraFOV(),
+          width / height || 1,
           0.1,
           1000,
         );
+
         const renderer = new THREE.WebGLRenderer({
           canvas,
           alpha: true,
           antialias: true,
+          powerPreference: "high-performance",
         });
 
-        renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+        renderer.setSize(width, height);
         renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        renderer.toneMapping = THREE.ACESFilmicToneMapping;
+        renderer.toneMappingExposure = 1.2;
 
-        // Lighting
-        const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+        // Lighting - Realistic sun + ambient
+        const ambientLight = new THREE.AmbientLight(0xffffff, 0.3);
         scene.add(ambientLight);
 
-        const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
-        directionalLight.position.set(5, 3, 5);
-        scene.add(directionalLight);
+        const sunLight = new THREE.DirectionalLight(0xffffff, 1.5);
+        sunLight.position.set(5, 2, 5);
+        scene.add(sunLight);
 
-        const pointLight = new THREE.PointLight(0x2563eb, 1, 100);
-        pointLight.position.set(-10, -10, 10);
-        scene.add(pointLight);
+        // Earth textures (using high-quality public NASA/Three.js textures)
+        const textureLoader = new THREE.TextureLoader();
+        const earthGroup = new THREE.Group();
+        earthGroup.rotation.z = (-23.5 * Math.PI) / 180; // Earth's axial tilt
+        scene.add(earthGroup);
 
-        // Create Globe
-        const globeGeometry = new THREE.SphereGeometry(3, 64, 64);
-        const globeMaterial = new THREE.MeshPhongMaterial({
-          color: 0x2563eb,
-          transparent: true,
-          opacity: 0.15,
-          shininess: 80,
-          specular: 0x111111,
-        });
-        const globe = new THREE.Mesh(globeGeometry, globeMaterial);
-        scene.add(globe);
+        // Load textures with error handling
+        const textures = {
+          map: textureLoader.load(
+            "https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg",
+          ),
+          bump: textureLoader.load(
+            "https://unpkg.com/three-globe/example/img/earth-topology.png",
+          ),
+          specular: textureLoader.load(
+            "https://unpkg.com/three-globe/example/img/earth-water.png",
+          ),
+          clouds: textureLoader.load(
+            "https://unpkg.com/three-globe/example/img/earth-clouds.png",
+          ),
+          night: textureLoader.load(
+            "https://unpkg.com/three-globe/example/img/earth-night.jpg",
+          ),
+        };
 
-        // Wireframe Globe
-        const wireframeGeometry = new THREE.SphereGeometry(3.02, 32, 32);
-        const wireframeMaterial = new THREE.MeshBasicMaterial({
-          color: 0x2563eb,
-          wireframe: true,
-          transparent: true,
-          opacity: 0.3,
-        });
-        const wireframe = new THREE.Mesh(wireframeGeometry, wireframeMaterial);
-        scene.add(wireframe);
-
-        // Particle System for "Students"
-        const particlesGeometry = new THREE.BufferGeometry();
-        const particleCount = 200;
-        const posArray = new Float32Array(particleCount * 3);
-
-        for (let i = 0; i < particleCount * 3; i++) {
-          posArray[i] = (Math.random() - 0.5) * 15;
-        }
-
-        particlesGeometry.setAttribute(
-          "position",
-          new THREE.BufferAttribute(posArray, 3),
-        );
-
-        const particlesMaterial = new THREE.PointsMaterial({
-          size: 0.08,
-          color: 0x059669,
-          transparent: true,
-          opacity: 0.9,
-          sizeAttenuation: true,
+        // Configure textures
+        Object.values(textures).forEach((tex) => {
+          tex.colorSpace = THREE.SRGBColorSpace;
         });
 
-        const particles = new THREE.Points(
-          particlesGeometry,
-          particlesMaterial,
-        );
-        scene.add(particles);
+        // Main Earth sphere
+        const earthGeometry = new THREE.SphereGeometry(2, 64, 64);
+        const earthMaterial = new THREE.MeshPhongMaterial({
+          map: textures.map,
+          bumpMap: textures.bump,
+          bumpScale: 0.05,
+          specularMap: textures.specular,
+          specular: new THREE.Color(0x333333),
+          shininess: 15,
+        });
+        const earth = new THREE.Mesh(earthGeometry, earthMaterial);
+        earthGroup.add(earth);
 
-        // Connecting Lines (Pathways)
-        const lineMaterial = new THREE.LineBasicMaterial({
-          color: 0xfcd34d,
+        // Clouds layer (slightly larger sphere)
+        const cloudsGeometry = new THREE.SphereGeometry(2.02, 64, 64);
+        const cloudsMaterial = new THREE.MeshPhongMaterial({
+          map: textures.clouds,
           transparent: true,
           opacity: 0.4,
+          side: THREE.DoubleSide,
+        });
+        const clouds = new THREE.Mesh(cloudsGeometry, cloudsMaterial);
+        earthGroup.add(clouds);
+
+        // Atmosphere glow (custom shader)
+        const atmosphereGeometry = new THREE.SphereGeometry(2.15, 64, 64);
+        const atmosphereMaterial = new THREE.ShaderMaterial({
+          vertexShader: `
+      varying vec3 vNormal;
+      void main() {
+        vNormal = normalize(normalMatrix * normal);
+        gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+      }
+    `,
+          fragmentShader: `
+      varying vec3 vNormal;
+      void main() {
+        float intensity = pow(0.7 - dot(vNormal, vec3(0.0, 0.0, 1.0)), 2.0);
+        gl_FragColor = vec4(0.37, 0.65, 0.95, 1.0) * intensity * 0.6;
+      }
+    `,
+          blending: THREE.AdditiveBlending,
+          side: THREE.BackSide,
+          transparent: true,
+        });
+        const atmosphere = new THREE.Mesh(
+          atmosphereGeometry,
+          atmosphereMaterial,
+        );
+        scene.add(atmosphere);
+
+        // Stars background
+        const starsGeometry = new THREE.BufferGeometry();
+        const starsMaterial = new THREE.PointsMaterial({
+          color: 0xffffff,
+          size: 0.02,
+          transparent: true,
+          opacity: 0.8,
         });
 
-        for (let i = 0; i < 15; i++) {
-          const lineGeometry = new THREE.BufferGeometry().setFromPoints([
-            new THREE.Vector3(
-              (Math.random() - 0.5) * 8,
-              (Math.random() - 0.5) * 8,
-              (Math.random() - 0.5) * 8,
-            ),
-            new THREE.Vector3(
-              (Math.random() - 0.5) * 8,
-              (Math.random() - 0.5) * 8,
-              (Math.random() - 0.5) * 8,
-            ),
-          ]);
-          const line = new THREE.Line(lineGeometry, lineMaterial);
-          scene.add(line);
+        const starsVertices = [];
+        for (let i = 0; i < 2000; i++) {
+          const x = (Math.random() - 0.5) * 100;
+          const y = (Math.random() - 0.5) * 100;
+          const z = (Math.random() - 0.5) * 100;
+          starsVertices.push(x, y, z);
         }
 
-        // Camera Position
-        camera.position.z = 8;
+        starsGeometry.setAttribute(
+          "position",
+          new THREE.Float32BufferAttribute(starsVertices, 3),
+        );
+        const stars = new THREE.Points(starsGeometry, starsMaterial);
+        scene.add(stars);
 
-        // Animation
-        let rotationSpeed = 0.002;
+        // Camera position - responsive based on screen size
+        const getCameraZ = () => {
+          if (window.innerWidth < 640) return 6;
+          if (window.innerWidth < 1024) return 5.5;
+          return 5;
+        };
+        camera.position.z = getCameraZ();
 
+        // Interaction variables
+        let isDragging = false;
+        let previousMousePosition = { x: 0, y: 0 };
+        let autoRotate = true;
+        let rotationVelocity = { x: 0.001, y: 0.002 };
+
+        // Mouse/Touch events
+        const onPointerDown = (e) => {
+          isDragging = true;
+          autoRotate = false;
+          previousMousePosition = {
+            x: e.clientX || e.touches?.[0]?.clientX,
+            y: e.clientY || e.touches?.[0]?.clientY,
+          };
+        };
+
+        const onPointerMove = (e) => {
+          if (!isDragging) return;
+
+          const currentX = e.clientX || e.touches?.[0]?.clientX;
+          const currentY = e.clientY || e.touches?.[0]?.clientY;
+
+          const deltaX = currentX - previousMousePosition.x;
+          const deltaY = currentY - previousMousePosition.y;
+
+          earthGroup.rotation.y += deltaX * 0.005;
+          earthGroup.rotation.x += deltaY * 0.005;
+          clouds.rotation.y += deltaX * 0.005;
+          clouds.rotation.x += deltaY * 0.005;
+
+          previousMousePosition = { x: currentX, y: currentY };
+        };
+
+        const onPointerUp = () => {
+          isDragging = false;
+          // Resume auto-rotate after 3 seconds of inactivity
+          setTimeout(() => {
+            if (!isDragging) autoRotate = true;
+          }, 3000);
+        };
+
+        const onWheel = (e) => {
+          e.preventDefault();
+          const minZ = window.innerWidth < 640 ? 4.5 : 3.5;
+          const maxZ = window.innerWidth < 640 ? 12 : 10;
+          camera.position.z += e.deltaY * 0.01;
+          camera.position.z = Math.max(minZ, Math.min(maxZ, camera.position.z));
+        };
+
+        // Event listeners
+        canvas.addEventListener("mousedown", onPointerDown);
+        canvas.addEventListener("mousemove", onPointerMove);
+        canvas.addEventListener("mouseup", onPointerUp);
+        canvas.addEventListener("mouseleave", onPointerUp);
+        canvas.addEventListener("wheel", onWheel, { passive: false });
+
+        // Touch support
+        canvas.addEventListener("touchstart", onPointerDown, { passive: true });
+        canvas.addEventListener("touchmove", onPointerMove, { passive: true });
+        canvas.addEventListener("touchend", onPointerUp);
+
+        // Animation loop
         const animate = () => {
           requestAnimationFrame(animate);
 
-          globe.rotation.y += rotationSpeed;
-          globe.rotation.x += rotationSpeed * 0.3;
-          wireframe.rotation.y += rotationSpeed;
-          wireframe.rotation.x += rotationSpeed * 0.3;
-          particles.rotation.y += rotationSpeed * 0.5;
-
-          // Gentle particle movement
-          const positions = particlesGeometry.attributes.position.array;
-          for (let i = 0; i < positions.length; i += 3) {
-            positions[i + 2] += 0.005;
-            if (positions[i + 2] > 7) positions[i + 2] = -7;
+          // Auto-rotate when not interacting
+          if (autoRotate) {
+            earthGroup.rotation.y += rotationVelocity.y;
+            clouds.rotation.y += rotationVelocity.y * 1.1; // Clouds move slightly faster
           }
-          particlesGeometry.attributes.position.needsUpdate = true;
+
+          // Subtle cloud animation
+          clouds.rotation.y += 0.0002;
 
           renderer.render(scene, camera);
         };
 
         animate();
 
-        // Handle Resize
+        // Handle resize with debouncing for better performance
+        let resizeTimeout;
         const handleResize = () => {
-          const width = canvas.clientWidth;
-          const height = canvas.clientHeight;
-          renderer.setSize(width, height);
-          camera.aspect = width / height;
-          camera.updateProjectionMatrix();
+          clearTimeout(resizeTimeout);
+          resizeTimeout = setTimeout(() => {
+            const { width, height } = getContainerSize();
+            if (width === 0 || height === 0) return;
+
+            renderer.setSize(width, height);
+            camera.aspect = width / height;
+            camera.fov = getCameraFOV();
+            camera.updateProjectionMatrix();
+          }, 100);
         };
 
         window.addEventListener("resize", handleResize);
 
-        // Mouse Interaction (subtle parallax)
-        let mouseX = 0,
-          mouseY = 0;
-        document.addEventListener("mousemove", (e) => {
-          mouseX = (e.clientX / window.innerWidth) * 2 - 1;
-          mouseY = -(e.clientY / window.innerHeight) * 2 + 1;
+        // Also use ResizeObserver for more accurate container size changes
+        if (typeof ResizeObserver !== "undefined") {
+          const resizeObserver = new ResizeObserver((entries) => {
+            for (const entry of entries) {
+              const { width, height } = entry.contentRect;
+              if (width > 0 && height > 0) {
+                renderer.setSize(width, height);
+                camera.aspect = width / height;
+                camera.fov = getCameraFOV();
+                camera.updateProjectionMatrix();
+              }
+            }
+          });
+          resizeObserver.observe(container);
+        }
 
-          camera.position.x += (mouseX * 0.5 - camera.position.x) * 0.05;
-          camera.position.y += (mouseY * 0.3 - camera.position.y) * 0.05;
-          camera.lookAt(scene.position);
-        });
+        // Initial load animation - responsive final scale (reduced by ~15%)
+        const getGlobeScale = () => {
+          if (window.innerWidth < 640) return 0.72;
+          if (window.innerWidth < 1024) return 0.82;
+          return 0.85;
+        };
 
-        // Cleanup
+        const targetScale = getGlobeScale();
+        earth.scale.set(0.1, 0.1, 0.1);
+        earthGroup.rotation.x = 0.3;
+
+        const loadAnimation = () => {
+          if (earth.scale.x < targetScale) {
+            earth.scale.multiplyScalar(1.05);
+            earthGroup.rotation.x *= 0.95;
+            requestAnimationFrame(loadAnimation);
+          } else {
+            earth.scale.set(targetScale, targetScale, targetScale);
+          }
+        };
+        setTimeout(loadAnimation, 300);
+
+        // Cleanup function
         return () => {
           window.removeEventListener("resize", handleResize);
+          canvas.removeEventListener("mousedown", onPointerDown);
+          canvas.removeEventListener("mousemove", onPointerMove);
+          canvas.removeEventListener("mouseup", onPointerUp);
+          canvas.removeEventListener("wheel", onWheel);
+          canvas.removeEventListener("touchstart", onPointerDown);
+          canvas.removeEventListener("touchmove", onPointerMove);
+          canvas.removeEventListener("touchend", onPointerUp);
+          clearTimeout(resizeTimeout);
+          if (typeof resizeObserver !== "undefined") {
+            resizeObserver.disconnect();
+          }
           renderer.dispose();
         };
       };
 
-      // Initialize when DOM is ready
-      document.addEventListener("DOMContentLoaded", initHeroGlobe);
+      // Initialize when DOM and Three.js are ready
+      if (typeof THREE !== "undefined") {
+        document.addEventListener("DOMContentLoaded", initRealisticEarth);
+      } else {
+        // Wait for Three.js to load if not already available
+        const checkThreeJS = setInterval(() => {
+          if (typeof THREE !== "undefined") {
+            clearInterval(checkThreeJS);
+            document.addEventListener("DOMContentLoaded", initRealisticEarth);
+          }
+        }, 100);
+      }
+    </script>
+
+    <!-- Parallax Scrolling Script -->
+    <script>
+      // Smooth Parallax Scrolling
+      document.addEventListener("DOMContentLoaded", () => {
+        // Elements for parallax
+        const parallaxElements = document.querySelectorAll(".parallax-slow, .parallax-medium");
+
+        // Parallax scroll handler - subtle movement only
+        const handleParallax = () => {
+          const scrollY = window.pageYOffset;
+
+          parallaxElements.forEach((el) => {
+            const speed = el.classList.contains("parallax-slow") ? 0.05 : 0.1;
+            const yPos = scrollY * speed;
+            el.style.transform = `translateY(${yPos}px)`;
+          });
+        };
+
+        window.addEventListener("scroll", handleParallax, { passive: true });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute("href"));
+            if (target) {
+              target.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            }
+          });
+        });
+      });
     </script>
   </body>
 </html>

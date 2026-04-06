@@ -328,3 +328,244 @@ html {
     transform: none !important;
   }
 }
+
+/* Glass Card for floating elements */
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Floating Animation */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Tagline Highlight Underline */
+.text-accent-highlight {
+  position: relative;
+  display: inline;
+}
+.text-accent-highlight::after {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: var(--color-accent-yellow);
+  opacity: 0.4;
+  z-index: -1;
+  transform: skewX(-5deg);
+  border-radius: 2px;
+}
+
+/* Earth Globe Container */
+#earth-canvas {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+/* Responsive Typography */
+@media (max-width: 640px) {
+  .font-display.text-4xl {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+}
+
+/* Smooth Scroll Behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Reduced Motion Preference */
+@media (prefers-reduced-motion: reduce) {
+  .animate-float,
+  .animate-pulse,
+  .animate-bounce,
+  .group-hover\:translate-x-1 {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
+/* Cursor feedback for interactive globe */
+.cursor-grab {
+  cursor: grab;
+}
+.cursor-grab:active {
+  cursor: grabbing;
+}
+
+/* CTA Button Style-Swap Animation */
+
+/* Primary Button Text & Icon Colors */
+.cta-primary-text {
+  color: var(--color-white);
+}
+.cta-primary-icon {
+  color: var(--color-white);
+}
+
+/* Primary Button Hover States */
+.group.cta-primary:hover .cta-primary-text,
+.group.cta-primary:hover .cta-primary-icon {
+  color: var(--color-primary);
+}
+
+/* Secondary Button Text Color */
+.cta-secondary-text {
+  color: var(--color-gray-900);
+}
+
+/* Secondary Button Hover State */
+.group.cta-secondary:hover .cta-secondary-text {
+  color: var(--color-white);
+}
+
+/* Smooth Scale Animation for Background Swap */
+.cta-primary .absolute.inset-0.bg-white,
+.cta-secondary .absolute.inset-0.bg-primary {
+  will-change: transform;
+  transform-origin: left;
+}
+.cta-secondary .absolute.inset-0.bg-primary {
+  transform-origin: right;
+}
+
+/* Enhanced Hover Elevation */
+.cta-primary:hover,
+.cta-secondary:hover {
+  box-shadow: var(--shadow-lg);
+  z-index: 5;
+}
+
+/* Prevent layout shift during animation */
+.cta-primary,
+.cta-secondary {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Icon Arrow Animation on Primary Button */
+.cta-primary-icon {
+  transition: transform var(--transition-base);
+}
+.group.cta-primary:hover .cta-primary-icon {
+  transform: translateX(4px);
+}
+
+/* Optional: Add a subtle shine effect on hover */
+.cta-primary::after,
+.cta-secondary::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transform: skewX(-20deg);
+  transition: left 0.5s ease;
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+.cta-primary:hover::after,
+.cta-secondary:hover::after {
+  left: 150%;
+}
+
+/* Mobile Optimization */
+@media (max-width: 640px) {
+  .cta-primary,
+  .cta-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Reduced Motion Preference */
+@media (prefers-reduced-motion: reduce) {
+  .cta-primary .absolute.inset-0,
+  .cta-secondary .absolute.inset-0,
+  .cta-primary-icon,
+  .cta-primary::after,
+  .cta-secondary::after {
+    transition: none !important;
+    transform: none !important;
+    animation: none !important;
+  }
+
+  .group.cta-primary:hover,
+  .group.cta-secondary:hover {
+    transform: none !important;
+  }
+}
+
+.group:hover::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: inherit;
+  border: 2px solid var(--color-primary);
+  opacity: 0;
+  animation: pulse-ring 0.6s ease-out;
+}
+@keyframes pulse-ring {
+  to { opacity: 0; transform: scale(1.15); }
+}
+
+/* Primary Glow Shadow for Hover */
+.hover\:shadow-primary-glow:hover {
+  box-shadow: 0 0 25px rgba(37, 99, 235, 0.3), 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure smooth GPU acceleration */
+.will-change-transform {
+  will-change: transform;
+}
+
+/* Fix focus states for keyboard navigation */
+.group:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 4px;
+}
+
+/* Optional: Subtle text micro-animation on secondary button */
+.group:hover .relative.z-10 {
+  transform: translateY(-1px);
+  transition: transform var(--transition-base);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .transition-transform,
+  .transition-opacity,
+  .transition-colors {
+    transition: none !important;
+    transform: none !important;
+  }
+  .hover\:shadow-primary-glow:hover,
+  .group:hover .relative.z-10 {
+    box-shadow: none !important;
+    transform: none !important;
+  }
+}
