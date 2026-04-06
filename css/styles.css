@@ -1,4 +1,3 @@
-/* CSS Variables */
 :root {
   --color-primary: #2563eb;
   --color-primary-dark: #1d4ed8;
@@ -20,8 +19,8 @@
 }
 
 body {
-  background-color: #f5f5f0;
-  color: #1a1a1a;
+  background-color: var(--color-gray-100);
+  color: var(--color-gray-900);
   overflow-x: hidden;
 }
 
@@ -34,31 +33,31 @@ body {
   pointer-events: none;
   z-index: 50;
   opacity: 0.4;
-  background-image: url("image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.8%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22 opacity=%220.4%22/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.8%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22 opacity=%220.4%22/%3E%3C/svg%3E");
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.9);
 }
 
 .dark-glass-card {
-  background: rgba(20, 20, 20, 0.6);
+  background: rgba(15, 23, 42, 0.7);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.text-lime-highlight {
-  background-color: #c8ff00;
+.text-accent-highlight {
+  background-color: var(--color-accent-yellow);
   padding: 0 4px;
   display: inline-block;
   transform: skew(-5deg);
 }
 
-.text-lime-highlight span {
+.text-accent-highlight span {
   display: inline-block;
   transform: skew(5deg);
 }
@@ -93,7 +92,172 @@ body {
 }
 
 .service-card:hover .service-icon {
-  background-color: #c8ff00;
-  color: #0a0a0a;
+  background-color: var(--color-accent-green);
+  color: var(--color-white);
   transform: scale(1.1);
+}
+
+/* Custom utility classes using new color scheme */
+.bg-primary {
+  background-color: var(--color-primary);
+}
+.bg-primary-dark {
+  background-color: var(--color-primary-dark);
+}
+.bg-accent-green {
+  background-color: var(--color-accent-green);
+}
+.bg-accent-green-dark {
+  background-color: var(--color-accent-green-dark);
+}
+.bg-accent-yellow {
+  background-color: var(--color-accent-yellow);
+}
+.bg-gray-900 {
+  background-color: var(--color-gray-900);
+}
+.bg-white {
+  background-color: var(--color-white);
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+.text-primary-dark {
+  color: var(--color-primary-dark);
+}
+.text-accent-green {
+  color: var(--color-accent-green);
+}
+.text-accent-yellow {
+  color: var(--color-accent-yellow);
+}
+.text-gray-400 {
+  color: var(--color-gray-400);
+}
+.text-gray-900 {
+  color: var(--color-gray-900);
+}
+.text-white {
+  color: var(--color-white);
+}
+
+.border-gray-300 {
+  border-color: var(--color-gray-300);
+}
+.border-primary {
+  border-color: var(--color-primary);
+}
+
+.hover\:bg-primary-dark:hover {
+  background-color: var(--color-primary-dark);
+}
+.hover\:text-primary:hover {
+  color: var(--color-primary);
+}
+.hover\:text-accent-green-dark:hover {
+  color: var(--color-accent-green-dark);
+}
+
+.shadow-green {
+  box-shadow: var(--shadow-green);
+}
+.shadow-lg {
+  box-shadow: var(--shadow-lg);
+}
+
+.transition-base {
+  transition: var(--transition-base);
+}
+.transition-bounce {
+  transition: var(--transition-bounce);
+}
+
+/* Enhanced Glass Feature Card */
+.glass-feature-card {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-feature-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.08),
+    transparent
+  );
+  transition: left 0.5s ease;
+  pointer-events: none;
+}
+
+.glass-feature-card:hover::before {
+  left: 100%;
+}
+
+.glass-feature-card:hover {
+  border-color: rgba(5, 150, 105, 0.4);
+  box-shadow:
+    0 12px 40px rgba(5, 150, 105, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .glass-feature-card {
+    padding: 1.5rem;
+  }
+
+  .glass-feature-card .w-14 {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .glass-feature-card .w-7 {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+/* Center the last card on desktop when using 3-column grid with 5 items */
+@media (min-width: 1024px) {
+  .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-3 > *:nth-child(4),
+  .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-3 > *:nth-child(5) {
+    /* Optional: Add margin to center the bottom row */
+  }
+}
+
+/* Optional: Center the last row with flex on large screens */
+@media (min-width: 1024px) {
+  .features-grid-centered {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  .features-grid-centered > *:last-child:nth-child(odd) {
+    grid-column: span 3;
+    justify-self: center;
+    max-width: 380px;
+    width: 100%;
+  }
 }
