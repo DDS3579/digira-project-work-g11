@@ -4,10 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sahaj Shikshya</title>
+
+    <!-- Local CSS -->
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/responsive.css" />
     <link rel="stylesheet" href="css/variables.css" />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+
   </head>
   <body>
     <!-- Navbar for Sahaj Shikshya begins -->
@@ -84,15 +94,235 @@
     </header>
     <!-- Navbar for Sahaj Shikshya ends -->
 
-    <!-- Hero Section Starts -->
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <!-- Background Image with Overlay -->
+      <div class="hero-bg">
+        <img
+          src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
+          alt="Students collaborating on study abroad plans"
+          class="hero-bg-img"
+        />
+        <div class="hero-overlay"></div>
+      </div>
 
-    <div className="grid grid-cols-5 grid-rows-5 gap-4" id="hero">
-      <div className="col-span-2 row-span-5">1</div>
-      <div className="col-span-3 row-span-5 col-start-3">2</div>
+      <!-- Decorative Elements -->
+      <div class="hero-decoration">
+        <div class="hero-blob hero-blob-1"></div>
+        <div class="hero-blob hero-blob-2"></div>
+      </div>
+
+      <!-- Content -->
+      <div class="hero-content">
+        <div class="hero-inner">
+          <!-- Headline -->
+          <h1 class="hero-title">
+            <span class="hero-title-line">Consultancies Won't Tell You.</span>
+            <span class="hero-title-line hero-title-accent">We Will.</span>
+          </h1>
+
+          <!-- Subtitle -->
+          <p class="hero-subtitle">
+            Get honest, unbiased information about studying abroad — costs,
+            scholarships, visa success rates, and more. No hidden agenda.
+          </p>
+
+          <!-- CTA Buttons -->
+          <div class="hero-ctas">
+            <a href="#calculator" class="btn btn-primary">
+              <span>Check Affordability</span>
+              <svg
+                class="btn-icon"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </a>
+            <a href="#guide" class="btn btn-secondary">
+              <span>Explore Guide</span>
+            </a>
+          </div>
+
+          <!-- Trust Badges -->
+          <div class="hero-trust">
+            <div class="trust-item">
+              <div class="trust-dot trust-dot-green"></div>
+              <span>100% Free & Unbiased</span>
+            </div>
+            <div class="trust-item">
+              <div class="trust-dot trust-dot-yellow"></div>
+              <span>Real Cost Breakdowns</span>
+            </div>
+            <div class="trust-item">
+              <div class="trust-dot trust-dot-red"></div>
+              <span>Made for Nepali Students</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trusted By Section starts -->
+    <div
+      id="numbers"
+      class="border-blue-500 block max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20"
+    >
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center"
+      >
+        <div>
+          <h2 class="text-3xl font-bold text-gray-900">100+</h2>
+          <p class="text-gray-600 mt-2">Consultants</p>
+        </div>
+        <div>
+          <h2 class="text-3xl font-bold text-gray-900">500+</h2>
+          <p class="text-gray-600 mt-2">Students</p>
+        </div>
+        <div>
+          <h2 class="text-3xl font-bold text-gray-900">50+</h2>
+          <p class="text-gray-600 mt-2">Universities</p>
+        </div>
+        <div>
+          <h2 class="text-3xl font-bold text-gray-900">10+</h2>
+          <p class="text-gray-600 mt-2">Countries</p>
+        </div>
+      </div>
     </div>
 
-    <!-- Hero Section End  -->
+    <!-- Trusted By Section ends -->
 
+    <!-- Features Section starts -->
+    <section
+      id="features"
+      class="py-24 bg-charcoal text-white relative overflow-hidden"
+    >
+      <div class="absolute inset-0 bg-grain opacity-10"></div>
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="text-center mb-16">
+          <h2 class="font-display text-4xl md:text-5xl font-bold mb-4">
+            Built for speed.
+          </h2>
+          <p class="text-gray-400 max-w-2xl mx-auto">
+            Our platform combines cutting-edge AI with intuitive design to
+            streamline your operations.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Feature 1 -->
+          <div
+            class="dark-glass-card p-8 rounded-2xl hover:bg-white/5 transition-colors duration-300"
+          >
+            <div
+              class="w-12 h-12 rounded-full bg-lime/20 flex items-center justify-center mb-6 text-lime"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 10V3L4 14h7v7l9-11h-7z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3 font-display">
+              Realtime Collaboration
+            </h3>
+            <p class="text-gray-400 leading-relaxed">
+              Work together seamlessly with your team. Changes sync instantly
+              across all devices.
+            </p>
+          </div>
+
+          <!-- Feature 2 -->
+          <div
+            class="dark-glass-card p-8 rounded-2xl hover:bg-white/5 transition-colors duration-300"
+          >
+            <div
+              class="w-12 h-12 rounded-full bg-lime/20 flex items-center justify-center mb-6 text-lime"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3 font-display">
+              AI Text Generator
+            </h3>
+            <p class="text-gray-400 leading-relaxed">
+              Generate high-quality content in seconds. From emails to blog
+              posts, let AI handle the heavy lifting.
+            </p>
+          </div>
+
+          <!-- Feature 3 -->
+          <div
+            class="dark-glass-card p-8 rounded-2xl hover:bg-white/5 transition-colors duration-300"
+          >
+            <div
+              class="w-12 h-12 rounded-full bg-lime/20 flex items-center justify-center mb-6 text-lime"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3 font-display">
+              Templates Library
+            </h3>
+            <p class="text-gray-400 leading-relaxed">
+              Access hundreds of pre-built automation workflows designed by
+              industry experts.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section ends -->
+
+    <!-- Testimonials Section starts -->
+
+    <!-- Testimonials Section ends -->
+
+    <!-- About Us Section starts -->
+    <!-- About Us Section ends -->
+
+    <!-- Contact Us Section starts -->
+    <!-- Contact Us Section ends -->
+
+    <!-- Footer Starts -->
+    <!-- Footer Ends -->
     <script src="js/ui.js"></script>
   </body>
 </html>
