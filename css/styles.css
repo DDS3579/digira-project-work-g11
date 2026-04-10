@@ -569,3 +569,8 @@ html {
     transform: none !important;
   }
 }
+
+/* Sleek White Icon Glow for Feature Cards */
+.group:hover svg {
+  filter: drop-shadow(0 0 8px currentColor); /* currentColor is now white! */
+}

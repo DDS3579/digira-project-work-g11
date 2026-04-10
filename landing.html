@@ -354,6 +354,7 @@
     </section>
 
     <!-- Features Section (Dark) -->
+    <!-- Features Section (Dark) -->
     <section
       id="features"
       class="py-24 bg-gray-900 text-white relative overflow-hidden"
@@ -366,38 +367,36 @@
         "
       ></div>
 
-      <!-- Ambient glow effects -->
+      <!-- Ambient glow effects (Keeping subtle color in background for depth, but cards are pure white) -->
       <div
-        class="parallax-slow absolute top-1/4 -left-20 w-72 h-72 bg-accent-green/20 rounded-full blur-3xl"
+        class="parallax-slow absolute top-1/4 -left-20 w-72 h-72 bg-accent-green/10 rounded-full blur-3xl"
       ></div>
       <div
-        class="parallax-medium absolute bottom-1/4 -right-20 w-72 h-72 bg-primary/20 rounded-full blur-3xl"
+        class="parallax-medium absolute bottom-1/4 -right-20 w-72 h-72 bg-primary/10 rounded-full blur-3xl"
       ></div>
 
       <div class="max-w-7xl mx-auto px-6 relative z-10">
         <div class="text-center mb-16">
           <h2 class="font-display text-4xl md:text-5xl font-bold mb-4">
-            What we Provide
+            What We Provide
           </h2>
-          <p class="text-gray-400 max-w-2xl mx-auto">
-            Our platform combines cutting-edge AI with intuitive design to
-            streamline your operations.
+          <p class="text-gray-300 max-w-2xl mx-auto text-lg">
+            Everything you need to make an informed decision about studying
+            abroad.
           </p>
         </div>
 
-        <!-- Features Grid - Responsive: 1 col mobile, 2 col tablet, 3 col desktop -->
-        <div
-          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
-        >
-          <!-- Feature 1 -->
+        <!-- Features Grid - 1 col mobile, 2 col desktop (Horizontal Layout) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Feature 1: University Selection -->
           <div
-            class="glass-feature-card group p-8 rounded-2xl transition-base duration-300 hover:-translate-y-1"
+            class="group p-6 sm:p-8 rounded-2xl border border-gray-700/50 bg-[#0c1222]/60 backdrop-blur-md flex flex-col sm:flex-row items-start gap-6 transition-all duration-300 hover:-translate-y-1 hover:border-white/50 hover:shadow-[0_0_30px_rgba(255,255,255,0.1)]"
           >
             <div
-              class="w-14 h-14 rounded-xl bg-gradient-to-br from-accent-green/30 to-accent-green/10 flex items-center justify-center mb-6 border border-accent-green/30 group-hover:scale-110 transition-base duration-300"
+              class="flex-shrink-0 w-16 h-16 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-white/10 transition-all duration-300"
             >
               <svg
-                class="w-7 h-7"
+                class="w-8 h-8 text-white"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -405,602 +404,1186 @@
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M13 10V3L4 14h7v7l9-11h-7z"
+                  stroke-width="1.5"
+                  d="M12 14l9-5-9-5-9 5 9 5z"
                 ></path>
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold mb-3 font-display text-white">
-              University Selection
-            </h3>
-            <p class="text-gray-400 leading-relaxed text-sm">
-              Select universities based on your particular requirements and
-              preferences with ease using our realtime database.
-            </p>
-          </div>
-
-          <!-- Feature 2 -->
-          <div
-            class="glass-feature-card group p-8 rounded-2xl transition-base duration-300 hover:-translate-y-1"
-          >
-            <div
-              class="w-14 h-14 rounded-xl bg-gradient-to-br from-accent-green/30 to-accent-green/10 flex items-center justify-center mb-6 border border-accent-green/30 group-hover:scale-110 transition-base duration-300"
-            >
-              <svg
-                class="w-7 h-7"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                  stroke-width="1.5"
+                  d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
                 ></path>
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold mb-3 font-display text-white">
-              Risk Assessment
-            </h3>
-            <p class="text-gray-400 leading-relaxed text-sm">
-              Evaluate your chances of admission and living expenses with our
-              risk assessment tool that analyzes your profile and preferences.
-            </p>
-          </div>
-
-          <!-- Feature 3 -->
-          <div
-            class="glass-feature-card group p-8 rounded-2xl transition-base duration-300 hover:-translate-y-1"
-          >
-            <div
-              class="w-14 h-14 rounded-xl bg-gradient-to-br from-accent-green/30 to-accent-green/10 flex items-center justify-center mb-6 border border-accent-green/30 group-hover:scale-110 transition-base duration-300"
-            >
-              <svg
-                class="w-7 h-7"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
+                  stroke-width="1.5"
+                  d="M12 14v7"
                 ></path>
               </svg>
             </div>
-            <h3 class="text-xl font-bold mb-3 font-display text-white">
-              Financial Planning
-            </h3>
-            <p class="text-gray-400 leading-relaxed text-sm">
-              Providing transparent financial requirements so that you select
-              the best for you based on your financial requirements along with Loan & EMI Calculator.
-            </p>
-          </div>
-
-          <!-- Feature 4 -->
-          <div
-            class="glass-feature-card group p-8 rounded-2xl transition-base duration-300 hover:-translate-y-1"
-          >
-            <div
-              class="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/30 to-primary/10 flex items-center justify-center mb-6 border border-primary/30 group-hover:scale-110 transition-base duration-300"
-            >
-              <svg
-                class="w-7 h-7"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-                ></path>
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold mb-3 font-display text-white">
-              Compare Universities
-            </h3>
-            <p class="text-gray-400 leading-relaxed text-sm">
-              Compare universities based on various criteria like location,
-              programs, and costs to find the perfect fit for you.
-            </p>
-          </div>
-
-          <!-- Feature 5 -->
-          <div
-            class="glass-feature-card group p-8 rounded-2xl transition-base duration-300 hover:-translate-y-1"
-          >
-            <div
-              class="w-14 h-14 rounded-xl bg-gradient-to-br from-accent-yellow/30 to-accent-yellow/10 flex items-center justify-center mb-6 border border-accent-yellow/30 group-hover:scale-110 transition-base duration-300"
-            >
-              <svg
-                class="w-7 h-7"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
-                ></path>
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold mb-3 font-display text-white">
-              Scholarships Available
-            </h3>
-            <p class="text-gray-400 leading-relaxed text-sm">
-              Discover and apply for scholarships that match your profile and
-              criteria.
-            </p>
-          </div>
-
-          <!-- Feature 6 -->
-          <div
-            class="glass-feature-card group p-8 rounded-2xl transition-base duration-300 hover:-translate-y-1"
-          >
-            <div
-              class="w-14 h-14 rounded-xl bg-gradient-to-br from-accent-yellow/30 to-accent-yellow/10 flex items-center justify-center mb-6 border border-accent-yellow/30 group-hover:scale-110 transition-base duration-300"
-            >
-              <svg
-                class="w-7 h-7"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
-                ></path>
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold mb-3 font-display text-white">
-              Local Alternatives
-            </h3>
-            <p class="text-gray-400 leading-relaxed text-sm">
-              Compare the Foreign Universities with the local alternatives in Nepal based on various parameters.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="py-24 bg-gray-100">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="flex flex-col md:flex-row justify-between items-end mb-16">
-          <div>
-            <h2
-              class="font-display text-4xl md:text-5xl font-bold text-gray-900 mb-4"
-            >
-              Our Expertise
-            </h2>
-            <p class="text-gray-400 max-w-md">
-              Comprehensive digital solutions tailored for modern businesses.
-            </p>
-          </div>
-          <a
-            href="#contact"
-            class="hidden md:inline-flex items-center text-gray-900 font-medium hover:text-accent-green-dark transition-base mt-4 md:mt-0"
-          >
-            View all services
-            <svg
-              class="w-4 h-4 ml-2"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              ></path>
-            </svg>
-          </a>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- Service 1 -->
-          <div
-            class="service-card group p-8 bg-white rounded-2xl border border-gray-300 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-base duration-300 cursor-pointer"
-          >
-            <div
-              class="service-icon w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center mb-6 text-gray-900 transition-base duration-300"
-            >
-              <svg
-                class="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                ></path>
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold mb-2 font-display">
-              AI Automation (n8n)
-            </h3>
-            <p class="text-gray-400 text-sm">
-              Streamline workflows with custom n8n automations connecting your
-              favorite apps.
-            </p>
-          </div>
-
-          <!-- Service 2 -->
-          <div
-            class="service-card group p-8 bg-white rounded-2xl border border-gray-300 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-base duration-300 cursor-pointer"
-          >
-            <div
-              class="service-icon w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center mb-6 text-gray-900 transition-base duration-300"
-            >
-              <svg
-                class="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
-                ></path>
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold mb-2 font-display">OpenClaw Setup</h3>
-            <p class="text-gray-400 text-sm">
-              Advanced data extraction and processing setups for large-scale
-              operations.
-            </p>
-          </div>
-
-          <!-- Service 3 -->
-          <div
-            class="service-card group p-8 bg-white rounded-2xl border border-gray-300 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-base duration-300 cursor-pointer"
-          >
-            <div
-              class="service-icon w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center mb-6 text-gray-900 transition-base duration-300"
-            >
-              <svg
-                class="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                ></path>
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold mb-2 font-display">
-              Web Design & Dev
-            </h3>
-            <p class="text-gray-400 text-sm">
-              Stunning, responsive websites built with modern technologies and
-              clean code.
-            </p>
-          </div>
-
-          <!-- Service 4 -->
-          <div
-            class="service-card group p-8 bg-white rounded-2xl border border-gray-300 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-base duration-300 cursor-pointer"
-          >
-            <div
-              class="service-icon w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center mb-6 text-gray-900 transition-base duration-300"
-            >
-              <svg
-                class="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
-                ></path>
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold mb-2 font-display">
-              WordPress Development
-            </h3>
-            <p class="text-gray-400 text-sm">
-              Custom themes and plugins tailored to your specific business
-              needs.
-            </p>
-          </div>
-
-          <!-- Service 5 -->
-          <div
-            class="service-card group p-8 bg-white rounded-2xl border border-gray-300 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-base duration-300 cursor-pointer"
-          >
-            <div
-              class="service-icon w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center mb-6 text-gray-900 transition-base duration-300"
-            >
-              <svg
-                class="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
-                ></path>
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold mb-2 font-display">Cinematography</h3>
-            <p class="text-gray-400 text-sm">
-              High-end video production and storytelling for brands that demand
-              quality.
-            </p>
-          </div>
-
-          <!-- Service 6 -->
-          <div
-            class="service-card group p-8 bg-white rounded-2xl border border-gray-300 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-base duration-300 cursor-pointer"
-          >
-            <div
-              class="service-icon w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center mb-6 text-gray-900 transition-base duration-300"
-            >
-              <svg
-                class="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"
-                ></path>
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold mb-2 font-display">Marketing & SMM</h3>
-            <p class="text-gray-400 text-sm">
-              Strategic social media management and digital marketing campaigns.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Team Section -->
-    <section id="team" class="py-24 bg-white">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="text-center mb-16">
-          <h2
-            class="font-display text-4xl md:text-5xl font-bold text-gray-900 mb-4"
-          >
-            Meet the Minds
-          </h2>
-          <p class="text-gray-400">
-            The talented team behind Digira's success.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-          <!-- Team Member 1 -->
-          <div class="group relative overflow-hidden rounded-2xl aspect-[3/4]">
-            <img
-              src="https://image.qwenlm.ai/public_source/8f7eeeec-0b50-494d-824f-c86284670e13/184f0b01a-6b7c-40c3-b2a7-ea249a24873a.png"
-              alt="Divya D. Sharma"
-              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-            />
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-            >
-              <h3 class="text-white font-bold text-lg">Divya D. Sharma</h3>
-              <p class="text-accent-green text-sm">Founder & Tech Lead</p>
-            </div>
-          </div>
-
-          <!-- Team Member 2 -->
-          <div class="group relative overflow-hidden rounded-2xl aspect-[3/4]">
-            <img
-              src="https://image.qwenlm.ai/public_source/8f7eeeec-0b50-494d-824f-c86284670e13/184f0b01a-6b7c-40c3-b2a7-ea249a24873a.png"
-              alt="Nabin B. Thapa"
-              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-            />
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-            >
-              <h3 class="text-white font-bold text-lg">Nabin B. Thapa</h3>
-              <p class="text-accent-green text-sm">Co Founder & Design Lead</p>
-            </div>
-          </div>
-
-          <!-- Team Member 3 -->
-          <div class="group relative overflow-hidden rounded-2xl aspect-[3/4]">
-            <img
-              src="https://image.qwenlm.ai/public_source/8f7eeeec-0b50-494d-824f-c86284670e13/184f0b01a-6b7c-40c3-b2a7-ea249a24873a.png"
-              alt="Abhi Gautam"
-              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-            />
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-            >
-              <h3 class="text-white font-bold text-lg">Abhi Gautam</h3>
-              <p class="text-accent-green text-sm">
-                Co Founder & Cinematographer
+            <div>
+              <h3 class="text-lg font-bold mb-2 font-display text-white">
+                University Selection
+              </h3>
+              <p class="text-gray-400 leading-relaxed text-sm">
+                Select universities based on your particular requirements and
+                preferences with ease using our realtime database.
               </p>
             </div>
           </div>
 
-          <!-- Team Member 4 -->
-          <div class="group relative overflow-hidden rounded-2xl aspect-[3/4]">
-            <img
-              src="https://image.qwenlm.ai/public_source/8f7eeeec-0b50-494d-824f-c86284670e13/184f0b01a-6b7c-40c3-b2a7-ea249a24873a.png"
-              alt="Kritagya P."
-              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-            />
+          <!-- Feature 2: Risk Assessment -->
+          <div
+            class="group p-6 sm:p-8 rounded-2xl border border-gray-700/50 bg-[#0c1222]/60 backdrop-blur-md flex flex-col sm:flex-row items-start gap-6 transition-all duration-300 hover:-translate-y-1 hover:border-white/50 hover:shadow-[0_0_30px_rgba(255,255,255,0.1)]"
+          >
             <div
-              class="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              class="flex-shrink-0 w-16 h-16 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-white/10 transition-all duration-300"
             >
-              <h3 class="text-white font-bold text-lg">Kritagya P.</h3>
-              <p class="text-accent-green text-sm">Operations Supervisor</p>
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                ></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold mb-2 font-display text-white">
+                Risk Assessment
+              </h3>
+              <p class="text-gray-400 leading-relaxed text-sm">
+                Evaluate your chances of admission and living expenses with our
+                risk assessment tool that analyzes your profile.
+              </p>
             </div>
           </div>
 
-          <!-- Team Member 5 -->
-          <div class="group relative overflow-hidden rounded-2xl aspect-[3/4]">
-            <img
-              src="https://image.qwenlm.ai/public_source/8f7eeeec-0b50-494d-824f-c86284670e13/184f0b01a-6b7c-40c3-b2a7-ea249a24873a.png"
-              alt="Diwas K."
-              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-            />
+          <!-- Feature 3: Financial Planning -->
+          <div
+            class="group p-6 sm:p-8 rounded-2xl border border-gray-700/50 bg-[#0c1222]/60 backdrop-blur-md flex flex-col sm:flex-row items-start gap-6 transition-all duration-300 hover:-translate-y-1 hover:border-white/50 hover:shadow-[0_0_30px_rgba(255,255,255,0.1)]"
+          >
             <div
-              class="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              class="flex-shrink-0 w-16 h-16 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-white/10 transition-all duration-300"
             >
-              <h3 class="text-white font-bold text-lg">Diwas K.</h3>
-              <p class="text-accent-green text-sm">Creative Operations Lead</p>
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"
+                ></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold mb-2 font-display text-white">
+                Financial Planning
+              </h3>
+              <p class="text-gray-400 leading-relaxed text-sm">
+                Providing transparent financial requirements so that you select
+                the best for you based on your financial needs along with Loan &
+                EMI Calculator.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature 4: Compare Universities -->
+          <div
+            class="group p-6 sm:p-8 rounded-2xl border border-gray-700/50 bg-[#0c1222]/60 backdrop-blur-md flex flex-col sm:flex-row items-start gap-6 transition-all duration-300 hover:-translate-y-1 hover:border-white/50 hover:shadow-[0_0_30px_rgba(255,255,255,0.1)]"
+          >
+            <div
+              class="flex-shrink-0 w-16 h-16 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-white/10 transition-all duration-300"
+            >
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                ></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold mb-2 font-display text-white">
+                Compare Universities
+              </h3>
+              <p class="text-gray-400 leading-relaxed text-sm">
+                Compare universities based on various criteria like location,
+                programs, and costs to find the perfect fit for you.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature 5: Scholarships Available -->
+          <div
+            class="group p-6 sm:p-8 rounded-2xl border border-gray-700/50 bg-[#0c1222]/60 backdrop-blur-md flex flex-col sm:flex-row items-start gap-6 transition-all duration-300 hover:-translate-y-1 hover:border-white/50 hover:shadow-[0_0_30px_rgba(255,255,255,0.1)]"
+          >
+            <div
+              class="flex-shrink-0 w-16 h-16 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-white/10 transition-all duration-300"
+            >
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+                ></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold mb-2 font-display text-white">
+                Scholarships Available
+              </h3>
+              <p class="text-gray-400 leading-relaxed text-sm">
+                Discover and apply for scholarships that match your profile and
+                criteria to fund your education abroad.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature 6: Local Alternatives -->
+          <div
+            class="group p-6 sm:p-8 rounded-2xl border border-gray-700/50 bg-[#0c1222]/60 backdrop-blur-md flex flex-col sm:flex-row items-start gap-6 transition-all duration-300 hover:-translate-y-1 hover:border-white/50 hover:shadow-[0_0_30px_rgba(255,255,255,0.1)]"
+          >
+            <div
+              class="flex-shrink-0 w-16 h-16 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-white/10 transition-all duration-300"
+            >
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                ></path>
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                ></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold mb-2 font-display text-white">
+                Local Alternatives
+              </h3>
+              <p class="text-gray-400 leading-relaxed text-sm">
+                Compare the Foreign Universities with the local alternatives in
+                Nepal based on various parameters.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CTA Section -->
-    <section id="quote" class="py-24 bg-gray-900 relative overflow-hidden">
+    <!-- Testimonials Section -->
+    <section
+      id="testimonials"
+      class="py-24 bg-gray-100 relative overflow-hidden"
+    >
+      <!-- Subtle ambient background for depth -->
       <div
-        class="absolute top-0 right-0 w-1/2 h-full bg-accent-green/10 skew-x-12 transform origin-bottom-right"
+        class="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none"
       ></div>
-      <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
-        <h2
-          class="font-display text-5xl md:text-7xl font-bold text-white mb-8 tracking-tight"
+      <div
+        class="absolute bottom-0 left-0 w-80 h-80 bg-accent-green/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2 pointer-events-none"
+      ></div>
+
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <!-- Centered Header -->
+        <div class="text-center mb-16 max-w-3xl mx-auto">
+          <h2
+            class="font-display text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight"
+          >
+            Voices of Our Students
+          </h2>
+          <p class="text-gray-400 text-lg leading-relaxed">
+            Honest experiences from students who navigated their abroad journey
+            with Sahaj Shikshya.
+          </p>
+        </div>
+
+        <!-- Testimonials Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+          <!-- Testimonial 1: Bikalpa -->
+          <div
+            class="group relative bg-white p-8 md:p-10 rounded-2xl border-l-[3px] border-gray-200 shadow-[0_4px_20px_rgba(0,0,0,0.04)] flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 hover:border-l-primary hover:shadow-[0_12px_40px_rgba(37,99,235,0.1)]"
+          >
+            <div>
+              <!-- 5-Star Rating -->
+              <div class="flex gap-1 mb-5">
+                <svg
+                  class="w-4 h-4 text-accent-yellow"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  ></path>
+                </svg>
+                <svg
+                  class="w-4 h-4 text-accent-yellow"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  ></path>
+                </svg>
+                <svg
+                  class="w-4 h-4 text-accent-yellow"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  ></path>
+                </svg>
+                <svg
+                  class="w-4 h-4 text-accent-yellow"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  ></path>
+                </svg>
+                <svg
+                  class="w-4 h-4 text-accent-yellow"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  ></path>
+                </svg>
+              </div>
+
+              <!-- Quote Text -->
+              <p
+                class="text-gray-700 text-base md:text-[1.05rem] font-light leading-relaxed mb-8"
+              >
+                "Sahaj Shikshya removed all the confusion I had about tuition
+                fees and living costs. The transparency it provides is exactly
+                what Nepali students need before making such a massive
+                commitment."
+              </p>
+            </div>
+
+            <!-- Profile Section -->
+            <div class="flex items-center gap-4 pt-6 border-t border-gray-100">
+              <div
+                class="w-11 h-11 rounded-full bg-gradient-to-br from-primary to-blue-400 flex items-center justify-center text-white font-bold text-sm shadow-md"
+              >
+                B
+              </div>
+              <div>
+                <h4 class="font-display font-bold text-gray-900 text-sm">
+                  Bikalpa Acharya
+                </h4>
+                <p class="text-xs text-gray-400">
+                  Prospective Engineering Student
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2: Shrijan -->
+          <div
+            class="group relative bg-white p-8 md:p-10 rounded-2xl border-l-[3px] border-gray-200 shadow-[0_4px_20px_rgba(0,0,0,0.04)] flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 hover:border-l-accent-green hover:shadow-[0_12px_40px_rgba(5,150,105,0.1)]"
+          >
+            <div>
+              <div class="flex gap-1 mb-5">
+                <svg
+                  class="w-4 h-4 text-accent-yellow"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  ></path>
+                </svg>
+                <svg
+                  class="w-4 h-4 text-accent-yellow"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  ></path>
+                </svg>
+                <svg
+                  class="w-4 h-4 text-accent-yellow"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  ></path>
+                </svg>
+                <svg
+                  class="w-4 h-4 text-accent-yellow"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  ></path>
+                </svg>
+                <svg
+                  class="w-4 h-4 text-accent-yellow"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  ></path>
+                </svg>
+              </div>
+
+              <p
+                class="text-gray-700 text-base md:text-[1.05rem] font-light leading-relaxed mb-8"
+              >
+                "The university comparison tool is a game-changer. Being able to
+                see local alternatives side-by-side with foreign options gave me
+                a realistic perspective I couldn't find anywhere else."
+              </p>
+            </div>
+
+            <div class="flex items-center gap-4 pt-6 border-t border-gray-100">
+              <div
+                class="w-11 h-11 rounded-full bg-gradient-to-br from-accent-green to-emerald-400 flex items-center justify-center text-white font-bold text-sm shadow-md"
+              >
+                S
+              </div>
+              <div>
+                <h4 class="font-display font-bold text-gray-900 text-sm">
+                  Shrijan Dhital
+                </h4>
+                <p class="text-xs text-gray-400">Researching IT Programs</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3: Sukrit -->
+          <div
+            class="group relative bg-white p-8 md:p-10 rounded-2xl border-l-[3px] border-gray-200 shadow-[0_4px_20px_rgba(0,0,0,0.04)] flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 hover:border-l-accent-yellow hover:shadow-[0_12px_40px_rgba(252,211,77,0.15)]"
+          >
+            <div>
+              <div class="flex gap-1 mb-5">
+                <svg
+                  class="w-4 h-4 text-accent-yellow"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  ></path>
+                </svg>
+                <svg
+                  class="w-4 h-4 text-accent-yellow"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  ></path>
+                </svg>
+                <svg
+                  class="w-4 h-4 text-accent-yellow"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  ></path>
+                </svg>
+                <svg
+                  class="w-4 h-4 text-accent-yellow"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  ></path>
+                </svg>
+                <svg
+                  class="w-4 h-4 text-accent-yellow"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  ></path>
+                </svg>
+              </div>
+
+              <p
+                class="text-gray-700 text-base md:text-[1.05rem] font-light leading-relaxed mb-8"
+              >
+                "I was completely lost about the financial burden until I used
+                the EMI calculator. The risk assessment feature helped me plan
+                my budget perfectly. No consultancy was this honest about the
+                costs."
+              </p>
+            </div>
+
+            <div class="flex items-center gap-4 pt-6 border-t border-gray-100">
+              <div
+                class="w-11 h-11 rounded-full bg-gradient-to-br from-accent-yellow to-amber-400 flex items-center justify-center text-gray-900 font-bold text-sm shadow-md"
+              >
+                S
+              </div>
+              <div>
+                <h4 class="font-display font-bold text-gray-900 text-sm">
+                  Sukrit Dahal
+                </h4>
+                <p class="text-xs text-gray-400">Planning for MBA Abroad</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 4: Oshan -->
+          <div
+            class="group relative bg-white p-8 md:p-10 rounded-2xl border-l-[3px] border-gray-200 shadow-[0_4px_20px_rgba(0,0,0,0.04)] flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 hover:border-l-accent-red hover:shadow-[0_12px_40px_rgba(220,38,38,0.1)]"
+          >
+            <div>
+              <div class="flex gap-1 mb-5">
+                <svg
+                  class="w-4 h-4 text-accent-yellow"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  ></path>
+                </svg>
+                <svg
+                  class="w-4 h-4 text-accent-yellow"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  ></path>
+                </svg>
+                <svg
+                  class="w-4 h-4 text-accent-yellow"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  ></path>
+                </svg>
+                <svg
+                  class="w-4 h-4 text-accent-yellow"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  ></path>
+                </svg>
+                <svg
+                  class="w-4 h-4 text-accent-yellow"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  ></path>
+                </svg>
+              </div>
+
+              <p
+                class="text-gray-700 text-base md:text-[1.05rem] font-light leading-relaxed mb-8"
+              >
+                "Finding scholarships was always a headache. This platform laid
+                everything out clearly. I finally feel confident about my
+                decision to study abroad without relying on biased agents."
+              </p>
+            </div>
+
+            <div class="flex items-center gap-4 pt-6 border-t border-gray-100">
+              <div
+                class="w-11 h-11 rounded-full bg-gradient-to-br from-accent-red to-rose-400 flex items-center justify-center text-white font-bold text-sm shadow-md"
+              >
+                O
+              </div>
+              <div>
+                <h4 class="font-display font-bold text-gray-900 text-sm">
+                  Oshan Neupane
+                </h4>
+                <p class="text-xs text-gray-400">
+                  Exploring Scholarship Options
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us / Team Section -->
+    <section id="team" class="py-24 bg-white relative overflow-hidden">
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-gray-50 to-white pointer-events-none"
+      ></div>
+
+      <!-- Decorative blobs -->
+      <div
+        class="absolute top-0 left-0 w-72 h-72 bg-primary/5 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl pointer-events-none"
+      ></div>
+      <div
+        class="absolute bottom-0 right-0 w-72 h-72 bg-accent-green/5 rounded-full translate-x-1/2 translate-y-1/2 blur-3xl pointer-events-none"
+      ></div>
+
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <!-- Header -->
+        <div class="text-center mb-20">
+          <h2
+            class="font-display text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight"
+          >
+            Meet Team Digira
+          </h2>
+          <p class="text-gray-400 max-w-xl mx-auto text-lg leading-relaxed">
+            The minds behind Sahaj Shikshya — dedicated to simplifying abroad
+            education for Nepal.
+          </p>
+          <!-- Decorative divider -->
+          <div class="flex items-center justify-center gap-2 mt-6">
+            <div class="h-px w-12 bg-gray-200 rounded-full"></div>
+            <div class="h-1.5 w-1.5 rounded-full bg-primary"></div>
+            <div class="h-px w-24 bg-primary/40 rounded-full"></div>
+            <div class="h-1.5 w-1.5 rounded-full bg-primary"></div>
+            <div class="h-px w-12 bg-gray-200 rounded-full"></div>
+          </div>
+        </div>
+
+        <!-- Team Grid -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5 lg:gap-6"
         >
-          Ready to automate?
-        </h2>
-        <p class="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
-          Transform your business operations with our cutting-edge AI solutions.
-          Get a custom quote today.
-        </p>
-        <button
-          class="bg-accent-green text-white px-10 py-4 rounded-full text-lg font-bold hover:bg-accent-green-dark hover:scale-105 transition-base duration-300 shadow-green"
+          <!-- Member 1: Sukrit -->
+          <div
+            class="group relative p-7 rounded-2xl border border-gray-200 bg-white hover:shadow-2xl hover:shadow-accent-green/10 hover:border-accent-green/40 transition-all duration-500 hover:-translate-y-2 flex flex-col items-center text-center"
+          >
+            <!-- Corner accent -->
+            <div
+              class="absolute top-0 right-0 w-16 h-16 bg-accent-green/5 rounded-bl-3xl rounded-tr-2xl pointer-events-none"
+            ></div>
+            <!-- Avatar -->
+            <div class="relative mb-5">
+              <div
+                class="w-20 h-20 rounded-full bg-gradient-to-br from-accent-green/30 to-accent-green/5 border-2 border-accent-green/20 flex items-center justify-center group-hover:border-accent-green/60 group-hover:shadow-lg group-hover:shadow-accent-green/20 transition-all duration-500"
+              >
+                <span class="text-3xl font-display font-bold text-accent-green"
+                  >S</span
+                >
+              </div>
+              <!-- Online dot -->
+              <div
+                class="absolute bottom-1 right-1 w-3.5 h-3.5 rounded-full bg-accent-green border-2 border-white shadow-sm"
+              ></div>
+            </div>
+            <h3
+              class="text-sm font-display font-bold text-gray-900 mb-1 leading-tight"
+            >
+              Sukrit J. Dahal
+            </h3>
+            <p
+              class="text-[11px] font-semibold text-accent-green uppercase tracking-widest mb-3"
+            >
+              Web Designer
+            </p>
+            <div
+              class="w-8 h-px bg-gray-200 mb-3 group-hover:w-14 group-hover:bg-accent-green/40 transition-all duration-500"
+            ></div>
+            <p class="text-xs text-gray-400 leading-relaxed">
+              Crafting the visual experience and interface animations.
+            </p>
+          </div>
+
+          <!-- Member 2: Shrijan -->
+          <div
+            class="group relative p-7 rounded-2xl border border-gray-200 bg-white hover:shadow-2xl hover:shadow-accent-yellow/10 hover:border-accent-yellow/40 transition-all duration-500 hover:-translate-y-2 flex flex-col items-center text-center"
+          >
+            <div
+              class="absolute top-0 right-0 w-16 h-16 bg-accent-yellow/5 rounded-bl-3xl rounded-tr-2xl pointer-events-none"
+            ></div>
+            <div class="relative mb-5">
+              <div
+                class="w-20 h-20 rounded-full bg-gradient-to-br from-accent-yellow/30 to-accent-yellow/5 border-2 border-accent-yellow/20 flex items-center justify-center group-hover:border-accent-yellow/60 group-hover:shadow-lg group-hover:shadow-accent-yellow/20 transition-all duration-500"
+              >
+                <span class="text-3xl font-display font-bold text-accent-yellow"
+                  >S</span
+                >
+              </div>
+              <div
+                class="absolute bottom-1 right-1 w-3.5 h-3.5 rounded-full bg-accent-yellow border-2 border-white shadow-sm"
+              ></div>
+            </div>
+            <h3
+              class="text-sm font-display font-bold text-gray-900 mb-1 leading-tight"
+            >
+              Shrijan Dhital
+            </h3>
+            <p
+              class="text-[11px] font-semibold text-accent-yellow uppercase tracking-widest mb-3"
+            >
+              Data Management
+            </p>
+            <div
+              class="w-8 h-px bg-gray-200 mb-3 group-hover:w-14 group-hover:bg-accent-yellow/40 transition-all duration-500"
+            ></div>
+            <p class="text-xs text-gray-400 leading-relaxed">
+              Sourcing and structuring the platform's comprehensive data.
+            </p>
+          </div>
+
+          <!-- Member 3: Divya (Lead) -->
+          <div
+            class="group relative p-7 rounded-2xl border-2 border-primary/25 bg-gradient-to-b from-primary/5 to-white hover:shadow-2xl hover:shadow-primary/15 hover:border-primary/60 transition-all duration-500 hover:-translate-y-2 flex flex-col items-center text-center sm:col-span-2 lg:col-span-1"
+          >
+            <!-- Lead badge -->
+            <div
+              class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-primary to-blue-500 text-white text-[10px] font-bold px-4 py-1.5 rounded-full shadow-lg shadow-primary/30 uppercase tracking-widest whitespace-nowrap"
+            >
+              ✦ Team Lead
+            </div>
+            <!-- Glow ring -->
+            <div
+              class="absolute inset-0 rounded-2xl bg-gradient-to-b from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+            ></div>
+
+            <div class="relative mb-5">
+              <!-- Pulse ring -->
+              <div
+                class="absolute inset-0 rounded-full bg-primary/20 scale-110 animate-pulse pointer-events-none"
+              ></div>
+              <div
+                class="w-20 h-20 rounded-full bg-gradient-to-br from-primary/30 to-primary/10 border-2 border-primary/40 flex items-center justify-center shadow-xl shadow-primary/20 group-hover:shadow-2xl group-hover:shadow-primary/30 group-hover:border-primary/70 transition-all duration-500 relative"
+              >
+                <span class="text-3xl font-display font-bold text-primary"
+                  >D</span
+                >
+              </div>
+              <div
+                class="absolute bottom-1 right-1 w-3.5 h-3.5 rounded-full bg-primary border-2 border-white shadow-sm"
+              ></div>
+            </div>
+            <h3
+              class="text-sm font-display font-bold text-gray-900 mb-1 leading-tight"
+            >
+              Divya D. Sharma
+            </h3>
+            <p
+              class="text-[11px] font-semibold text-primary uppercase tracking-widest mb-3"
+            >
+              Lead Developer
+            </p>
+            <div
+              class="w-8 h-px bg-primary/20 mb-3 group-hover:w-14 group-hover:bg-primary/50 transition-all duration-500"
+            ></div>
+            <p class="text-xs text-gray-500 leading-relaxed">
+              Architecting the platform and leading the team to delivery.
+            </p>
+          </div>
+
+          <!-- Member 4: Oshan -->
+          <div
+            class="group relative p-7 rounded-2xl border border-gray-200 bg-white hover:shadow-2xl hover:shadow-accent-red/10 hover:border-accent-red/40 transition-all duration-500 hover:-translate-y-2 flex flex-col items-center text-center"
+          >
+            <div
+              class="absolute top-0 right-0 w-16 h-16 bg-accent-red/5 rounded-bl-3xl rounded-tr-2xl pointer-events-none"
+            ></div>
+            <div class="relative mb-5">
+              <div
+                class="w-20 h-20 rounded-full bg-gradient-to-br from-accent-red/30 to-accent-red/5 border-2 border-accent-red/20 flex items-center justify-center group-hover:border-accent-red/60 group-hover:shadow-lg group-hover:shadow-accent-red/20 transition-all duration-500"
+              >
+                <span class="text-3xl font-display font-bold text-accent-red"
+                  >O</span
+                >
+              </div>
+              <div
+                class="absolute bottom-1 right-1 w-3.5 h-3.5 rounded-full bg-accent-red border-2 border-white shadow-sm"
+              ></div>
+            </div>
+            <h3
+              class="text-sm font-display font-bold text-gray-900 mb-1 leading-tight"
+            >
+              Oshan Neupane
+            </h3>
+            <p
+              class="text-[11px] font-semibold text-accent-red uppercase tracking-widest mb-3"
+            >
+              Content Writer
+            </p>
+            <div
+              class="w-8 h-px bg-gray-200 mb-3 group-hover:w-14 group-hover:bg-accent-red/40 transition-all duration-500"
+            ></div>
+            <p class="text-xs text-gray-400 leading-relaxed">
+              Crafting clear content and ensuring information accuracy.
+            </p>
+          </div>
+
+          <!-- Member 5: Bikalpa -->
+          <div
+            class="group relative p-7 rounded-2xl border border-gray-200 bg-white hover:shadow-2xl hover:shadow-violet-500/10 hover:border-violet-500/40 transition-all duration-500 hover:-translate-y-2 flex flex-col items-center text-center"
+          >
+            <div
+              class="absolute top-0 right-0 w-16 h-16 bg-violet-500/5 rounded-bl-3xl rounded-tr-2xl pointer-events-none"
+            ></div>
+            <div class="relative mb-5">
+              <div
+                class="w-20 h-20 rounded-full bg-gradient-to-br from-violet-500/30 to-violet-500/5 border-2 border-violet-500/20 flex items-center justify-center group-hover:border-violet-500/60 group-hover:shadow-lg group-hover:shadow-violet-500/20 transition-all duration-500"
+              >
+                <span class="text-3xl font-display font-bold text-violet-600"
+                  >B</span
+                >
+              </div>
+              <div
+                class="absolute bottom-1 right-1 w-3.5 h-3.5 rounded-full bg-violet-500 border-2 border-white shadow-sm"
+              ></div>
+            </div>
+            <h3
+              class="text-sm font-display font-bold text-gray-900 mb-1 leading-tight"
+            >
+              Bikalpa Acharya
+            </h3>
+            <p
+              class="text-[11px] font-semibold text-violet-600 uppercase tracking-widest mb-3"
+            >
+              Co-Developer
+            </p>
+            <div
+              class="w-8 h-px bg-gray-200 mb-3 group-hover:w-14 group-hover:bg-violet-500/40 transition-all duration-500"
+            ></div>
+            <p class="text-xs text-gray-400 leading-relaxed">
+              Ensuring flawless functionality and core development.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="py-24 bg-gray-100 relative overflow-hidden">
+      <!-- Subtle ambient background -->
+      <div
+        class="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none"
+      ></div>
+      <div
+        class="absolute bottom-0 left-0 w-80 h-80 bg-accent-green/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2 pointer-events-none"
+      ></div>
+
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start"
         >
-          Get a Quote
-        </button>
+          <!-- Left Column: Info -->
+          <div class="max-w-lg">
+            <h2
+              class="font-display text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight"
+            >
+              Get in Touch
+            </h2>
+            <p class="text-gray-400 text-lg leading-relaxed mb-10">
+              Have questions about studying abroad or need guidance? We're here
+              to help you make the right choice. Reach out to us directly.
+            </p>
+
+            <div class="space-y-6">
+              <!-- Email -->
+              <div class="flex items-start gap-4 group">
+                <div
+                  class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 transition-all duration-300 group-hover:bg-primary/20"
+                >
+                  <svg
+                    class="w-5 h-5 text-primary"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-display font-bold text-gray-900 mb-1">
+                    Email Us
+                  </h4>
+                  <p class="text-gray-500 text-sm">hello@sahajshikshya.com</p>
+                </div>
+              </div>
+
+              <!-- Location -->
+              <div class="flex items-start gap-4 group">
+                <div
+                  class="w-12 h-12 rounded-xl bg-accent-green/10 flex items-center justify-center flex-shrink-0 transition-all duration-300 group-hover:bg-accent-green/20"
+                >
+                  <svg
+                    class="w-5 h-5 text-primary"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                    ></path>
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-display font-bold text-gray-900 mb-1">
+                    Visit Us
+                  </h4>
+                  <p class="text-gray-500 text-sm">Kathmandu, Nepal</p>
+                </div>
+              </div>
+
+              <!-- Socials -->
+              <div class="flex items-start gap-4 group">
+                <div
+                  class="w-12 h-12 rounded-xl bg-accent-yellow/10 flex items-center justify-center flex-shrink-0 transition-all duration-300 group-hover:bg-accent-yellow/20"
+                >
+                  <svg
+                    class="w-5 h-5 text-primary"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-display font-bold text-gray-900 mb-1">
+                    Connect
+                  </h4>
+                  <div class="flex gap-4 text-gray-500 text-sm">
+                    <a
+                      href="#"
+                      class="hover:text-primary transition-colors duration-300"
+                      >Facebook</a
+                    >
+                    <a
+                      href="#"
+                      class="hover:text-primary transition-colors duration-300"
+                      >Instagram</a
+                    >
+                    <a
+                      href="#"
+                      class="hover:text-primary transition-colors duration-300"
+                      >LinkedIn</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Form -->
+          <div
+            class="bg-white p-8 md:p-10 rounded-2xl border border-gray-200 shadow-[0_8px_30px_rgba(0,0,0,0.04)]"
+          >
+            <form action="#" method="POST" class="space-y-6">
+              <div>
+                <label
+                  for="name"
+                  class="block text-sm font-medium text-gray-700 mb-2"
+                  >Full Name</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Eg: Bikalpa Acharya"
+                  class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 text-gray-900 text-sm placeholder:text-gray-400 focus:bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-300 outline-none"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  for="email"
+                  class="block text-sm font-medium text-gray-700 mb-2"
+                  >Email Address</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 text-gray-900 text-sm placeholder:text-gray-400 focus:bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-300 outline-none"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  for="message"
+                  class="block text-sm font-medium text-gray-700 mb-2"
+                  >Your Message</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  placeholder="How can we help you?"
+                  class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 text-gray-900 text-sm placeholder:text-gray-400 focus:bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-300 outline-none resize-none"
+                  required
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="w-full bg-primary text-white px-8 py-3.5 rounded-xl font-semibold text-sm hover:bg-primary-dark transition-all duration-300 transform hover:-translate-y-0.5 shadow-md hover:shadow-lg flex items-center justify-center gap-2"
+              >
+                Send Message
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  ></path>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-100 pt-20 pb-10 border-t border-gray-300">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
-          <div class="col-span-1 md:col-span-1">
+    <footer
+      class="bg-gray-900 pt-20 pb-10 border-t border-gray-800 relative overflow-hidden"
+    >
+      <!-- Subtle ambient glow -->
+      <div
+        class="absolute bottom-0 left-1/2 -translate-x-1/2 w-1/2 h-1/2 bg-primary/5 rounded-full blur-3xl pointer-events-none"
+      ></div>
+
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16"
+        >
+          <!-- Column 1: Brand -->
+          <div class="lg:col-span-1">
             <div
-              class="font-display font-bold text-2xl tracking-tighter mb-6 text-primary"
+              class="font-display font-bold text-2xl tracking-tighter mb-6 text-white"
             >
-              DIGIRA.
+              Sahaj Shikshya
             </div>
-            <p class="text-gray-400 text-sm leading-relaxed">
-              Kathmandu, Nepal<br />
-              AI Automation Agency
+            <p class="text-gray-400 text-sm leading-relaxed mb-6">
+              Simplifying the path to your dream university abroad. Honest,
+              transparent, and built for Nepali students.
             </p>
+            <!-- Socials -->
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300"
+              >
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                  ></path>
+                </svg>
+              </a>
+              <a
+                href="#"
+                class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300"
+              >
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"
+                  ></path>
+                </svg>
+              </a>
+              <a
+                href="#"
+                class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300"
+              >
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  ></path>
+                </svg>
+              </a>
+            </div>
           </div>
 
+          <!-- Column 2: Platform / Dashboard Links -->
           <div>
-            <h4 class="font-bold text-gray-900 mb-4">Services</h4>
-            <ul class="space-y-2 text-sm text-gray-400">
+            <h4
+              class="font-display font-bold text-white mb-6 text-sm uppercase tracking-wider"
+            >
+              Platform
+            </h4>
+            <ul class="space-y-3 text-sm">
               <li>
-                <a href="#" class="hover:text-accent-green-dark transition-base"
-                  >AI Automation</a
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-300 inline-block"
+                  >Universities</a
                 >
               </li>
               <li>
-                <a href="#" class="hover:text-accent-green-dark transition-base"
-                  >Web Development</a
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-300 inline-block"
+                  >Scholarships</a
                 >
               </li>
               <li>
-                <a href="#" class="hover:text-accent-green-dark transition-base"
-                  >Cinematography</a
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-300 inline-block"
+                  >Compare Universities</a
                 >
               </li>
               <li>
-                <a href="#" class="hover:text-accent-green-dark transition-base"
-                  >Marketing</a
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-300 inline-block"
+                  >Loan & EMI Calculator</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-300 inline-block"
+                  >Local Alternatives</a
                 >
               </li>
             </ul>
           </div>
 
+          <!-- Column 3: Company Links -->
           <div>
-            <h4 class="font-bold text-gray-900 mb-4">Company</h4>
-            <ul class="space-y-2 text-sm text-gray-400">
+            <h4
+              class="font-display font-bold text-white mb-6 text-sm uppercase tracking-wider"
+            >
+              Company
+            </h4>
+            <ul class="space-y-3 text-sm">
               <li>
-                <a href="#" class="hover:text-accent-green-dark transition-base"
+                <a
+                  href="#team"
+                  class="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-300 inline-block"
                   >About Us</a
                 >
               </li>
               <li>
-                <a href="#" class="hover:text-accent-green-dark transition-base"
-                  >Careers</a
+                <a
+                  href="#features"
+                  class="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-300 inline-block"
+                  >Features</a
                 >
               </li>
               <li>
-                <a href="#" class="hover:text-accent-green-dark transition-base"
-                  >Blog</a
+                <a
+                  href="#testimonials"
+                  class="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-300 inline-block"
+                  >Testimonials</a
                 >
               </li>
               <li>
-                <a href="#" class="hover:text-accent-green-dark transition-base"
-                  >Contact</a
+                <a
+                  href="#contact"
+                  class="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-300 inline-block"
+                  >Contact Us</a
                 >
               </li>
             </ul>
           </div>
 
+          <!-- Column 4: Legal & Support -->
           <div>
-            <h4 class="font-bold text-gray-900 mb-4">Newsletter</h4>
-            <p class="text-gray-400 text-sm mb-4">
-              Subscribe for latest updates.
-            </p>
-            <div class="flex">
-              <input
-                type="email"
-                placeholder="Email address"
-                class="bg-white border border-gray-300 rounded-l-lg px-4 py-2 text-sm w-full focus:outline-none focus:border-accent-green"
-              />
-              <button
-                class="bg-primary text-white px-4 py-2 rounded-r-lg text-sm hover:bg-primary-dark transition-base"
-              >
-                →
-              </button>
-            </div>
+            <h4
+              class="font-display font-bold text-white mb-6 text-sm uppercase tracking-wider"
+            >
+              Legal
+            </h4>
+            <ul class="space-y-3 text-sm">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-300 inline-block"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-300 inline-block"
+                  >Terms of Service</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-300 inline-block"
+                  >Disclaimer</a
+                >
+              </li>
+            </ul>
           </div>
         </div>
 
+        <!-- Bottom Bar -->
         <div
-          class="border-t border-gray-300 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400"
+          class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500"
         >
-          <p>&copy; 2023 Digira Agency. All rights reserved.</p>
-          <div class="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" class="hover:text-gray-900 transition-base"
-              >Privacy Policy</a
-            >
-            <a href="#" class="hover:text-gray-900 transition-base"
-              >Terms of Service</a
-            >
-          </div>
+          <p>&copy; 2083 B.S. Sahaj Shikshya. All rights reserved.</p>
+          <p class="mt-4 md:mt-0">Team Digira</p>
         </div>
       </div>
     </footer>
