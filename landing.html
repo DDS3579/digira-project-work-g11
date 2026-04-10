@@ -27,13 +27,13 @@
         theme: {
           extend: {
             colors: {
-              "primary": "var(--color-primary)",
+              primary: "var(--color-primary)",
               "primary-dark": "var(--color-primary-dark)",
               "accent-yellow": "var(--color-accent-yellow)",
               "accent-green": "var(--color-accent-green)",
               "accent-green-dark": "var(--color-accent-green-dark)",
               "accent-red": "var(--color-accent-red)",
-              "white": "var(--color-white)",
+              white: "var(--color-white)",
               "gray-100": "var(--color-gray-100)",
               "gray-300": "var(--color-gray-300)",
               "gray-400": "var(--color-gray-400)",
@@ -411,11 +411,11 @@
               </svg>
             </div>
             <h3 class="text-xl font-bold mb-3 font-display text-white">
-              Realtime Collaboration
+              University Selection
             </h3>
             <p class="text-gray-400 leading-relaxed text-sm">
-              Work together seamlessly with your team. Changes sync instantly
-              across all devices with zero latency.
+              Select universities based on your particular requirements and
+              preferences with ease using our realtime database.
             </p>
           </div>
 
@@ -441,11 +441,11 @@
               </svg>
             </div>
             <h3 class="text-xl font-bold mb-3 font-display text-white">
-              AI Text Generator
+              Risk Assessment
             </h3>
             <p class="text-gray-400 leading-relaxed text-sm">
-              Generate high-quality content in seconds. From emails to blog
-              posts, let AI handle the heavy lifting.
+              Evaluate your chances of admission and living expenses with our
+              risk assessment tool that analyzes your profile and preferences.
             </p>
           </div>
 
@@ -471,11 +471,11 @@
               </svg>
             </div>
             <h3 class="text-xl font-bold mb-3 font-display text-white">
-              Templates Library
+              Financial Planning
             </h3>
             <p class="text-gray-400 leading-relaxed text-sm">
-              Access hundreds of pre-built automation workflows designed by
-              industry experts for instant deployment.
+              Providing transparent financial requirements so that you select
+              the best for you based on your financial requirements along with Loan & EMI Calculator.
             </p>
           </div>
 
@@ -501,11 +501,11 @@
               </svg>
             </div>
             <h3 class="text-xl font-bold mb-3 font-display text-white">
-              Advanced Analytics
+              Compare Universities
             </h3>
             <p class="text-gray-400 leading-relaxed text-sm">
-              Get deep insights into your workflows with real-time dashboards,
-              custom reports, and AI-powered recommendations.
+              Compare universities based on various criteria like location,
+              programs, and costs to find the perfect fit for you.
             </p>
           </div>
 
@@ -531,11 +531,40 @@
               </svg>
             </div>
             <h3 class="text-xl font-bold mb-3 font-display text-white">
-              Enterprise Security
+              Scholarships Available
             </h3>
             <p class="text-gray-400 leading-relaxed text-sm">
-              Bank-grade encryption, SSO integration, and compliance
-              certifications keep your data safe and protected.
+              Discover and apply for scholarships that match your profile and
+              criteria.
+            </p>
+          </div>
+
+          <!-- Feature 6 -->
+          <div
+            class="glass-feature-card group p-8 rounded-2xl transition-base duration-300 hover:-translate-y-1"
+          >
+            <div
+              class="w-14 h-14 rounded-xl bg-gradient-to-br from-accent-yellow/30 to-accent-yellow/10 flex items-center justify-center mb-6 border border-accent-yellow/30 group-hover:scale-110 transition-base duration-300"
+            >
+              <svg
+                class="w-7 h-7"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3 font-display text-white">
+              Local Alternatives
+            </h3>
+            <p class="text-gray-400 leading-relaxed text-sm">
+              Compare the Foreign Universities with the local alternatives in Nepal based on various parameters.
             </p>
           </div>
         </div>
@@ -1314,7 +1343,9 @@
       // Smooth Parallax Scrolling
       document.addEventListener("DOMContentLoaded", () => {
         // Elements for parallax
-        const parallaxElements = document.querySelectorAll(".parallax-slow, .parallax-medium");
+        const parallaxElements = document.querySelectorAll(
+          ".parallax-slow, .parallax-medium",
+        );
 
         // Parallax scroll handler - subtle movement only
         const handleParallax = () => {
@@ -1331,7 +1362,7 @@
 
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-          anchor.addEventListener("click", function(e) {
+          anchor.addEventListener("click", function (e) {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute("href"));
             if (target) {
