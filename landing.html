@@ -951,96 +951,132 @@
       </div>
     </section>
 
-    <!-- Team Section -->
-    <section id="team" class="py-24 bg-white">
-      <div class="max-w-7xl mx-auto px-6">
+    <!-- About Us / Team Section -->
+    <section id="team" class="py-24 bg-white relative overflow-hidden">
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-gray-50 to-white pointer-events-none"
+      ></div>
+
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
         <div class="text-center mb-16">
           <h2
-            class="font-display text-4xl md:text-5xl font-bold text-gray-900 mb-4"
+            class="font-display text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight"
           >
-            Meet the Minds
+            Meet Team Digira
           </h2>
-          <p class="text-gray-400">
-            The talented team behind Digira's success.
+          <p class="text-gray-400 max-w-2xl mx-auto text-lg">
+            The minds behind Sahaj Shikshya — dedicated to simplifying abroad
+            education for Nepal.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-          <!-- Team Member 1 -->
-          <div class="group relative overflow-hidden rounded-2xl aspect-[3/4]">
-            <img
-              src="https://image.qwenlm.ai/public_source/8f7eeeec-0b50-494d-824f-c86284670e13/184f0b01a-6b7c-40c3-b2a7-ea249a24873a.png"
-              alt="Divya D. Sharma"
-              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-            />
+        <!-- Team Grid: 5 Cols on Desktop, 3 on Tablet, 2 on Mobile -->
+        <div
+          class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 lg:gap-6"
+        >
+          <!-- Member 1: Sukrit -->
+          <div
+            class="group p-6 rounded-2xl border border-gray-200 bg-white hover:shadow-xl hover:border-accent-green/30 transition-all duration-300 hover:-translate-y-1 flex flex-col items-center text-center"
+          >
             <div
-              class="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              class="w-16 h-16 rounded-full bg-gradient-to-br from-accent-green/20 to-accent-green/5 border-2 border-accent-green/20 flex items-center justify-center mb-4 group-hover:border-accent-green/50 transition-colors duration-300"
             >
-              <h3 class="text-white font-bold text-lg">Divya D. Sharma</h3>
-              <p class="text-accent-green text-sm">Founder & Tech Lead</p>
+              <span class="text-2xl font-display font-bold text-accent-green"
+                >S</span
+              >
             </div>
+            <h3 class="text-base font-display font-bold text-gray-900 mb-1">
+              Sukrit J. Dahal
+            </h3>
+            <p class="text-xs font-medium text-primary mb-3">Web Designer</p>
+            <p class="text-xs text-gray-400 leading-relaxed">
+              Crafting the visual experience and interface animations.
+            </p>
           </div>
 
-          <!-- Team Member 2 -->
-          <div class="group relative overflow-hidden rounded-2xl aspect-[3/4]">
-            <img
-              src="https://image.qwenlm.ai/public_source/8f7eeeec-0b50-494d-824f-c86284670e13/184f0b01a-6b7c-40c3-b2a7-ea249a24873a.png"
-              alt="Nabin B. Thapa"
-              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-            />
+          <!-- Member 2: Shrijan -->
+          <div
+            class="group p-6 rounded-2xl border border-gray-200 bg-white hover:shadow-xl hover:border-accent-yellow/30 transition-all duration-300 hover:-translate-y-1 flex flex-col items-center text-center"
+          >
             <div
-              class="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              class="w-16 h-16 rounded-full bg-gradient-to-br from-accent-yellow/20 to-accent-yellow/5 border-2 border-accent-yellow/20 flex items-center justify-center mb-4 group-hover:border-accent-yellow/50 transition-colors duration-300"
             >
-              <h3 class="text-white font-bold text-lg">Nabin B. Thapa</h3>
-              <p class="text-accent-green text-sm">Co Founder & Design Lead</p>
+              <span class="text-2xl font-display font-bold text-accent-yellow"
+                >S</span
+              >
             </div>
+            <h3 class="text-base font-display font-bold text-gray-900 mb-1">
+              Shrijan Dhital
+            </h3>
+            <p class="text-xs font-medium text-primary mb-3">Data Management</p>
+            <p class="text-xs text-gray-400 leading-relaxed">
+              Sourcing and structuring the platform's comprehensive data.
+            </p>
           </div>
 
-          <!-- Team Member 3 -->
-          <div class="group relative overflow-hidden rounded-2xl aspect-[3/4]">
-            <img
-              src="https://image.qwenlm.ai/public_source/8f7eeeec-0b50-494d-824f-c86284670e13/184f0b01a-6b7c-40c3-b2a7-ea249a24873a.png"
-              alt="Abhi Gautam"
-              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-            />
+          <!-- Member 3: Divya (Center - Lead) -->
+          <div
+            class="group p-6 rounded-2xl border-2 border-primary/20 bg-white hover:shadow-xl hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 flex flex-col items-center text-center relative"
+          >
             <div
-              class="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              class="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-md uppercase tracking-wider"
             >
-              <h3 class="text-white font-bold text-lg">Abhi Gautam</h3>
-              <p class="text-accent-green text-sm">
-                Co Founder & Cinematographer
-              </p>
+              Lead
             </div>
+            <div
+              class="w-16 h-16 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 border-2 border-primary/30 flex items-center justify-center mb-4 shadow-[0_0_15px_rgba(37,99,235,0.15)] group-hover:shadow-[0_0_25px_rgba(37,99,235,0.3)] transition-all duration-300"
+            >
+              <span class="text-2xl font-display font-bold text-primary"
+                >D</span
+              >
+            </div>
+            <h3 class="text-base font-display font-bold text-gray-900 mb-1">
+              Divya D. Sharma
+            </h3>
+            <p class="text-xs font-medium text-primary mb-3">Lead Developer</p>
+            <p class="text-xs text-gray-400 leading-relaxed">
+              Architecting the platform and leading the team to delivery.
+            </p>
           </div>
 
-          <!-- Team Member 4 -->
-          <div class="group relative overflow-hidden rounded-2xl aspect-[3/4]">
-            <img
-              src="https://image.qwenlm.ai/public_source/8f7eeeec-0b50-494d-824f-c86284670e13/184f0b01a-6b7c-40c3-b2a7-ea249a24873a.png"
-              alt="Kritagya P."
-              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-            />
+          <!-- Member 4: Oshan -->
+          <div
+            class="group p-6 rounded-2xl border border-gray-200 bg-white hover:shadow-xl hover:border-accent-red/30 transition-all duration-300 hover:-translate-y-1 flex flex-col items-center text-center"
+          >
             <div
-              class="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              class="w-16 h-16 rounded-full bg-gradient-to-br from-accent-red/20 to-accent-red/5 border-2 border-accent-red/20 flex items-center justify-center mb-4 group-hover:border-accent-red/50 transition-colors duration-300"
             >
-              <h3 class="text-white font-bold text-lg">Kritagya P.</h3>
-              <p class="text-accent-green text-sm">Operations Supervisor</p>
+              <span class="text-2xl font-display font-bold text-accent-red"
+                >O</span
+              >
             </div>
+            <h3 class="text-base font-display font-bold text-gray-900 mb-1">
+              Oshan Neupane
+            </h3>
+            <p class="text-xs font-medium text-primary mb-3">Content Writer</p>
+            <p class="text-xs text-gray-400 leading-relaxed">
+              Crafting clear content and ensuring information accuracy.
+            </p>
           </div>
 
-          <!-- Team Member 5 -->
-          <div class="group relative overflow-hidden rounded-2xl aspect-[3/4]">
-            <img
-              src="https://image.qwenlm.ai/public_source/8f7eeeec-0b50-494d-824f-c86284670e13/184f0b01a-6b7c-40c3-b2a7-ea249a24873a.png"
-              alt="Diwas K."
-              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-            />
+          <!-- Member 5: Bikalpa -->
+          <div
+            class="group p-6 rounded-2xl border border-gray-200 bg-white hover:shadow-xl hover:border-violet-500/30 transition-all duration-300 hover:-translate-y-1 flex flex-col items-center text-center col-span-2 md:col-span-1"
+          >
             <div
-              class="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              class="w-16 h-16 rounded-full bg-gradient-to-br from-violet-500/20 to-violet-500/5 border-2 border-violet-500/20 flex items-center justify-center mb-4 group-hover:border-violet-500/50 transition-colors duration-300"
             >
-              <h3 class="text-white font-bold text-lg">Diwas K.</h3>
-              <p class="text-accent-green text-sm">Creative Operations Lead</p>
+              <span class="text-2xl font-display font-bold text-violet-600"
+                >B</span
+              >
             </div>
+            <h3 class="text-base font-display font-bold text-gray-900 mb-1">
+              Bikalpa Acharya
+            </h3>
+            <p class="text-xs font-medium text-primary mb-3">Co-Developer</p>
+            <p class="text-xs text-gray-400 leading-relaxed">
+              Ensuring flawless functionality and core development.
+            </p>
           </div>
         </div>
       </div>
