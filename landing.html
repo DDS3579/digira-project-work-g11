@@ -827,65 +827,82 @@
 
       <div class="max-w-7xl mx-auto px-6 relative z-10">
         <!-- Header -->
-        <div class="text-center mb-20">
+        <div class="mb-16">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="h-px w-8 bg-primary/40"></div>
+            <span
+              class="text-primary text-xs font-semibold uppercase tracking-[0.2em]"
+              >Our Team</span
+            >
+          </div>
           <h2
-            class="font-display text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight"
+            class="font-display text-4xl md:text-5xl font-bold text-gray-900 tracking-tight"
           >
             Meet Team Digira
           </h2>
-          <p class="text-gray-400 max-w-xl mx-auto text-lg leading-relaxed">
+          <p class="text-gray-400 text-lg leading-relaxed mt-4 max-w-xl">
             The minds behind Sahaj Shikshya — dedicated to simplifying abroad
             education for Nepal.
           </p>
-          <!-- Decorative divider -->
-          <div class="flex items-center justify-center gap-2 mt-6">
-            <div class="h-px w-12 bg-gray-200 rounded-full"></div>
-            <div class="h-1.5 w-1.5 rounded-full bg-primary"></div>
-            <div class="h-px w-24 bg-primary/40 rounded-full"></div>
-            <div class="h-1.5 w-1.5 rounded-full bg-primary"></div>
-            <div class="h-px w-12 bg-gray-200 rounded-full"></div>
+        </div>
+
+        <!-- Lead Card: Divya — Horizontal layout on desktop -->
+        <div
+          class="group bg-white rounded-2xl border border-gray-100 p-6 md:p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(37,99,235,0.08)] mb-5"
+        >
+          <div class="flex flex-col sm:flex-row items-center sm:items-start gap-5 md:gap-8">
+            <!-- Avatar -->
+            <div
+              class="w-20 h-20 md:w-24 md:h-24 rounded-full bg-primary flex items-center justify-center text-white font-display font-bold text-2xl md:text-3xl flex-shrink-0"
+            >
+              D
+            </div>
+            <!-- Info -->
+            <div class="text-center sm:text-left flex-1">
+              <div class="flex flex-col sm:flex-row sm:items-center gap-1.5 sm:gap-3 mb-2">
+                <h3
+                  class="font-display font-bold text-gray-900 text-lg leading-tight"
+                >
+                  Divya D. Sharma
+                </h3>
+                <span
+                  class="inline-block bg-primary/10 text-primary text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-widest"
+                  >Team Lead</span
+                >
+              </div>
+              <p
+                class="text-[11px] font-semibold text-primary uppercase tracking-widest mb-3"
+              >
+                Lead Developer
+              </p>
+              <p class="text-sm text-gray-400 leading-relaxed max-w-lg">
+                Architecting the platform and leading the team to delivery.
+              </p>
+            </div>
           </div>
         </div>
 
-        <!-- Team Grid -->
-        <div
-          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5 lg:gap-6"
-        >
+        <!-- Team Grid: 4 members -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           <!-- Member 1: Sukrit -->
           <div
-            class="group relative p-7 rounded-2xl border border-gray-200 bg-white hover:shadow-2xl hover:shadow-accent-green/10 hover:border-accent-green/40 transition-all duration-500 hover:-translate-y-2 flex flex-col items-center text-center"
+            class="group bg-white rounded-2xl border border-gray-100 p-6 flex flex-col items-center text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(37,99,235,0.08)]"
           >
-            <!-- Corner accent -->
             <div
-              class="absolute top-0 right-0 w-16 h-16 bg-accent-green/5 rounded-bl-3xl rounded-tr-2xl pointer-events-none"
-            ></div>
-            <!-- Avatar -->
-            <div class="relative mb-5">
-              <div
-                class="w-20 h-20 rounded-full bg-gradient-to-br from-accent-green/30 to-accent-green/5 border-2 border-accent-green/20 flex items-center justify-center group-hover:border-accent-green/60 group-hover:shadow-lg group-hover:shadow-accent-green/20 transition-all duration-500"
-              >
-                <span class="text-3xl font-display font-bold text-accent-green"
-                  >S</span
-                >
-              </div>
-              <!-- Online dot -->
-              <div
-                class="absolute bottom-1 right-1 w-3.5 h-3.5 rounded-full bg-accent-green border-2 border-white shadow-sm"
-              ></div>
+              class="w-16 h-16 rounded-full bg-primary flex items-center justify-center text-white font-display font-bold text-xl mb-4"
+            >
+              S
             </div>
             <h3
-              class="text-sm font-display font-bold text-gray-900 mb-1 leading-tight"
+              class="font-display font-bold text-gray-900 text-sm leading-tight mb-1"
             >
               Sukrit J. Dahal
             </h3>
             <p
-              class="text-[11px] font-semibold text-accent-green uppercase tracking-widest mb-3"
+              class="text-[11px] font-semibold text-primary uppercase tracking-widest mb-3"
             >
               Web Designer
             </p>
-            <div
-              class="w-8 h-px bg-gray-200 mb-3 group-hover:w-14 group-hover:bg-accent-green/40 transition-all duration-500"
-            ></div>
             <p class="text-xs text-gray-400 leading-relaxed">
               Crafting the visual experience and interface animations.
             </p>
@@ -893,159 +910,71 @@
 
           <!-- Member 2: Shrijan -->
           <div
-            class="group relative p-7 rounded-2xl border border-gray-200 bg-white hover:shadow-2xl hover:shadow-accent-yellow/10 hover:border-accent-yellow/40 transition-all duration-500 hover:-translate-y-2 flex flex-col items-center text-center"
+            class="group bg-white rounded-2xl border border-gray-100 p-6 flex flex-col items-center text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(37,99,235,0.08)]"
           >
             <div
-              class="absolute top-0 right-0 w-16 h-16 bg-accent-yellow/5 rounded-bl-3xl rounded-tr-2xl pointer-events-none"
-            ></div>
-            <div class="relative mb-5">
-              <div
-                class="w-20 h-20 rounded-full bg-gradient-to-br from-accent-yellow/30 to-accent-yellow/5 border-2 border-accent-yellow/20 flex items-center justify-center group-hover:border-accent-yellow/60 group-hover:shadow-lg group-hover:shadow-accent-yellow/20 transition-all duration-500"
-              >
-                <span class="text-3xl font-display font-bold text-accent-yellow"
-                  >S</span
-                >
-              </div>
-              <div
-                class="absolute bottom-1 right-1 w-3.5 h-3.5 rounded-full bg-accent-yellow border-2 border-white shadow-sm"
-              ></div>
+              class="w-16 h-16 rounded-full bg-primary flex items-center justify-center text-white font-display font-bold text-xl mb-4"
+            >
+              S
             </div>
             <h3
-              class="text-sm font-display font-bold text-gray-900 mb-1 leading-tight"
+              class="font-display font-bold text-gray-900 text-sm leading-tight mb-1"
             >
               Shrijan Dhital
             </h3>
             <p
-              class="text-[11px] font-semibold text-accent-yellow uppercase tracking-widest mb-3"
+              class="text-[11px] font-semibold text-primary uppercase tracking-widest mb-3"
             >
               Data Management
             </p>
-            <div
-              class="w-8 h-px bg-gray-200 mb-3 group-hover:w-14 group-hover:bg-accent-yellow/40 transition-all duration-500"
-            ></div>
             <p class="text-xs text-gray-400 leading-relaxed">
               Sourcing and structuring the platform's comprehensive data.
             </p>
           </div>
 
-          <!-- Member 3: Divya (Lead) -->
+          <!-- Member 3: Oshan -->
           <div
-            class="group relative p-7 rounded-2xl border-2 border-primary/25 bg-gradient-to-b from-primary/5 to-white hover:shadow-2xl hover:shadow-primary/15 hover:border-primary/60 transition-all duration-500 hover:-translate-y-2 flex flex-col items-center text-center sm:col-span-2 lg:col-span-1"
-          >
-            <!-- Lead badge -->
-            <div
-              class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-primary to-blue-500 text-white text-[10px] font-bold px-4 py-1.5 rounded-full shadow-lg shadow-primary/30 uppercase tracking-widest whitespace-nowrap"
-            >
-              ✦ Team Lead
-            </div>
-            <!-- Glow ring -->
-            <div
-              class="absolute inset-0 rounded-2xl bg-gradient-to-b from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
-            ></div>
-
-            <div class="relative mb-5">
-              <!-- Pulse ring -->
-              <div
-                class="absolute inset-0 rounded-full bg-primary/20 scale-110 animate-pulse pointer-events-none"
-              ></div>
-              <div
-                class="w-20 h-20 rounded-full bg-gradient-to-br from-primary/30 to-primary/10 border-2 border-primary/40 flex items-center justify-center shadow-xl shadow-primary/20 group-hover:shadow-2xl group-hover:shadow-primary/30 group-hover:border-primary/70 transition-all duration-500 relative"
-              >
-                <span class="text-3xl font-display font-bold text-primary"
-                  >D</span
-                >
-              </div>
-              <div
-                class="absolute bottom-1 right-1 w-3.5 h-3.5 rounded-full bg-primary border-2 border-white shadow-sm"
-              ></div>
-            </div>
-            <h3
-              class="text-sm font-display font-bold text-gray-900 mb-1 leading-tight"
-            >
-              Divya D. Sharma
-            </h3>
-            <p
-              class="text-[11px] font-semibold text-primary uppercase tracking-widest mb-3"
-            >
-              Lead Developer
-            </p>
-            <div
-              class="w-8 h-px bg-primary/20 mb-3 group-hover:w-14 group-hover:bg-primary/50 transition-all duration-500"
-            ></div>
-            <p class="text-xs text-gray-500 leading-relaxed">
-              Architecting the platform and leading the team to delivery.
-            </p>
-          </div>
-
-          <!-- Member 4: Oshan -->
-          <div
-            class="group relative p-7 rounded-2xl border border-gray-200 bg-white hover:shadow-2xl hover:shadow-accent-red/10 hover:border-accent-red/40 transition-all duration-500 hover:-translate-y-2 flex flex-col items-center text-center"
+            class="group bg-white rounded-2xl border border-gray-100 p-6 flex flex-col items-center text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(37,99,235,0.08)]"
           >
             <div
-              class="absolute top-0 right-0 w-16 h-16 bg-accent-red/5 rounded-bl-3xl rounded-tr-2xl pointer-events-none"
-            ></div>
-            <div class="relative mb-5">
-              <div
-                class="w-20 h-20 rounded-full bg-gradient-to-br from-accent-red/30 to-accent-red/5 border-2 border-accent-red/20 flex items-center justify-center group-hover:border-accent-red/60 group-hover:shadow-lg group-hover:shadow-accent-red/20 transition-all duration-500"
-              >
-                <span class="text-3xl font-display font-bold text-accent-red"
-                  >O</span
-                >
-              </div>
-              <div
-                class="absolute bottom-1 right-1 w-3.5 h-3.5 rounded-full bg-accent-red border-2 border-white shadow-sm"
-              ></div>
+              class="w-16 h-16 rounded-full bg-primary flex items-center justify-center text-white font-display font-bold text-xl mb-4"
+            >
+              O
             </div>
             <h3
-              class="text-sm font-display font-bold text-gray-900 mb-1 leading-tight"
+              class="font-display font-bold text-gray-900 text-sm leading-tight mb-1"
             >
               Oshan Neupane
             </h3>
             <p
-              class="text-[11px] font-semibold text-accent-red uppercase tracking-widest mb-3"
+              class="text-[11px] font-semibold text-primary uppercase tracking-widest mb-3"
             >
               Content Writer
             </p>
-            <div
-              class="w-8 h-px bg-gray-200 mb-3 group-hover:w-14 group-hover:bg-accent-red/40 transition-all duration-500"
-            ></div>
             <p class="text-xs text-gray-400 leading-relaxed">
               Crafting clear content and ensuring information accuracy.
             </p>
           </div>
 
-          <!-- Member 5: Bikalpa -->
+          <!-- Member 4: Bikalpa -->
           <div
-            class="group relative p-7 rounded-2xl border border-gray-200 bg-white hover:shadow-2xl hover:shadow-violet-500/10 hover:border-violet-500/40 transition-all duration-500 hover:-translate-y-2 flex flex-col items-center text-center"
+            class="group bg-white rounded-2xl border border-gray-100 p-6 flex flex-col items-center text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(37,99,235,0.08)]"
           >
             <div
-              class="absolute top-0 right-0 w-16 h-16 bg-violet-500/5 rounded-bl-3xl rounded-tr-2xl pointer-events-none"
-            ></div>
-            <div class="relative mb-5">
-              <div
-                class="w-20 h-20 rounded-full bg-gradient-to-br from-violet-500/30 to-violet-500/5 border-2 border-violet-500/20 flex items-center justify-center group-hover:border-violet-500/60 group-hover:shadow-lg group-hover:shadow-violet-500/20 transition-all duration-500"
-              >
-                <span class="text-3xl font-display font-bold text-violet-600"
-                  >B</span
-                >
-              </div>
-              <div
-                class="absolute bottom-1 right-1 w-3.5 h-3.5 rounded-full bg-violet-500 border-2 border-white shadow-sm"
-              ></div>
+              class="w-16 h-16 rounded-full bg-primary flex items-center justify-center text-white font-display font-bold text-xl mb-4"
+            >
+              B
             </div>
             <h3
-              class="text-sm font-display font-bold text-gray-900 mb-1 leading-tight"
+              class="font-display font-bold text-gray-900 text-sm leading-tight mb-1"
             >
               Bikalpa Acharya
             </h3>
             <p
-              class="text-[11px] font-semibold text-violet-600 uppercase tracking-widest mb-3"
+              class="text-[11px] font-semibold text-primary uppercase tracking-widest mb-3"
             >
               Co-Developer
             </p>
-            <div
-              class="w-8 h-px bg-gray-200 mb-3 group-hover:w-14 group-hover:bg-violet-500/40 transition-all duration-500"
-            ></div>
             <p class="text-xs text-gray-400 leading-relaxed">
               Ensuring flawless functionality and core development.
             </p>
