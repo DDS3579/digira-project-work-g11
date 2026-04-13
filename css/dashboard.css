@@ -1,0 +1,166 @@
+/* Custom CSS for the dashboard */
+
+/* General Styles */
+
+main {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.latest-news {
+  display: block;
+  background-color: #fff;
+  width: 100%;
+  border-radius: 25px;
+  padding: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.latest-news h2 {
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #0f172a;
+  margin: 0 0 12px 0;
+  letter-spacing: -0.01em;
+}
+
+#scrollable {
+  height: 24rem; /* 384px */
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 8px;
+}
+
+/* Webkit scrollbar styling */
+#scrollable::-webkit-scrollbar {
+  width: 6px;
+}
+
+#scrollable::-webkit-scrollbar-track {
+  background: #f5f5f5;
+  border-radius: 10px;
+}
+
+#scrollable::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+#scrollable::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* For Firefox */
+#scrollable {
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 #f5f5f5;
+}
+
+/* News Item Styling */
+.news-home {
+  padding: 16px;
+  margin-bottom: 12px;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 14px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.news-home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+  pointer-events: none;
+}
+
+.news-home:hover {
+  background: linear-gradient(135deg, #fff 0%, #f8fafc 100%);
+  border-color: rgba(37, 99, 235, 0.2);
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.12);
+  transform: translateY(-2px);
+}
+
+.news-home h3 {
+  font-family: "Sora", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  color: #0f172a;
+  margin: 0 0 8px 0;
+  line-height: 1.5;
+  letter-spacing: -0.005em;
+}
+
+.news-home p {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  color: rgba(15, 23, 42, 0.65);
+  margin: 0;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+}
+
+/* Responsive Design */
+@media (max-width: 1023px) {
+  .latest-news {
+    padding: 20px;
+  }
+
+  .latest-news h2 {
+    font-size: 20px;
+  }
+
+  .news-home {
+    padding: 14px;
+    margin-bottom: 10px;
+  }
+
+  .news-home h3 {
+    font-size: 14px;
+  }
+
+  .news-home p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 767px) {
+  .latest-news {
+    padding: 16px;
+  }
+
+  .latest-news h2 {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  #scrollable {
+    height: 20rem;
+    padding-right: 6px;
+  }
+
+  .news-home {
+    padding: 12px;
+    margin-bottom: 8px;
+  }
+
+  .news-home h3 {
+    font-size: 13px;
+    margin-bottom: 6px;
+  }
+
+  .news-home p {
+    font-size: 11px;
+    line-height: 1.4;
+  }
+}
