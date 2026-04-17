@@ -27,7 +27,7 @@ main {
 }
 
 #scrollable {
-  height: 24rem; /* 384px */
+  height: 20rem; 
   overflow-y: auto;
   overflow-x: hidden;
   padding-right: 8px;
