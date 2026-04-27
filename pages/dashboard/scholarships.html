@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard | Sahaj Shikshya</title>
+    <title>Scholarships | Sahaj Shikshya</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -11,13 +11,13 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../../css/sidebar.css" />
+    <link rel="stylesheet" href="../../css/pages.css" />
   </head>
   <body>
     <div id="drawer-overlay"></div>
 
     <!-- ═══ SIDEBAR ═══ -->
     <aside id="sidebar" class="sidebar">
-      <!-- Blob canvas lives INSIDE sidebar so glass frosts over them -->
       <div class="blob-canvas">
         <div class="blob blob-1"></div>
         <div class="blob blob-2"></div>
@@ -26,13 +26,11 @@
         <div class="blob blob-5"></div>
       </div>
 
-      <!-- Logo -->
       <div class="logo-area">
         <div class="logo-icon">S</div>
         <span class="logo-text collapsible">SAHAJ.</span>
       </div>
 
-      <!-- Nav -->
       <div class="nav-scroll">
         <p class="section-label">Main Menu</p>
         <nav>
@@ -202,7 +200,6 @@
         </nav>
       </div>
 
-      <!-- User footer -->
       <div class="user-footer">
         <div class="user-card">
           <div class="user-avatar">DS</div>
@@ -248,7 +245,7 @@
           />
         </svg>
       </button>
-      <h1 class="topbar-title" id="page-title">Home</h1>
+      <h1 class="topbar-title" id="page-title">Scholarships</h1>
       <button class="icon-btn" aria-label="Notifications">
         <svg
           width="17"
@@ -270,84 +267,1059 @@
       <div class="topbar-avatar">DS</div>
     </header>
 
-    <!-- ═══ MAIN ═══ -->
-    <main class="main-content">
-      <div class="welcome-area">
-        <div class="compass-container">
-          <div class="compass-ring-outer"></div>
-          <div class="compass-ring-mid"></div>
-          <div class="compass-glass">
-            <svg width="52" height="52" viewBox="0 0 52 52" fill="none">
-              <path d="M26 8 L29.5 25.5 L26 24 L22.5 25.5 Z" fill="#2563eb" />
+    <!-- ═══ MODAL ═══ -->
+    <div class="modal-overlay" id="sch-modal">
+      <div class="modal-box">
+        <div class="modal-header">
+          <div class="modal-header-left">
+            <div class="modal-badge blue" id="modal-type">Type</div>
+            <h2 class="modal-title" id="modal-name">Name</h2>
+            <div class="modal-subtitle">
+              <span id="modal-flag"></span>
+              <span id="modal-provider"></span>
+            </div>
+          </div>
+          <button class="modal-close" id="modal-close">
+            <svg
+              width="18"
+              height="18"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
               <path
-                d="M26 44 L22.5 26.5 L26 28 L29.5 26.5 Z"
-                fill="#0f172a"
-                fill-opacity="0.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
               />
-              <path d="M8 26 L25.5 22.5 L24 26 L25.5 29.5 Z" fill="#94a3b8" />
-              <path d="M44 26 L26.5 29.5 L28 26 L26.5 22.5 Z" fill="#94a3b8" />
-              <circle
-                cx="26"
-                cy="26"
-                r="4"
-                fill="#fbbf24"
-                stroke="white"
-                stroke-width="2"
-              />
-              <circle cx="26" cy="26" r="1.5" fill="#2563eb" />
             </svg>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="modal-tag" id="modal-field">Field</div>
+          <div class="modal-stats">
+            <div class="modal-stat-box">
+              <div class="modal-stat-label">Award Amount</div>
+              <div class="modal-stat-value" id="modal-amount">$0</div>
+            </div>
+            <div class="modal-stat-box">
+              <div class="modal-stat-label">Deadline</div>
+              <div class="modal-stat-value" id="modal-deadline">Date</div>
+            </div>
+            <div class="modal-stat-box">
+              <div class="modal-stat-label">Days Left</div>
+              <div class="modal-stat-value" id="modal-days">0</div>
+            </div>
+          </div>
+          <div class="modal-section">
+            <div class="modal-section-title">
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+              Description
+            </div>
+            <p
+              id="modal-desc"
+              style="
+                font-family: &quot;DM Sans&quot;, sans-serif;
+                font-size: 14px;
+                color: #475569;
+                line-height: 1.7;
+                margin: 0;
+              "
+            ></p>
+          </div>
+          <div class="modal-section">
+            <div class="modal-section-title">
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                />
+              </svg>
+              Eligibility
+            </div>
+            <ul class="modal-list" id="modal-eligibility"></ul>
+          </div>
+          <div class="modal-section">
+            <div class="modal-section-title">
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                />
+              </svg>
+              How to Apply
+            </div>
+            <ul class="modal-list" id="modal-steps"></ul>
+          </div>
+          <div class="modal-footer-note" id="modal-note">
+            Dates are subject to change. Always verify on the official provider
+            website.
           </div>
         </div>
-        <h2 class="welcome-title">Welcome to Sahaj Shikshya</h2>
-        <p class="welcome-sub">
-          Select a section from the sidebar to get started.
-        </p>
+      </div>
+    </div>
+
+    <!-- ═══ MAIN ═══ -->
+    <main class="main-content">
+      <!-- 1) TOP SCHOLARSHIPS -->
+      <div class="page-section">
+        <div class="section-header">
+          <h2>🏆 Top Scholarships</h2>
+        </div>
+        <div class="scroll-row" id="top-sch-row"></div>
+      </div>
+
+      <!-- 2) DEADLINE ALERT -->
+      <div class="page-section">
+        <div class="section-header">
+          <h2>⏰ Deadline Alert</h2>
+        </div>
+        <div class="scroll-row" id="deadline-row"></div>
+      </div>
+
+      <!-- 3) BY FIELD OF STUDY -->
+      <div class="page-section">
+        <div class="section-header">
+          <h2>📚 By Field of Study</h2>
+        </div>
+        <div class="tabs-wrapper">
+          <div class="tabs-row" id="field-tabs"></div>
+        </div>
+        <div class="content-grid" id="field-grid"></div>
+      </div>
+
+      <!-- 4) FUNDING SPECTRUM -->
+      <div class="page-section">
+        <div class="section-header">
+          <h2>💰 Funding Spectrum</h2>
+          <button class="action-link" id="spectrum-reset" style="display: none">
+            Show All
+            <svg
+              width="14"
+              height="14"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="spectrum-grid" id="spectrum-grid"></div>
+        <div id="spectrum-results" style="margin-top: 28px">
+          <div
+            class="group-title"
+            id="spectrum-result-title"
+            style="display: none"
+          ></div>
+          <div class="content-grid" id="spectrum-result-grid"></div>
+        </div>
       </div>
     </main>
 
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const body = document.body;
-        const toggle = document.getElementById("sidebar-toggle");
-        const overlay = document.getElementById("drawer-overlay");
-        const navItems = document.querySelectorAll(".nav-item");
-        const pageTitle = document.getElementById("page-title");
+      /* ══════════════════════════════════════
+         SIDEBAR LOGIC (preserved)
+         ══════════════════════════════════════ */
+      const body = document.body;
+      const toggle = document.getElementById("sidebar-toggle");
+      const overlay = document.getElementById("drawer-overlay");
+      const navItems = document.querySelectorAll(".nav-item");
+      const pageTitle = document.getElementById("page-title");
 
-        function initLayout() {
-          const w = window.innerWidth;
-          body.classList.remove("sidebar-collapsed", "mobile-open");
-          if (w >= 768 && w < 1200) {
-            body.classList.add("sidebar-collapsed");
-          }
-        }
-        initLayout();
+      function initLayout() {
+        const w = window.innerWidth;
+        body.classList.remove("sidebar-collapsed", "mobile-open");
+        if (w >= 768 && w < 1200) body.classList.add("sidebar-collapsed");
+      }
+      initLayout();
 
-        navItems.forEach((item) => {
-          item.addEventListener("click", () => {
-            navItems.forEach((n) => n.classList.remove("active"));
-            item.classList.add("active");
-            const label = item.querySelector(".nav-label");
-            if (label) pageTitle.textContent = label.textContent.trim();
-            if (window.innerWidth < 768) body.classList.remove("mobile-open");
-          });
-        });
-
-        toggle.addEventListener("click", () => {
-          if (window.innerWidth < 768) {
-            body.classList.toggle("mobile-open");
-          } else {
-            body.classList.toggle("sidebar-collapsed");
-          }
-        });
-
-        overlay.addEventListener("click", () =>
-          body.classList.remove("mobile-open"),
-        );
-
-        window.addEventListener("resize", () => {
-          if (window.innerWidth >= 768) body.classList.remove("mobile-open");
+      navItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          navItems.forEach((n) => n.classList.remove("active"));
+          item.classList.add("active");
+          const label = item.querySelector(".nav-label");
+          if (label) pageTitle.textContent = label.textContent.trim();
+          if (window.innerWidth < 768) body.classList.remove("mobile-open");
         });
       });
+
+      toggle.addEventListener("click", () => {
+        if (window.innerWidth < 768) body.classList.toggle("mobile-open");
+        else body.classList.toggle("sidebar-collapsed");
+      });
+
+      overlay.addEventListener("click", () =>
+        body.classList.remove("mobile-open"),
+      );
+      window.addEventListener("resize", () => {
+        if (window.innerWidth >= 768) body.classList.remove("mobile-open");
+      });
+
+      /* ══════════════════════════════════════
+         SCHOLARSHIP DATA
+         ══════════════════════════════════════ */
+      const FLAGS = {
+        USA: "🇺🇸",
+        UK: "🇬🇧",
+        Canada: "🇨🇦",
+        Australia: "🇦🇺",
+        Germany: "🇩🇪",
+        France: "🇫🇷",
+        Japan: "🇯🇵",
+        Netherlands: "🇳🇱",
+        Switzerland: "🇨🇭",
+        Sweden: "🇸🇪",
+        "New Zealand": "🇳🇿",
+        India: "🇮🇳",
+      };
+      function getFlag(c) {
+        return FLAGS[c] || "🌍";
+      }
+
+      const TYPE_LABELS = {
+        full: "Fully Funded",
+        partial: "Partial Scholarship",
+        tuition: "Tuition Only",
+        research: "Research Grant",
+        living: "Living Stipend",
+      };
+
+      const FIELDS = [
+        "Computer Science and Information Systems",
+        "Business and Management Studies",
+        "Finance (Accounting and Finance)",
+        "Economics and Econometrics",
+        "Data Science and Artificial Intelligence",
+        "Nursing",
+        "Medicine",
+        "Engineering and Technology",
+        "Agriculture and Forestry",
+        "Environmental Sciences",
+      ];
+
+      const SCHOLARSHIPS = [
+        {
+          id: 1,
+          name: "Fulbright Foreign Student Program",
+          provider: "U.S. Department of State",
+          country: "USA",
+          field: "Engineering and Technology",
+          amount: "Full Ride + $2,000/mo",
+          deadline: "2026-05-15",
+          type: "full",
+          featured: true,
+          eligibility: [
+            "Non-U.S. citizens",
+            "Master's or PhD level",
+            "Strong academic record",
+          ],
+          description:
+            "The Fulbright Program enables graduate students to study and conduct research in the United States at top-tier institutions.",
+          apply_steps: [
+            "Prepare academic transcripts",
+            "Write research proposal",
+            "Secure 3 letters of recommendation",
+            "Submit online application via embassy",
+          ],
+        },
+        {
+          id: 2,
+          name: "Chevening Scholarships",
+          provider: "UK Foreign Office",
+          country: "UK",
+          field: "Business and Management Studies",
+          amount: "Full Tuition + £1,500/mo",
+          deadline: "2026-06-01",
+          type: "full",
+          featured: true,
+          eligibility: [
+            "Chevening-eligible country citizen",
+            "2+ years work experience",
+            "Undergraduate degree",
+          ],
+          description:
+            "Chevening is the UK government's international awards program aimed at developing global leaders.",
+          apply_steps: [
+            "Choose 3 UK university courses",
+            "Write leadership & networking essays",
+            "Submit references",
+            "Attend interview if shortlisted",
+          ],
+        },
+        {
+          id: 3,
+          name: "DAAD Scholarship",
+          provider: "German Academic Exchange",
+          country: "Germany",
+          field: "Computer Science and Information Systems",
+          amount: "Full Funding + Travel",
+          deadline: "2026-05-30",
+          type: "full",
+          featured: true,
+          eligibility: [
+            "Bachelor's degree completed",
+            "2+ years professional exp.",
+            "German or English proficiency",
+          ],
+          description:
+            "DAAD offers fully-funded postgraduate study opportunities in Germany for international students.",
+          apply_steps: [
+            "Find eligible degree program",
+            "Register on DAAD portal",
+            "Upload CV and motivation letter",
+            "Submit before deadline",
+          ],
+        },
+        {
+          id: 4,
+          name: "Erasmus Mundus Joint Masters",
+          provider: "European Union",
+          country: "Netherlands",
+          field: "Economics and Econometrics",
+          amount: "€1,400/mo + Tuition",
+          deadline: "2026-08-20",
+          type: "full",
+          featured: false,
+          eligibility: [
+            "Bachelor's degree",
+            "Any nationality",
+            "English proficiency",
+          ],
+          description:
+            "Prestigious integrated study programs delivered by consortia of European universities.",
+          apply_steps: [
+            "Select EMJMD program",
+            "Submit application via consortium website",
+            "Provide language certificates",
+            "Await selection results",
+          ],
+        },
+        {
+          id: 5,
+          name: "Gates Cambridge Scholarship",
+          provider: "Bill & Melinda Gates Fdn",
+          country: "UK",
+          field: "Medicine",
+          amount: "Full Cost + £17,000",
+          deadline: "2026-10-15",
+          type: "full",
+          featured: false,
+          eligibility: [
+            "Non-UK citizen",
+            "Applying to Cambridge PhD",
+            "Outstanding intellect",
+          ],
+          description:
+            "Highly competitive full-cost scholarship for postgraduate study at the University of Cambridge.",
+          apply_steps: [
+            "Apply for Cambridge admission",
+            "Submit Gates statement",
+            "Provide 2 academic references",
+            "Attend interview",
+          ],
+        },
+        {
+          id: 6,
+          name: "ETH Excellence Scholarship",
+          provider: "ETH Zurich",
+          country: "Switzerland",
+          field: "Engineering and Technology",
+          amount: "CHF 12,000/sem",
+          deadline: "2026-05-10",
+          type: "partial",
+          featured: true,
+          eligibility: [
+            "Master's admission to ETH",
+            "Top 10% of class",
+            "Strong motivation letter",
+          ],
+          description:
+            "Supports outstanding students wishing to pursue a Master's degree at ETH Zurich.",
+          apply_steps: [
+            "Apply for Master's program",
+            "Submit Excellence application",
+            "Upload CV and transcripts",
+            "Await decision by June",
+          ],
+        },
+        {
+          id: 7,
+          name: "MEXT Scholarship",
+          provider: "Japan Govt / Monbukagakusho",
+          country: "Japan",
+          field: "Computer Science and Information Systems",
+          amount: "Full Ride + Yen 144,000/mo",
+          deadline: "2026-05-05",
+          type: "full",
+          featured: true,
+          eligibility: [
+            "Under 35 years old",
+            "Bachelor's completed",
+            "Willing to learn Japanese",
+          ],
+          description:
+            "Japanese government scholarship for international students to study at Japanese universities.",
+          apply_steps: [
+            "Contact Japanese embassy",
+            "Submit preliminary application",
+            "Take written exams and interview",
+            "Receive university placement",
+          ],
+        },
+        {
+          id: 8,
+          name: "Australian Awards Scholarships",
+          provider: "Dept of Foreign Affairs",
+          country: "Australia",
+          field: "Agriculture and Forestry",
+          amount: "Full Tuition + OSHC",
+          deadline: "2026-04-30",
+          type: "full",
+          featured: false,
+          eligibility: [
+            "Citizen of participating country",
+            "Minimum 2 years exp.",
+            "Not married to Australian",
+          ],
+          description:
+            "Long-term awards administered by the Australian Government to study at Australian universities.",
+          apply_steps: [
+            "Check participating country profile",
+            "Submit online application",
+            "Attach supporting documents",
+            "Attend interview panel",
+          ],
+        },
+        {
+          id: 9,
+          name: "Lester B. Pearson Intl Scholarship",
+          provider: "University of Toronto",
+          country: "Canada",
+          field: "Computer Science and Information Systems",
+          amount: "Full Tuition + Books",
+          deadline: "2026-12-01",
+          type: "full",
+          featured: false,
+          eligibility: [
+            "International student",
+            "Final year high school",
+            "Nominated by school",
+          ],
+          description:
+            "U of T's most prestigious scholarship for outstanding international students.",
+          apply_steps: [
+            "Receive school nomination",
+            "Apply to U of T first",
+            "Submit Pearson essay",
+            "Upload reference letters",
+          ],
+        },
+        {
+          id: 10,
+          name: "Melbourne Graduate Research",
+          provider: "Univ of Melbourne",
+          country: "Australia",
+          field: "Data Science and Artificial Intelligence",
+          amount: "Tuition + $32,000/yr",
+          deadline: "2026-11-30",
+          type: "tuition",
+          featured: false,
+          eligibility: [
+            "Research Master's or PhD",
+            "Strong academic results",
+            "Supervisor confirmation",
+          ],
+          description:
+            "Comprehensive funding package for high-achieving graduate researchers at Melbourne.",
+          apply_steps: [
+            "Find a supervisor",
+            "Prepare research proposal",
+            "Submit graduate application",
+            "Accept scholarship offer",
+          ],
+        },
+        {
+          id: 11,
+          name: "McGill Major Entrance Scholarship",
+          provider: "McGill University",
+          country: "Canada",
+          field: "Medicine",
+          amount: "C$12,000/yr",
+          deadline: "2026-06-15",
+          type: "partial",
+          featured: false,
+          eligibility: [
+            "First-time university student",
+            "Outstanding academic record",
+            "Leadership in community",
+          ],
+          description:
+            "Merit-based entrance scholarships for exceptional students beginning undergraduate studies.",
+          apply_steps: [
+            "Apply for McGill admission",
+            "Submit separate scholarship form",
+            "Write personal statement",
+            "Submit by deadline",
+          ],
+        },
+        {
+          id: 12,
+          name: "TU Delft Excellence Scholarship",
+          provider: "TU Delft",
+          country: "Netherlands",
+          field: "Engineering and Technology",
+          amount: "€15,000 + Tuition Waiver",
+          deadline: "2026-07-01",
+          type: "partial",
+          featured: false,
+          eligibility: [
+            "Bachelor's outside Netherlands",
+            "GPA top 10%",
+            "English proficiency",
+          ],
+          description:
+            "For talented international students to pursue a MSc degree at TU Delft.",
+          apply_steps: [
+            "Apply for MSc program",
+            "Submit Excellence essay",
+            "Upload portfolio if required",
+            "Await selection",
+          ],
+        },
+        {
+          id: 13,
+          name: "Swedish Institute Scholarship",
+          provider: "Swedish Institute",
+          country: "Sweden",
+          field: "Environmental Sciences",
+          amount: "Full Tuition + SEK 11,000/mo",
+          deadline: "2026-05-20",
+          type: "full",
+          featured: false,
+          eligibility: [
+            "Citizen of eligible country",
+            "Leadership experience",
+            "3,000 hours work exp.",
+          ],
+          description:
+            "Fully-funded Master's studies in Sweden with a focus on future global leaders.",
+          apply_steps: [
+            "Apply to Swedish university",
+            "Submit SI application",
+            "Write leadership essays",
+            "Provide 2 references",
+          ],
+        },
+        {
+          id: 14,
+          name: "INSEAD-Syngenta MBA Scholarship",
+          provider: "Syngenta / INSEAD",
+          country: "France",
+          field: "Business and Management Studies",
+          amount: "€25,000",
+          deadline: "2026-06-20",
+          type: "partial",
+          featured: false,
+          eligibility: [
+            "Admitted to INSEAD MBA",
+            "Agri-business interest",
+            "3+ years work exp.",
+          ],
+          description:
+            "For MBA candidates with a demonstrated commitment to agribusiness or sustainability.",
+          apply_steps: [
+            "Gain INSEAD admission",
+            "Submit scholarship essay",
+            "Demonstrate sector impact",
+            "Await decision",
+          ],
+        },
+        {
+          id: 15,
+          name: "Imperial President's PhD",
+          provider: "Imperial College London",
+          country: "UK",
+          field: "Finance (Accounting and Finance)",
+          amount: "Tuition + £21,000/yr",
+          deadline: "2026-08-01",
+          type: "tuition",
+          featured: false,
+          eligibility: [
+            "First-class honours degree",
+            "PhD admission to Imperial",
+            "Research alignment",
+          ],
+          description:
+            "Prestigious PhD scholarship covering full tuition and a generous living stipend.",
+          apply_steps: [
+            "Contact potential supervisor",
+            "Submit PhD application",
+            "Upload transcripts",
+            "Attend interview",
+          ],
+        },
+        {
+          id: 16,
+          name: "EPFL Doctoral Fellowship",
+          provider: "EPFL",
+          country: "Switzerland",
+          field: "Computer Science and Information Systems",
+          amount: "CHF 55,000/yr",
+          deadline: "2026-09-15",
+          type: "research",
+          featured: false,
+          eligibility: [
+            "Master's in relevant field",
+            "Research proposal",
+            "Supervisor agreement",
+          ],
+          description:
+            "Competitive doctoral positions at one of Europe's leading technical universities.",
+          apply_steps: [
+            "Find a lab and supervisor",
+            "Submit online application",
+            "Provide 3 references",
+            "Defend proposal orally",
+          ],
+        },
+        {
+          id: 17,
+          name: "ETH Zurich Med Research Grant",
+          provider: "ETH Zurich",
+          country: "Switzerland",
+          field: "Medicine",
+          amount: "CHF 48,000/yr",
+          deadline: "2026-07-15",
+          type: "research",
+          featured: false,
+          eligibility: [
+            "MD or Master's in life sciences",
+            "Clinical research focus",
+            "ETH supervisor",
+          ],
+          description:
+            "Supports outstanding medical researchers conducting doctoral research at ETH Zurich.",
+          apply_steps: [
+            "Identify ETH research group",
+            "Prepare CV and project plan",
+            "Submit to department",
+            "Interview with committee",
+          ],
+        },
+        {
+          id: 18,
+          name: "Wageningen Excellence Program",
+          provider: "Wageningen Univ",
+          country: "Netherlands",
+          field: "Agriculture and Forestry",
+          amount: "€1,200/mo Living",
+          deadline: "2026-06-10",
+          type: "living",
+          featured: false,
+          eligibility: [
+            "Bachelor's completed",
+            "Sustainable agriculture interest",
+            "English C1 level",
+          ],
+          description:
+            "Living stipend for talented students pursuing a Master's in food and agriculture sciences.",
+          apply_steps: [
+            "Apply for MSc program",
+            "Submit motivation letter",
+            "Upload English certificate",
+            "Await results",
+          ],
+        },
+        {
+          id: 19,
+          name: "UBC International Leader Award",
+          provider: "UBC",
+          country: "Canada",
+          field: "Nursing",
+          amount: "C$10,000 - C$50,000",
+          deadline: "2026-05-25",
+          type: "partial",
+          featured: false,
+          eligibility: [
+            "International student",
+            "Academic excellence",
+            "Leadership activities",
+          ],
+          description:
+            "Recognizes international students who demonstrate superior academic achievement and leadership.",
+          apply_steps: [
+            "Apply for UBC admission",
+            "Submit personal profile",
+            "List extracurriculars",
+            "Automatic consideration",
+          ],
+        },
+        {
+          id: 20,
+          name: "Rhodes Scholarship",
+          provider: "Rhodes Trust",
+          country: "UK",
+          field: "Environmental Sciences",
+          amount: "Full Ride + Stipend",
+          deadline: "2026-09-01",
+          type: "full",
+          featured: false,
+          eligibility: [
+            "Age 18-24",
+            "High academic standing",
+            "Integrity + leadership",
+          ],
+          description:
+            "World's oldest and most celebrated international fellowship for study at Oxford.",
+          apply_steps: [
+            "Secure institutional endorsement",
+            "Submit personal statement",
+            "Provide 5-8 references",
+            "Attend final interview",
+          ],
+        },
+      ];
+
+      /* ══════════════════════════════════════
+         UTILITIES
+         ══════════════════════════════════════ */
+      function getDaysUntil(deadlineStr) {
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        const d = new Date(deadlineStr);
+        d.setHours(0, 0, 0, 0);
+        return Math.ceil((d - today) / (1000 * 60 * 60 * 24));
+      }
+
+      function getUrgencyClass(days) {
+        if (days < 7) return "urgency-critical";
+        if (days < 30) return "urgency-warning";
+        return "urgency-safe";
+      }
+
+      function getUrgencyLabel(days) {
+        if (days < 0) return "Closed";
+        if (days === 0) return "Due Today";
+        if (days === 1) return "1 day left";
+        if (days < 7) return days + " days left";
+        if (days < 30) return Math.floor(days / 7) + " weeks left";
+        return Math.floor(days / 30) + " months left";
+      }
+
+      function getShortField(name) {
+        const map = {
+          "Computer Science and Information Systems": "CS & IT",
+          "Business and Management Studies": "Business",
+          "Finance (Accounting and Finance)": "Finance",
+          "Economics and Econometrics": "Economics",
+          "Data Science and Artificial Intelligence": "DS & AI",
+          Nursing: "Nursing",
+          Medicine: "Medicine",
+          "Engineering and Technology": "Engineering",
+          "Agriculture and Forestry": "Agriculture",
+          "Environmental Sciences": "Environment",
+        };
+        return map[name] || name;
+      }
+
+      /* ══════════════════════════════════════
+         CARD BUILDER
+         ══════════════════════════════════════ */
+      function createCardHTML(sch) {
+        const days = getDaysUntil(sch.deadline);
+        const urgencyClass = getUrgencyClass(days);
+        const urgencyLabel = getUrgencyLabel(days);
+        const flag = getFlag(sch.country);
+        const typeLabel = TYPE_LABELS[sch.type];
+
+        return `
+          <div class="card" data-id="${sch.id}">
+            <div class="card-header">
+              <div class="card-badge ${days < 7 ? "red" : days < 30 ? "orange" : "green"}">${urgencyLabel}</div>
+              <div class="card-meta">
+                <span>${flag}</span>
+                <span>${sch.country}</span>
+              </div>
+            </div>
+            <h3 class="card-title">${sch.name}</h3>
+            <p class="card-subtitle">${sch.provider}</p>
+            <span class="card-tag">${getShortField(sch.field)}</span>
+            <div class="card-stats">
+              <div class="card-stat">
+                <span class="card-stat-label">Award</span>
+                <span class="card-stat-value">${sch.amount}</span>
+              </div>
+              <div class="card-stat-divider"></div>
+              <div class="card-stat">
+                <span class="card-stat-label">Deadline</span>
+                <span class="card-stat-value ${urgencyClass}">${sch.deadline}</span>
+              </div>
+              <div class="card-stat-divider"></div>
+              <div class="card-stat">
+                <span class="card-stat-label">Type</span>
+                <span class="card-stat-value">${typeLabel}</span>
+              </div>
+            </div>
+            <div class="card-highlights">
+              ${sch.eligibility
+                .slice(0, 2)
+                .map((e) => `<span class="chip">${e}</span>`)
+                .join("")}
+            </div>
+            <button class="card-btn">
+              View Details
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+              </svg>
+            </button>
+          </div>
+        `;
+      }
+
+      function attachListeners(container) {
+        container.querySelectorAll(".card").forEach((card) => {
+          card.addEventListener("click", () => {
+            const id = parseInt(card.dataset.id);
+            const sch = SCHOLARSHIPS.find((s) => s.id === id);
+            if (sch) openModal(sch);
+          });
+        });
+      }
+
+      /* ══════════════════════════════════════
+         SECTION 1: TOP SCHOLARSHIPS
+         ══════════════════════════════════════ */
+      function renderTop() {
+        const row = document.getElementById("top-sch-row");
+        const featured = SCHOLARSHIPS.filter((s) => s.featured);
+        row.innerHTML = featured.map(createCardHTML).join("");
+        attachListeners(row);
+      }
+
+      /* ══════════════════════════════════════
+         SECTION 2: DEADLINE ALERT
+         ══════════════════════════════════════ */
+      function renderDeadline() {
+        const row = document.getElementById("deadline-row");
+        const sorted = [...SCHOLARSHIPS]
+          .filter((s) => getDaysUntil(s.deadline) >= 0)
+          .sort((a, b) => getDaysUntil(a.deadline) - getDaysUntil(b.deadline));
+        row.innerHTML = sorted.map(createCardHTML).join("");
+        attachListeners(row);
+      }
+
+      /* ══════════════════════════════════════
+         SECTION 3: BY FIELD OF STUDY
+         ══════════════════════════════════════ */
+      let activeFieldIndex = 0;
+      const tabsContainer = document.getElementById("field-tabs");
+      const fieldGrid = document.getElementById("field-grid");
+
+      FIELDS.forEach((field, i) => {
+        const tab = document.createElement("button");
+        tab.className = "tab-pill" + (i === 0 ? " active" : "");
+        tab.textContent = getShortField(field);
+        tab.addEventListener("click", () => {
+          tabsContainer
+            .querySelectorAll(".tab-pill")
+            .forEach((t) => t.classList.remove("active"));
+          tab.classList.add("active");
+          activeFieldIndex = i;
+          renderField();
+        });
+        tabsContainer.appendChild(tab);
+      });
+
+      function renderField() {
+        const field = FIELDS[activeFieldIndex];
+        const matches = SCHOLARSHIPS.filter((s) => s.field === field);
+        if (matches.length === 0) {
+          fieldGrid.innerHTML =
+            '<p style="color:#64748b;text-align:center;padding:40px;">No scholarships listed for this field yet.</p>';
+          return;
+        }
+        fieldGrid.innerHTML = matches.map(createCardHTML).join("");
+        attachListeners(fieldGrid);
+      }
+      renderField();
+
+      /* ══════════════════════════════════════
+         SECTION 4: FUNDING SPECTRUM
+         ══════════════════════════════════════ */
+      const SPECTRUM = [
+        {
+          key: "full",
+          label: "Fully Funded",
+          desc: "Tuition + living covered",
+          icon: '<svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>',
+        },
+        {
+          key: "partial",
+          label: "Partial",
+          desc: "Significant fee waiver",
+          icon: '<svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 12H4"/></svg>',
+        },
+        {
+          key: "tuition",
+          label: "Tuition Only",
+          desc: "Fees covered, living extra",
+          icon: '<svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 14l6-6m-5.5.5h.01m4.99 5h.01M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16l3.5-2 3.5 2 3.5-2 3.5 2z"/></svg>',
+        },
+        {
+          key: "research",
+          label: "Research Grant",
+          desc: "PhD / lab funding",
+          icon: '<svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>',
+        },
+        {
+          key: "living",
+          label: "Living Stipend",
+          desc: "Monthly allowance support",
+          icon: '<svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>',
+        },
+      ];
+
+      const spectrumGrid = document.getElementById("spectrum-grid");
+      const spectrumResultTitle = document.getElementById(
+        "spectrum-result-title",
+      );
+      const spectrumResultGrid = document.getElementById(
+        "spectrum-result-grid",
+      );
+      const spectrumReset = document.getElementById("spectrum-reset");
+      let activeSpectrum = null;
+
+      function renderSpectrum() {
+        spectrumGrid.innerHTML = SPECTRUM.map((spec) => {
+          const count = SCHOLARSHIPS.filter((s) => s.type === spec.key).length;
+          return `
+            <div class="spectrum-card ${activeSpectrum === spec.key ? "active" : ""}" data-type="${spec.key}">
+              <div class="spectrum-icon">${spec.icon}</div>
+              <div class="spectrum-label">${spec.label}</div>
+              <div class="spectrum-desc">${spec.desc} &middot; ${count} open</div>
+            </div>
+          `;
+        }).join("");
+
+        spectrumGrid.querySelectorAll(".spectrum-card").forEach((card) => {
+          card.addEventListener("click", () => {
+            const type = card.dataset.type;
+            if (activeSpectrum === type) {
+              activeSpectrum = null;
+              spectrumReset.style.display = "none";
+              spectrumResultTitle.style.display = "none";
+              spectrumResultGrid.innerHTML = "";
+            } else {
+              activeSpectrum = type;
+              spectrumReset.style.display = "inline-flex";
+              const matches = SCHOLARSHIPS.filter((s) => s.type === type);
+              spectrumResultTitle.style.display = "flex";
+              spectrumResultTitle.innerHTML = `${TYPE_LABELS[type]} <span class="group-count">${matches.length} scholarships</span>`;
+              spectrumResultGrid.innerHTML = matches
+                .map(createCardHTML)
+                .join("");
+              attachListeners(spectrumResultGrid);
+            }
+            renderSpectrum();
+          });
+        });
+      }
+      renderSpectrum();
+
+      spectrumReset.addEventListener("click", () => {
+        activeSpectrum = null;
+        spectrumReset.style.display = "none";
+        spectrumResultTitle.style.display = "none";
+        spectrumResultGrid.innerHTML = "";
+        renderSpectrum();
+      });
+
+      /* ══════════════════════════════════════
+         MODAL
+         ══════════════════════════════════════ */
+      const modal = document.getElementById("sch-modal");
+      const modalClose = document.getElementById("modal-close");
+
+      function openModal(sch) {
+        const days = getDaysUntil(sch.deadline);
+        const urgencyClass = days < 7 ? "red" : days < 30 ? "orange" : "green";
+
+        document.getElementById("modal-type").textContent =
+          TYPE_LABELS[sch.type];
+        document.getElementById("modal-type").className =
+          "modal-badge " + urgencyClass;
+        document.getElementById("modal-name").textContent = sch.name;
+        document.getElementById("modal-flag").textContent = getFlag(
+          sch.country,
+        );
+        document.getElementById("modal-provider").textContent = sch.provider;
+        document.getElementById("modal-field").textContent = sch.field;
+        document.getElementById("modal-amount").textContent = sch.amount;
+        document.getElementById("modal-deadline").textContent = sch.deadline;
+        document.getElementById("modal-days").textContent =
+          days < 0 ? "Closed" : days + " days";
+        document.getElementById("modal-days").style.color =
+          days < 7 ? "#dc2626" : days < 30 ? "#ea580c" : "#16a34a";
+        document.getElementById("modal-desc").textContent = sch.description;
+        document.getElementById("modal-eligibility").innerHTML = sch.eligibility
+          .map((e) => `<li>${e}</li>`)
+          .join("");
+        document.getElementById("modal-steps").innerHTML = sch.apply_steps
+          .map((e) => `<li>${e}</li>`)
+          .join("");
+
+        modal.classList.add("active");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeModal() {
+        modal.classList.remove("active");
+        document.body.style.overflow = "";
+      }
+
+      modalClose.addEventListener("click", closeModal);
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) closeModal();
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeModal();
+      });
+
+      /* ══════════════════════════════════════
+         INIT
+         ══════════════════════════════════════ */
+      renderTop();
+      renderDeadline();
     </script>
   </body>
 </html>
