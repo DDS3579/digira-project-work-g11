@@ -323,41 +323,59 @@
   margin-bottom: 16px;
   border: 1px solid rgba(37, 99, 235, 0.12);
 }
+/* ── Card Stats (horizontal rows ─ label left, value right) ── */
 .card-stats {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 0;
   background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
   padding: 16px;
   border-radius: 12px;
   margin-bottom: 16px;
   border: 1px solid rgba(15, 23, 42, 0.06);
 }
+
 .card-stat {
   display: flex;
-  flex-direction: column;
-  gap: 4px;
-  flex: 1;
-  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.05);
 }
+
+.card-stat:first-child {
+  padding-top: 0;
+}
+
+.card-stat:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
 .card-stat-label {
   font-family: "DM Sans", sans-serif;
   font-weight: 500;
-  font-size: 11px;
+  font-size: 12px;
   color: #64748b;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
+
 .card-stat-value {
   font-family: "Sora", sans-serif;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 14px;
   color: #0f172a;
+  text-align: right;
+  line-height: 1.35;
+  word-break: break-word;
 }
+
 .card-stat-divider {
-  width: 1px;
-  height: 32px;
-  background: linear-gradient(to bottom, transparent, #cbd5e1, transparent);
+  display: none;
 }
 .card-highlights {
   display: flex;
@@ -885,20 +903,6 @@
   }
   .modal-stats {
     grid-template-columns: 1fr;
-  }
-  .card-stats {
-    flex-direction: column;
-    gap: 12px;
-    padding: 14px;
-  }
-  .card-stat {
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: left;
-  }
-  .card-stat-divider {
-    display: none;
   }
   .modal-header,
   .modal-body {
