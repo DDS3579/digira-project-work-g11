@@ -291,13 +291,32 @@
         }
         initLayout();
 
+        const pageMapping = {
+          Home: "home.html",
+          Universities: "universities.html",
+          "Scholarships Available": "scholarships.html",
+          "Compare Universities": "comparision.html",
+          "Loan & EMI Calculator": "loan.html",
+          "Local Alternatives": "alternatives.html",
+          Profile: "profile.html",
+          Settings: "settings.html",
+        };
+
         navItems.forEach(item => {
           item.addEventListener('click', () => {
-            navItems.forEach(n => n.classList.remove('active'));
-            item.classList.add('active');
-            const label = item.querySelector('.nav-label');
-            if (label) pageTitle.textContent = label.textContent.trim();
-            if (window.innerWidth < 768) body.classList.remove('mobile-open');
+            const page = item.getAttribute('data-page');
+            const fileName = pageMapping[page];
+
+            if (fileName) {
+              navItems.forEach(n => n.classList.remove('active'));
+              item.classList.add('active');
+              const label = item.querySelector('.nav-label');
+              if (label) pageTitle.textContent = label.textContent.trim();
+              if (window.innerWidth < 768) body.classList.remove('mobile-open');
+              
+              // Navigate to the page
+              window.location.href = fileName;
+            }
           });
         });
 
