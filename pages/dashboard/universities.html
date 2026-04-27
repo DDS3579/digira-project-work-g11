@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard | Sahaj Shikshya</title>
+    <title>Universities | Sahaj Shikshya</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -11,13 +11,13 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../../css/sidebar.css" />
+    <link rel="stylesheet" href="../../css/universities.css" />
   </head>
   <body>
     <div id="drawer-overlay"></div>
 
     <!-- ═══ SIDEBAR ═══ -->
     <aside id="sidebar" class="sidebar">
-      <!-- Blob canvas lives INSIDE sidebar so glass frosts over them -->
       <div class="blob-canvas">
         <div class="blob blob-1"></div>
         <div class="blob blob-2"></div>
@@ -26,29 +26,18 @@
         <div class="blob blob-5"></div>
       </div>
 
-      <!-- Logo -->
       <div class="logo-area">
         <div class="logo-icon">S</div>
         <span class="logo-text collapsible">SAHAJ.</span>
       </div>
 
-      <!-- Nav -->
       <div class="nav-scroll">
         <p class="section-label">Main Menu</p>
         <nav>
           <button class="nav-item" data-page="Home">
             <div class="nav-icon-wrap">
-              <svg
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-                />
+              <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
               </svg>
             </div>
             <span class="nav-label collapsible">Home</span>
@@ -56,22 +45,9 @@
 
           <button class="nav-item active" data-page="Universities">
             <div class="nav-icon-wrap">
-              <svg
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M12 14l9-5-9-5-9 5 9 5z"
-                />
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479L12 21l-6.825-3.943a12.083 12.083 0 01.665-6.479L12 14z"
-                />
+              <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479L12 21l-6.825-3.943a12.083 12.083 0 01.665-6.479L12 14z"/>
               </svg>
             </div>
             <span class="nav-label collapsible">Universities</span>
@@ -80,17 +56,8 @@
 
           <button class="nav-item" data-page="Scholarships Available">
             <div class="nav-icon-wrap">
-              <svg
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
+              <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
               </svg>
             </div>
             <span class="nav-label collapsible">Scholarships Available</span>
@@ -98,17 +65,8 @@
 
           <button class="nav-item" data-page="Compare Universities">
             <div class="nav-icon-wrap">
-              <svg
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"
-                />
+              <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
               </svg>
             </div>
             <span class="nav-label collapsible">Compare Universities</span>
@@ -116,17 +74,8 @@
 
           <button class="nav-item" data-page="Loan & EMI Calculator">
             <div class="nav-icon-wrap">
-              <svg
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"
-                />
+              <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
               </svg>
             </div>
             <span class="nav-label collapsible">Loan & EMI Calculator</span>
@@ -134,22 +83,9 @@
 
           <button class="nav-item" data-page="Local Alternatives">
             <div class="nav-icon-wrap">
-              <svg
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                />
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                />
+              <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
               </svg>
             </div>
             <span class="nav-label collapsible">Local Alternatives</span>
@@ -161,17 +97,8 @@
         <nav>
           <button class="nav-item" data-page="Profile">
             <div class="nav-icon-wrap">
-              <svg
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                />
+              <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
               </svg>
             </div>
             <span class="nav-label collapsible">Profile</span>
@@ -179,22 +106,9 @@
 
           <button class="nav-item" data-page="Settings">
             <div class="nav-icon-wrap">
-              <svg
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
-                />
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                />
+              <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
               </svg>
             </div>
             <span class="nav-label collapsible">Settings</span>
@@ -202,7 +116,6 @@
         </nav>
       </div>
 
-      <!-- User footer -->
       <div class="user-footer">
         <div class="user-card">
           <div class="user-avatar">DS</div>
@@ -211,19 +124,8 @@
             <div class="user-role">Student</div>
           </div>
           <a href="login.html" class="logout-btn collapsible" title="Logout">
-            <svg
-              width="15"
-              height="15"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.8"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
-              />
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/>
             </svg>
           </a>
         </div>
@@ -233,36 +135,14 @@
     <!-- ═══ TOPBAR ═══ -->
     <header class="topbar">
       <button class="hamburger" id="sidebar-toggle" aria-label="Toggle sidebar">
-        <svg
-          width="20"
-          height="20"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          viewBox="0 0 24 24"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M4 6h16M4 12h16M4 18h16"
-          />
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
       </button>
-      <h1 class="topbar-title" id="page-title">Home</h1>
+      <h1 class="topbar-title" id="page-title">Universities</h1>
       <button class="icon-btn" aria-label="Notifications">
-        <svg
-          width="17"
-          height="17"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.8"
-          viewBox="0 0 24 24"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
-          />
+        <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
         </svg>
         <span class="notif-dot"></span>
       </button>
@@ -270,83 +150,437 @@
       <div class="topbar-avatar">DS</div>
     </header>
 
+    <!-- ═══ MODAL ═══ -->
+    <div class="modal-overlay" id="uni-modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-header-left">
+            <div class="modal-uni-rank" id="modal-rank"></div>
+            <h2 class="modal-uni-name" id="modal-name"></h2>
+            <div class="modal-uni-country">
+              <span id="modal-flag"></span>
+              <span id="modal-country"></span>
+            </div>
+          </div>
+          <button class="modal-close" id="modal-close">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="modal-field-tag" id="modal-field"></div>
+
+          <div class="modal-stats">
+            <div class="modal-stat-card">
+              <div class="modal-stat-label">Tuition / Year</div>
+              <div class="modal-stat-value" id="modal-tuition"></div>
+            </div>
+            <div class="modal-stat-card">
+              <div class="modal-stat-label">Acceptance Rate</div>
+              <div class="modal-stat-value" id="modal-acceptance"></div>
+            </div>
+            <div class="modal-stat-card">
+              <div class="modal-stat-label">Difficulty</div>
+              <div class="modal-stat-value" id="modal-difficulty"></div>
+            </div>
+          </div>
+
+          <div class="modal-info-section">
+            <div class="modal-info-title">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8V7m0 10v1"/>
+              </svg>
+              Scholarships & Grants
+            </div>
+            <ul class="modal-info-list" id="modal-scholarships"></ul>
+          </div>
+
+          <div class="modal-info-section">
+            <div class="modal-info-title">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+              </svg>
+              Financial Burden Reduction
+            </div>
+            <ul class="modal-info-list" id="modal-financial"></ul>
+          </div>
+
+          <div class="modal-info-section">
+            <div class="modal-info-title">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+              </svg>
+              Accommodation & Facilities
+            </div>
+            <ul class="modal-info-list" id="modal-accommodation"></ul>
+          </div>
+
+          <div class="modal-ranking-source" id="modal-source"></div>
+        </div>
+      </div>
+    </div>
+
     <!-- ═══ MAIN ═══ -->
     <main class="main-content">
-      <div class="welcome-area">
-        <div class="compass-container">
-          <div class="compass-ring-outer"></div>
-          <div class="compass-ring-mid"></div>
-          <div class="compass-glass">
-            <svg width="52" height="52" viewBox="0 0 52 52" fill="none">
-              <path d="M26 8 L29.5 25.5 L26 24 L22.5 25.5 Z" fill="#2563eb" />
-              <path
-                d="M26 44 L22.5 26.5 L26 28 L29.5 26.5 Z"
-                fill="#0f172a"
-                fill-opacity="0.7"
-              />
-              <path d="M8 26 L25.5 22.5 L24 26 L25.5 29.5 Z" fill="#94a3b8" />
-              <path d="M44 26 L26.5 29.5 L28 26 L26.5 22.5 Z" fill="#94a3b8" />
-              <circle
-                cx="26"
-                cy="26"
-                r="4"
-                fill="#fbbf24"
-                stroke="white"
-                stroke-width="2"
-              />
-              <circle cx="26" cy="26" r="1.5" fill="#2563eb" />
-            </svg>
+      <!-- DEFAULT VIEW -->
+      <div id="default-view">
+        <!-- Top Universities Section -->
+        <div class="uni-page-section">
+          <div class="uni-section-header">
+            <h2>🏆 Top Universities</h2>
           </div>
+          <div class="field-tabs-wrapper">
+            <div class="field-tabs" id="field-tabs"></div>
+          </div>
+          <div class="uni-scroll-row" id="top-unis-row"></div>
         </div>
-        <h2 class="welcome-title">Welcome to Sahaj Shikshya</h2>
-        <p class="welcome-sub">
-          Select a section from the sidebar to get started.
-        </p>
+
+        <!-- Recently Added Section -->
+        <div class="uni-page-section">
+          <div class="uni-section-header">
+            <h2>🆕 Recently Added</h2>
+            <button class="view-all-link" id="view-all-btn">
+              View All
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+              </svg>
+            </button>
+          </div>
+          <div class="recently-added-row" id="recently-added-row"></div>
+        </div>
+      </div>
+
+      <!-- VIEW ALL (hidden by default) -->
+      <div id="view-all-section" style="display: none;">
+        <div class="view-all-bar">
+          <button class="back-btn" id="back-btn">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+            </svg>
+            Back
+          </button>
+          <div class="search-bar">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+            <input type="text" id="search-input" placeholder="Search universities..." />
+          </div>
+          <div class="total-count" id="total-count"></div>
+        </div>
+        <div id="view-all-content"></div>
       </div>
     </main>
 
+    <!-- ═══ SCRIPTS ═══ -->
+    <script src="../../js/data.js"></script>
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
+      document.addEventListener('DOMContentLoaded', () => {
+        /* ── Sidebar Logic (preserved) ── */
         const body = document.body;
-        const toggle = document.getElementById("sidebar-toggle");
-        const overlay = document.getElementById("drawer-overlay");
-        const navItems = document.querySelectorAll(".nav-item");
-        const pageTitle = document.getElementById("page-title");
+        const toggle = document.getElementById('sidebar-toggle');
+        const overlay = document.getElementById('drawer-overlay');
+        const navItems = document.querySelectorAll('.nav-item');
+        const pageTitle = document.getElementById('page-title');
 
         function initLayout() {
           const w = window.innerWidth;
-          body.classList.remove("sidebar-collapsed", "mobile-open");
-          if (w >= 768 && w < 1200) {
-            body.classList.add("sidebar-collapsed");
-          }
+          body.classList.remove('sidebar-collapsed', 'mobile-open');
+          if (w >= 768 && w < 1200) body.classList.add('sidebar-collapsed');
         }
         initLayout();
 
-        navItems.forEach((item) => {
-          item.addEventListener("click", () => {
-            navItems.forEach((n) => n.classList.remove("active"));
-            item.classList.add("active");
-            const label = item.querySelector(".nav-label");
+        navItems.forEach(item => {
+          item.addEventListener('click', () => {
+            navItems.forEach(n => n.classList.remove('active'));
+            item.classList.add('active');
+            const label = item.querySelector('.nav-label');
             if (label) pageTitle.textContent = label.textContent.trim();
-            if (window.innerWidth < 768) body.classList.remove("mobile-open");
+            if (window.innerWidth < 768) body.classList.remove('mobile-open');
           });
         });
 
-        toggle.addEventListener("click", () => {
-          if (window.innerWidth < 768) {
-            body.classList.toggle("mobile-open");
-          } else {
-            body.classList.toggle("sidebar-collapsed");
-          }
+        toggle.addEventListener('click', () => {
+          if (window.innerWidth < 768) body.classList.toggle('mobile-open');
+          else body.classList.toggle('sidebar-collapsed');
         });
 
-        overlay.addEventListener("click", () =>
-          body.classList.remove("mobile-open"),
-        );
-
-        window.addEventListener("resize", () => {
-          if (window.innerWidth >= 768) body.classList.remove("mobile-open");
+        overlay.addEventListener('click', () => body.classList.remove('mobile-open'));
+        window.addEventListener('resize', () => {
+          if (window.innerWidth >= 768) body.classList.remove('mobile-open');
         });
+
+        /* ══════════════════════════════════════
+           UNIVERSITY PAGE LOGIC
+           ══════════════════════════════════════ */
+
+        const data = UNIVERSITY_DATA;
+        const fields = data.fields;
+
+        // Country flag map
+        const FLAGS = {
+          'USA': '🇺🇸', 'UK': '🇬🇧', 'Canada': '🇨🇦', 'Australia': '🇦🇺',
+          'Germany': '🇩🇪', 'France': '🇫🇷', 'Japan': '🇯🇵', 'China': '🇨🇳',
+          'South Korea': '🇰🇷', 'Singapore': '🇸🇬', 'Netherlands': '🇳🇱',
+          'Switzerland': '🇨🇭', 'Sweden': '🇸🇪', 'India': '🇮🇳',
+          'Hong Kong': '🇭🇰', 'Denmark': '🇩🇰', 'Finland': '🇫🇮',
+          'Norway': '🇳🇴', 'Ireland': '🇮🇪', 'New Zealand': '🇳🇿',
+          'Belgium': '🇧🇪', 'Austria': '🇦🇹', 'Italy': '🇮🇹',
+          'Spain': '🇪🇸', 'Brazil': '🇧🇷', 'Mexico': '🇲🇽',
+          'Malaysia': '🇲🇾', 'Thailand': '🇹🇭', 'Taiwan': '🇹🇼',
+          'Saudi Arabia': '🇸🇦', 'UAE': '🇦🇪', 'South Africa': '🇿🇦',
+          'Russia': '🇷🇺', 'Poland': '🇵🇱', 'Czech Republic': '🇨🇿',
+          'Argentina': '🇦🇷', 'Chile': '🇨🇱', 'Colombia': '🇨🇴',
+          'Israel': '🇮🇱', 'Portugal': '🇵🇹', 'Greece': '🇬🇷'
+        };
+
+        function getFlag(country) {
+          return FLAGS[country] || '🌍';
+        }
+
+        function getDifficultyClass(score) {
+          if (score >= 8) return 'difficulty-high';
+          if (score >= 5) return 'difficulty-medium';
+          return 'difficulty-low';
+        }
+
+        function formatTuition(amount) {
+          return '$' + amount.toLocaleString();
+        }
+
+        function getShortFieldName(name) {
+          const map = {
+            'Computer Science and Information Systems': 'CS & IT',
+            'Business and Management Studies': 'Business',
+            'Finance (Accounting and Finance)': 'Finance',
+            'Economics and Econometrics': 'Economics',
+            'Data Science and Artificial Intelligence': 'DS & AI',
+            'Nursing': 'Nursing',
+            'Medicine': 'Medicine',
+            'Engineering and Technology': 'Engineering',
+            'Agriculture and Forestry': 'Agriculture',
+            'Environmental Sciences': 'Environment'
+          };
+          return map[name] || name;
+        }
+
+        // ── Build University Card HTML ──
+        function createCardHTML(uni, fieldName) {
+          const flag = getFlag(uni.country);
+          const diffClass = getDifficultyClass(uni.admission_difficulty_score);
+          const badges = uni.scholarships_and_grants.slice(0, 2)
+            .map(s => `<span class="uni-badge">${s}</span>`).join('');
+
+          return `
+            <div class="uni-card" data-uni='${JSON.stringify(uni).replace(/'/g, "&#39;")}' data-field="${fieldName}">
+              <div class="uni-card-header">
+                <div class="uni-rank">#${uni.rank}</div>
+                <div class="uni-country">
+                  <span class="country-flag">${flag}</span>
+                  <span>${uni.country}</span>
+                </div>
+              </div>
+              <h3 class="uni-name">${uni.university_name}</h3>
+              <span class="uni-field-tag">${getShortFieldName(fieldName)}</span>
+              <div class="uni-stats">
+                <div class="stat-item">
+                  <span class="stat-label">Tuition/Yr</span>
+                  <span class="stat-value">${formatTuition(uni.average_annual_tuition_usd)}</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                  <span class="stat-label">Acceptance</span>
+                  <span class="stat-value">${uni.acceptance_rate_percent}%</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                  <span class="stat-label">Difficulty</span>
+                  <span class="stat-value ${diffClass}">${uni.admission_difficulty_score}/10</span>
+                </div>
+              </div>
+              <div class="uni-badges">${badges}</div>
+              <button class="uni-details-btn">
+                View Details
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                </svg>
+              </button>
+            </div>
+          `;
+        }
+
+        // ── TOP UNIVERSITIES: Tabs + Row ──
+        const tabsContainer = document.getElementById('field-tabs');
+        const topRow = document.getElementById('top-unis-row');
+        let activeFieldIndex = 0;
+
+        // Create tabs
+        fields.forEach((field, i) => {
+          const tab = document.createElement('button');
+          tab.className = 'field-tab' + (i === 0 ? ' active' : '');
+          tab.textContent = getShortFieldName(field.field_name);
+          tab.addEventListener('click', () => {
+            document.querySelectorAll('.field-tab').forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            activeFieldIndex = i;
+            renderTopUnis();
+          });
+          tabsContainer.appendChild(tab);
+        });
+
+        function renderTopUnis() {
+          const field = fields[activeFieldIndex];
+          const top5 = field.universities
+            .sort((a, b) => a.rank - b.rank)
+            .slice(0, 5);
+          topRow.innerHTML = top5.map(u => createCardHTML(u, field.field_name)).join('');
+          attachCardListeners(topRow);
+        }
+        renderTopUnis();
+
+        // ── RECENTLY ADDED ──
+        const recentRow = document.getElementById('recently-added-row');
+
+        function renderRecentlyAdded() {
+          // Grab last 2 universities from each field (simulate recently added)
+          let recent = [];
+          fields.forEach(field => {
+            const unis = field.universities;
+            const lastOnes = unis.slice(-2);
+            lastOnes.forEach(u => {
+              recent.push({ uni: u, fieldName: field.field_name });
+            });
+          });
+          // Show max 8
+          recent = recent.slice(0, 8);
+          recentRow.innerHTML = recent.map(r => createCardHTML(r.uni, r.fieldName)).join('');
+          attachCardListeners(recentRow);
+        }
+        renderRecentlyAdded();
+
+        // ── VIEW ALL ──
+        const defaultView = document.getElementById('default-view');
+        const viewAllSection = document.getElementById('view-all-section');
+        const viewAllContent = document.getElementById('view-all-content');
+        const viewAllBtn = document.getElementById('view-all-btn');
+        const backBtn = document.getElementById('back-btn');
+        const searchInput = document.getElementById('search-input');
+        const totalCount = document.getElementById('total-count');
+
+        viewAllBtn.addEventListener('click', () => {
+          defaultView.style.display = 'none';
+          viewAllSection.style.display = 'block';
+          renderViewAll();
+        });
+
+        backBtn.addEventListener('click', () => {
+          viewAllSection.style.display = 'none';
+          defaultView.style.display = 'block';
+          searchInput.value = '';
+        });
+
+        function renderViewAll(query = '') {
+          const q = query.toLowerCase().trim();
+          let totalUnis = 0;
+          let html = '';
+
+          fields.forEach(field => {
+            let unis = [...field.universities].sort((a, b) => a.rank - b.rank);
+
+            if (q) {
+              unis = unis.filter(u =>
+                u.university_name.toLowerCase().includes(q) ||
+                u.country.toLowerCase().includes(q) ||
+                field.field_name.toLowerCase().includes(q)
+              );
+            }
+
+            if (unis.length === 0) return;
+
+            totalUnis += unis.length;
+
+            html += `
+              <div class="field-group">
+                <div class="field-group-title">
+                  ${field.field_name}
+                  <span class="field-group-count">${unis.length} universities</span>
+                </div>
+                <div class="uni-grid">
+                  ${unis.map(u => createCardHTML(u, field.field_name)).join('')}
+                </div>
+              </div>
+            `;
+          });
+
+          viewAllContent.innerHTML = html || '<p style="color:#64748b;text-align:center;padding:40px;">No universities found.</p>';
+          totalCount.innerHTML = `Total: <span>${totalUnis}</span> universities`;
+          attachCardListeners(viewAllContent);
+        }
+
+        // Search
+        let searchTimeout;
+        searchInput.addEventListener('input', (e) => {
+          clearTimeout(searchTimeout);
+          searchTimeout = setTimeout(() => {
+            renderViewAll(e.target.value);
+          }, 250);
+        });
+
+        // ── MODAL ──
+        const modal = document.getElementById('uni-modal');
+        const modalClose = document.getElementById('modal-close');
+
+        function openModal(uni, fieldName) {
+          document.getElementById('modal-rank').textContent = `Rank #${uni.rank}`;
+          document.getElementById('modal-name').textContent = uni.university_name;
+          document.getElementById('modal-flag').textContent = getFlag(uni.country);
+          document.getElementById('modal-country').textContent = uni.country;
+          document.getElementById('modal-field').textContent = fieldName;
+          document.getElementById('modal-tuition').textContent = formatTuition(uni.average_annual_tuition_usd);
+          document.getElementById('modal-acceptance').textContent = uni.acceptance_rate_percent + '%';
+
+          const diffEl = document.getElementById('modal-difficulty');
+          diffEl.textContent = uni.admission_difficulty_score + '/10';
+          diffEl.className = 'modal-stat-value ' + getDifficultyClass(uni.admission_difficulty_score);
+
+          document.getElementById('modal-scholarships').innerHTML =
+            uni.scholarships_and_grants.map(s => `<li>${s}</li>`).join('');
+
+          document.getElementById('modal-financial').innerHTML =
+            uni.financial_burden_reduction_policies.map(s => `<li>${s}</li>`).join('');
+
+          document.getElementById('modal-accommodation').innerHTML =
+            uni.accommodation_and_facilities.map(s => `<li>${s}</li>`).join('');
+
+          document.getElementById('modal-source').textContent = '📊 ' + uni.ranking_source;
+
+          modal.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+          modal.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+
+        modalClose.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) closeModal();
+        });
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') closeModal();
+        });
+
+        // ── Attach click listeners to cards ──
+        function attachCardListeners(container) {
+          container.querySelectorAll('.uni-card').forEach(card => {
+            card.addEventListener('click', () => {
+              const uni = JSON.parse(card.dataset.uni);
+              const fieldName = card.dataset.field;
+              openModal(uni, fieldName);
+            });
+          });
+        }
       });
     </script>
   </body>
