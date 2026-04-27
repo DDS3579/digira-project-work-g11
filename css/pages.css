@@ -922,3 +922,609 @@
     grid-template-columns: 1fr;
   }
 }
+
+
+/* ═══════════════════════════════════════════════════════════════
+   LOAN CALCULATOR PAGE
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Calculator Layout ── */
+.calc-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 1024px) {
+  .calc-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.calc-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 20px;
+  padding: 28px;
+}
+
+.calc-card h3 {
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #0f172a;
+  margin: 0 0 20px 0;
+  letter-spacing: -0.01em;
+}
+
+/* ── Inputs ── */
+.input-group {
+  margin-bottom: 18px;
+}
+
+.input-group label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  color: #475569;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.input-group label span {
+  color: #94a3b8;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: none;
+}
+
+.input-group input[type="number"],
+.input-group input[type="text"] {
+  width: 100%;
+  padding: 12px 16px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  color: #0f172a;
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  border-radius: 12px;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.input-group input:focus {
+  border-color: rgba(37, 99, 235, 0.5);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.08);
+}
+
+.input-group input:read-only {
+  background: #f1f5f9;
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.input-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* Slider */
+.range-wrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.range-wrap input[type="range"] {
+  flex: 1;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  background: #e2e8f0;
+  border-radius: 10px;
+  outline: none;
+}
+
+.range-wrap input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #2563eb;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 3px solid #ffffff;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.35);
+  transition: transform 0.15s ease;
+}
+
+.range-wrap input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+
+.range-val {
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: #2563eb;
+  min-width: 56px;
+  text-align: right;
+}
+
+/* Toggle */
+.toggle-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.toggle-row input[type="checkbox"] {
+  width: 44px;
+  height: 24px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: #cbd5e1;
+  border-radius: 999px;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.3s ease;
+}
+
+.toggle-row input[type="checkbox"]::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border-radius: 50%;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+}
+
+.toggle-row input[type="checkbox"]:checked {
+  background: #2563eb;
+}
+
+.toggle-row input[type="checkbox"]:checked::after {
+  transform: translateX(20px);
+}
+
+.toggle-row label {
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  color: #475569;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* ── Output Panel ── */
+.output-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.output-hero {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  border-radius: 16px;
+  padding: 28px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.output-hero-label {
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  opacity: 0.85;
+  margin-bottom: 8px;
+}
+
+.output-hero-value {
+  font-family: "Sora", sans-serif;
+  font-weight: 800;
+  font-size: 36px;
+  letter-spacing: -0.02em;
+  margin-bottom: 4px;
+}
+
+.output-hero-sub {
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+.output-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.output-cell {
+  background: #f8fafc;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+}
+
+.output-cell-label {
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.output-cell-value {
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #0f172a;
+}
+
+.output-cell-value.red { color: #dc2626; }
+.output-cell-value.orange { color: #ea580c; }
+.output-cell-value.green { color: #16a34a; }
+
+/* ── Chart ── */
+.chart-wrap {
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 280px;
+}
+
+.chart-wrap canvas {
+  max-width: 260px;
+  max-height: 260px;
+}
+
+/* ── Funding Breakdown Bar ── */
+.fund-bar-wrap {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 40px;
+}
+
+.fund-bar-title {
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #0f172a;
+  margin-bottom: 16px;
+}
+
+.fund-track {
+  width: 100%;
+  height: 32px;
+  border-radius: 999px;
+  overflow: hidden;
+  display: flex;
+  background: #f1f5f9;
+  margin-bottom: 16px;
+}
+
+.fund-segment {
+  height: 100%;
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.fund-segment.self { background: linear-gradient(90deg, #16a34a, #22c55e); }
+.fund-segment.loan { background: linear-gradient(90deg, #2563eb, #3b82f6); }
+.fund-segment.gap  { background: linear-gradient(90deg, #dc2626, #ef4444); }
+.fund-segment.work { background: linear-gradient(90deg, #f59e0b, #fbbf24); }
+
+.fund-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.fund-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  color: #475569;
+}
+
+.fund-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.fund-dot.self { background: #16a34a; }
+.fund-dot.loan { background: #2563eb; }
+.fund-dot.gap  { background: #dc2626; }
+.fund-dot.work { background: #f59e0b; }
+
+/* ── Amortization ── */
+.amort-wrap {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 40px;
+}
+
+.amort-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.amort-header h3 {
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #0f172a;
+  margin: 0;
+}
+
+.amort-header svg {
+  transition: transform 0.3s ease;
+  color: #64748b;
+}
+
+.amort-header.open svg {
+  transform: rotate(180deg);
+}
+
+.amort-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.amort-body.open {
+  max-height: 2000px;
+}
+
+.amort-table-wrap {
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.amort-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+}
+
+.amort-table th {
+  background: #f1f5f9;
+  color: #475569;
+  font-weight: 600;
+  text-align: left;
+  padding: 12px 16px;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.amort-table td {
+  padding: 12px 16px;
+  border-top: 1px solid rgba(15, 23, 42, 0.05);
+  color: #0f172a;
+  white-space: nowrap;
+}
+
+.amort-table tr:hover td {
+  background: #f8fafc;
+}
+
+.amort-table .morat-row td {
+  color: #94a3b8;
+  font-style: italic;
+}
+
+/* ── Bank Comparison ── */
+.bank-scroll {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 4px 4px 20px 4px;
+  scroll-snap-type: x mandatory;
+}
+
+.bank-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.bank-scroll::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 10px;
+}
+
+.bank-scroll::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+.bank-card {
+  flex: 0 0 280px;
+  scroll-snap-align: start;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 16px;
+  padding: 22px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.bank-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.1);
+  border-color: rgba(37, 99, 235, 0.2);
+}
+
+.bank-name {
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+
+.bank-tag {
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  color: #64748b;
+  margin-bottom: 14px;
+}
+
+.bank-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.05);
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+}
+
+.bank-row:last-child {
+  border-bottom: none;
+}
+
+.bank-row span:first-child {
+  color: #64748b;
+}
+
+.bank-row span:last-child {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.bank-apply-btn {
+  width: 100%;
+  margin-top: 14px;
+  padding: 10px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  color: #2563eb;
+  background: rgba(37, 99, 235, 0.08);
+  border: 1px solid rgba(37, 99, 235, 0.15);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.bank-apply-btn:hover {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+/* ── Tips Accordion ── */
+.tips-wrap {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.tips-wrap h3 {
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #0f172a;
+  margin: 0 0 16px 0;
+}
+
+.accordion-item {
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.accordion-item:last-child {
+  border-bottom: none;
+}
+
+.accordion-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  cursor: pointer;
+  font-family: "Sora", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  color: #0f172a;
+  user-select: none;
+}
+
+.accordion-head svg {
+  color: #64748b;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.accordion-item.open .accordion-head svg {
+  transform: rotate(180deg);
+}
+
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.accordion-item.open .accordion-body {
+  max-height: 400px;
+}
+
+.accordion-body p {
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.7;
+  margin: 0 0 16px 0;
+  padding-right: 24px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .input-row {
+    grid-template-columns: 1fr;
+  }
+  .output-hero-value {
+    font-size: 28px;
+  }
+  .output-grid {
+    grid-template-columns: 1fr;
+  }
+  .bank-card {
+    flex: 0 0 260px;
+  }
+}
