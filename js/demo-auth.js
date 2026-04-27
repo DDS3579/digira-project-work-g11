@@ -4,6 +4,16 @@
     name: "Demo User",
     email: "demo@example.com",
   };
+  const DASHBOARD_ROUTES = {
+    Home: "home.html",
+    Universities: "universities.html",
+    "Scholarships Available": "scholarships.html",
+    "Compare Universities": "comparision.html",
+    "Loan & EMI Calculator": "loan.html",
+    "Local Alternatives": "alternatives.html",
+    Profile: "profile.html",
+    Settings: "settings.html",
+  };
 
   function pathName() {
     return window.location.pathname.replace(/\\/g, "/").toLowerCase();
@@ -19,6 +29,11 @@
 
   function isDashboardPage() {
     return pathName().includes("/pages/dashboard/");
+  }
+
+  function currentDashboardFile() {
+    const parts = pathName().split("/");
+    return parts[parts.length - 1] || "";
   }
 
   function initialsFromName(name) {
@@ -98,10 +113,44 @@
 
   function wireLogout() {
     document.querySelectorAll(".logout-btn").forEach((button) => {
+      button.setAttribute("href", "../auth/login.html");
       button.addEventListener("click", (event) => {
         event.preventDefault();
         clearUser();
         window.location.href = "../auth/login.html";
+      });
+    });
+  }
+
+  function wireDashboardNav() {
+    const pageTitle = document.getElementById("page-title");
+    const currentFile = currentDashboardFile();
+
+    document.querySelectorAll(".nav-item").forEach((item) => {
+      const pageName = item.dataset.page;
+      const targetFile = DASHBOARD_ROUTES[pageName];
+
+      if (!targetFile) {
+        return;
+      }
+
+      if (targetFile === currentFile) {
+        document
+          .querySelectorAll(".nav-item.active")
+          .forEach((node) => node.classList.remove("active"));
+        item.classList.add("active");
+        if (pageTitle) {
+          pageTitle.textContent = pageName;
+        }
+      }
+
+      item.addEventListener("click", () => {
+        if (pageTitle) {
+          pageTitle.textContent = pageName;
+        }
+        if (targetFile !== currentFile) {
+          window.location.href = targetFile;
+        }
       });
     });
   }
@@ -171,6 +220,7 @@
 
     if (isDashboardPage()) {
       applyUserToDashboard(getUser());
+      wireDashboardNav();
       wireLogout();
     }
   });
