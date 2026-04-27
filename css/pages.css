@@ -2313,3 +2313,581 @@
     white-space: nowrap;
   }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   COMPARISON PAGE
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Selection Arena ── */
+.compare-arena {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 20px;
+  padding: 32px;
+  margin-bottom: 32px;
+}
+
+.arena-title {
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #0f172a;
+  margin: 0 0 24px 0;
+  text-align: center;
+}
+
+.arena-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  align-items: end;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 1024px) {
+  .arena-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .arena-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.arena-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.arena-field label {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  color: #475569;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.arena-field select {
+  padding: 12px 16px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  color: #0f172a;
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  border-radius: 12px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.arena-field select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.08);
+}
+
+.arena-btn {
+  width: 100%;
+  padding: 14px 24px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: #ffffff;
+  background: #2563eb;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.arena-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.3);
+}
+
+.arena-btn:disabled {
+  background: #cbd5e1;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* ── University Pool ── */
+.pool-section {
+  margin-bottom: 32px;
+}
+
+.pool-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.pool-header h3 {
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #0f172a;
+  margin: 0;
+}
+
+.pool-toggle {
+  display: flex;
+  gap: 8px;
+  background: #f1f5f9;
+  padding: 4px;
+  border-radius: 10px;
+}
+
+.pool-toggle button {
+  padding: 8px 16px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  color: #64748b;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.pool-toggle button.active {
+  background: #ffffff;
+  color: #2563eb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.pool-scroll {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 4px 4px 20px 4px;
+}
+
+.pool-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.pool-scroll::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 10px;
+}
+
+.pool-scroll::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+/* ── Pool Card ── */
+.pool-card {
+  flex: 0 0 260px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border: 2px solid transparent;
+  border-radius: 14px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.pool-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.1);
+  border-color: rgba(37, 99, 235, 0.2);
+}
+
+.pool-card.selected {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.pool-card .check-mark {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 24px;
+  height: 24px;
+  background: #2563eb;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.pool-card.selected .check-mark {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.pool-card-name {
+  font-family: "Sora", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  color: #0f172a;
+  margin-bottom: 6px;
+  padding-right: 28px;
+}
+
+.pool-card-meta {
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 12px;
+}
+
+.pool-card-stats {
+  display: flex;
+  gap: 12px;
+}
+
+.pool-card-stat {
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  color: #475569;
+  background: #f1f5f9;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+/* ── Comparison Stage ── */
+.compare-stage {
+  display: none;
+}
+
+.compare-stage.active {
+  display: block;
+}
+
+.compare-slots {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+@media (max-width: 768px) {
+  .compare-slots {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Slot Card ── */
+.slot-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 20px;
+  padding: 28px;
+  position: relative;
+}
+
+.slot-card.empty {
+  border-style: dashed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 280px;
+  color: #94a3b8;
+}
+
+.slot-card.empty svg {
+  margin-bottom: 12px;
+  color: #cbd5e1;
+}
+
+.slot-card.empty p {
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  margin: 0;
+}
+
+.slot-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.slot-title {
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #0f172a;
+  margin: 0 0 6px 0;
+  line-height: 1.3;
+}
+
+.slot-location {
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.slot-rank {
+  font-family: "Sora", sans-serif;
+  font-weight: 800;
+  font-size: 28px;
+  color: #2563eb;
+  background: linear-gradient(
+    135deg,
+    rgba(37, 99, 235, 0.1) 0%,
+    rgba(37, 99, 235, 0.05) 100%
+  );
+  padding: 8px 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(37, 99, 235, 0.15);
+}
+
+.slot-remove {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f1f5f9;
+  border: none;
+  border-radius: 8px;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.slot-remove:hover {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.slot-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.slot-tag {
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+
+.slot-tag.blue {
+  color: #2563eb;
+  background: rgba(37, 99, 235, 0.08);
+}
+
+.slot-tag.green {
+  color: #16a34a;
+  background: rgba(22, 163, 74, 0.08);
+}
+
+.slot-tag.orange {
+  color: #ea580c;
+  background: rgba(234, 88, 12, 0.08);
+}
+
+/* ── Metrics Table ── */
+.metrics-table-wrap {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 20px;
+  padding: 28px;
+  margin-bottom: 32px;
+  overflow-x: auto;
+}
+
+.metrics-table-wrap h3 {
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #0f172a;
+  margin: 0 0 20px 0;
+}
+
+.metrics-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  min-width: 500px;
+}
+
+.metrics-table th {
+  text-align: left;
+  padding: 14px 16px;
+  font-weight: 600;
+  color: #475569;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: #f1f5f9;
+  border-radius: 8px;
+}
+
+.metrics-table th:first-child {
+  width: 200px;
+}
+
+.metrics-table td {
+  padding: 16px;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.05);
+  color: #0f172a;
+  vertical-align: middle;
+}
+
+.metrics-table tr:last-child td {
+  border-bottom: none;
+}
+
+.metrics-table .winner {
+  background: rgba(22, 163, 74, 0.06);
+  font-weight: 700;
+  color: #16a34a;
+}
+
+.metrics-table .loser {
+  color: #64748b;
+}
+
+.metrics-table .tied {
+  font-weight: 600;
+}
+
+.metric-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  color: #475569;
+}
+
+.metric-label svg {
+  color: #2563eb;
+  flex-shrink: 0;
+}
+
+/* ── Verdict Bar ── */
+.verdict-bar {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  border-radius: 20px;
+  padding: 32px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-bottom: 32px;
+}
+
+@media (max-width: 768px) {
+  .verdict-bar {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.verdict-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.verdict-content h3 {
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  margin: 0 0 8px 0;
+}
+
+.verdict-content p {
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 0 16px 0;
+  line-height: 1.6;
+}
+
+.verdict-winner {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #fbbf24;
+}
+
+/* ── Rate Toggle ── */
+.rate-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  justify-content: flex-end;
+}
+
+.rate-bar label {
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.rate-bar input {
+  width: 80px;
+  padding: 8px 12px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  color: #0f172a;
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* ── Save / Export ── */
+.action-bar {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .compare-arena {
+    padding: 20px;
+  }
+
+  .metrics-table-wrap {
+    padding: 20px;
+  }
+
+  .slot-card {
+    padding: 20px;
+  }
+
+  .verdict-bar {
+    padding: 24px;
+  }
+}
