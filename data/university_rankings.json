@@ -1,5 +1,4 @@
-const UNIVERSITY_DATA = 
-    {
+{
   "fields": [
     {
       "field_name": "Computer Science and Information Systems",
@@ -12447,4 +12446,4 @@ const UNIVERSITY_DATA =
       ]
     }
   ]
-};
+}

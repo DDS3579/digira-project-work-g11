@@ -1,0 +1,979 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compare Universities | Sahaj Shikshya</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Sora:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/sidebar.css" />
+    <link rel="stylesheet" href="../../css/pages.css" />
+  </head>
+  <body>
+    <div id="drawer-overlay"></div>
+
+    <!-- ═══ SIDEBAR ═══ -->
+    <aside id="sidebar" class="sidebar">
+      <div class="blob-canvas">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="blob blob-4"></div>
+        <div class="blob blob-5"></div>
+      </div>
+
+      <div class="logo-area">
+        <div class="logo-icon">S</div>
+        <span class="logo-text collapsible">SAHAJ.</span>
+      </div>
+
+      <div class="nav-scroll">
+        <p class="section-label">Main Menu</p>
+        <nav>
+          <button class="nav-item" data-page="Home">
+            <div class="nav-icon-wrap">
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                />
+              </svg>
+            </div>
+            <span class="nav-label collapsible">Home</span>
+          </button>
+
+          <button class="nav-item" data-page="Universities">
+            <div class="nav-icon-wrap">
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 14l9-5-9-5-9 5 9 5z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479L12 21l-6.825-3.943a12.083 12.083 0 01.665-6.479L12 14z"
+                />
+              </svg>
+            </div>
+            <span class="nav-label collapsible">Universities</span>
+            <span class="nav-badge collapsible">New</span>
+          </button>
+
+          <button class="nav-item" data-page="Scholarships Available">
+            <div class="nav-icon-wrap">
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+            </div>
+            <span class="nav-label collapsible">Scholarships Available</span>
+          </button>
+
+          <button class="nav-item active" data-page="Compare Universities">
+            <div class="nav-icon-wrap">
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"
+                />
+              </svg>
+            </div>
+            <span class="nav-label collapsible">Compare Universities</span>
+          </button>
+
+          <button class="nav-item" data-page="Loan & EMI Calculator">
+            <div class="nav-icon-wrap">
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"
+                />
+              </svg>
+            </div>
+            <span class="nav-label collapsible">Loan & EMI Calculator</span>
+          </button>
+
+          <button class="nav-item" data-page="Local Alternatives">
+            <div class="nav-icon-wrap">
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+              </svg>
+            </div>
+            <span class="nav-label collapsible">Local Alternatives</span>
+          </button>
+        </nav>
+
+        <div class="nav-divider"></div>
+        <p class="section-label">Account</p>
+        <nav>
+          <button class="nav-item" data-page="Profile">
+            <div class="nav-icon-wrap">
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                />
+              </svg>
+            </div>
+            <span class="nav-label collapsible">Profile</span>
+          </button>
+
+          <button class="nav-item" data-page="Settings">
+            <div class="nav-icon-wrap">
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+              </svg>
+            </div>
+            <span class="nav-label collapsible">Settings</span>
+          </button>
+        </nav>
+      </div>
+
+      <div class="user-footer">
+        <div class="user-card">
+          <div class="user-avatar">DS</div>
+          <div class="user-info collapsible">
+            <div class="user-name">Divya D. Sharma</div>
+            <div class="user-role">Student</div>
+          </div>
+          <a href="login.html" class="logout-btn collapsible" title="Logout">
+            <svg
+              width="15"
+              height="15"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ═══ TOPBAR ═══ -->
+    <header class="topbar">
+      <button class="hamburger" id="sidebar-toggle" aria-label="Toggle sidebar">
+        <svg
+          width="20"
+          height="20"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+      </button>
+      <h1 class="topbar-title" id="page-title">Compare Universities</h1>
+      <button class="icon-btn" aria-label="Notifications">
+        <svg
+          width="17"
+          height="17"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+          />
+        </svg>
+        <span class="notif-dot"></span>
+      </button>
+      <div class="topbar-divider"></div>
+      <div class="topbar-avatar">DS</div>
+    </header>
+
+    <!-- ═══ MAIN ═══ -->
+    <main class="main-content">
+      <!-- STEP 1: SELECTION ARENA -->
+      <div class="compare-arena">
+        <h2 class="arena-title">Find Universities to Compare</h2>
+        <div class="arena-grid">
+          <div class="arena-field">
+            <label>Field of Study</label>
+            <select id="arena-field">
+              <option value="">Select Field</option>
+            </select>
+          </div>
+          <div class="arena-field">
+            <label>Budget Tier (NPR/yr)</label>
+            <select id="arena-budget">
+              <option value="all">Any Budget</option>
+              <option value="0-500000">Under 5 Lakhs</option>
+              <option value="500000-1500000">5L – 15 Lakhs</option>
+              <option value="1500000-3000000">15L – 30 Lakhs</option>
+              <option value="3000000-999999999">Above 30 Lakhs</option>
+            </select>
+          </div>
+          <div class="arena-field">
+            <label>Preference</label>
+            <select id="arena-pref">
+              <option value="balanced">Balanced View</option>
+              <option value="rank">Best Ranked</option>
+              <option value="value">Best Value</option>
+              <option value="easy">Easiest Admission</option>
+              <option value="scholarship">Most Scholarships</option>
+            </select>
+          </div>
+          <div class="arena-field">
+            <label>&nbsp;</label>
+            <button class="arena-btn" id="arena-btn">Find Matches</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 2: UNIVERSITY POOL -->
+      <div class="pool-section" id="pool-section" style="display: none">
+        <div class="pool-header">
+          <h3 id="pool-title">Select up to 2 universities</h3>
+          <div class="pool-toggle">
+            <button class="active" data-pool="all">All</button>
+            <button data-pool="nepal">🇳🇵 Nepali</button>
+            <button data-pool="abroad">🌍 Abroad</button>
+          </div>
+        </div>
+        <div class="rate-bar">
+          <label>USD to NPR rate:</label>
+          <input type="number" id="npr-rate" value="135" step="1" min="1" />
+        </div>
+        <div class="pool-scroll" id="pool-scroll"></div>
+      </div>
+
+      <!-- STEP 3: COMPARISON STAGE -->
+      <div class="compare-stage" id="compare-stage">
+        <!-- Slots -->
+        <div class="compare-slots" id="compare-slots">
+          <div class="slot-card empty" id="slot-0">
+            <svg
+              width="40"
+              height="40"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 4v16m8-8H4"
+              />
+            </svg>
+            <p>Select a university from above</p>
+          </div>
+          <div class="slot-card empty" id="slot-1">
+            <svg
+              width="40"
+              height="40"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 4v16m8-8H4"
+              />
+            </svg>
+            <p>Select a university from above</p>
+          </div>
+        </div>
+
+        <!-- Metrics Table -->
+        <div class="metrics-table-wrap">
+          <h3>Head-to-Head Comparison</h3>
+          <div style="overflow-x: auto">
+            <table class="metrics-table" id="metrics-table">
+              <thead>
+                <tr>
+                  <th>Metric</th>
+                  <th id="th-0">University A</th>
+                  <th id="th-1">University B</th>
+                  <th>Winner</th>
+                </tr>
+              </thead>
+              <tbody id="metrics-body"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Verdict -->
+        <div class="verdict-bar" id="verdict-bar">
+          <div class="verdict-icon">
+            <svg
+              width="32"
+              height="32"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+          </div>
+          <div class="verdict-content">
+            <h3>Our Verdict</h3>
+            <p id="verdict-text">
+              Select two universities to see a personalized recommendation based
+              on your preference.
+            </p>
+            <div
+              class="verdict-winner"
+              id="verdict-winner"
+              style="display: none"
+            >
+              <svg
+                width="20"
+                height="20"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+                />
+              </svg>
+              <span id="verdict-winner-name">Winner</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="action-bar">
+          <button class="btn-secondary" id="reset-btn">Start Over</button>
+          <button class="btn-primary" id="save-btn">Save Comparison</button>
+        </div>
+      </div>
+    </main>
+
+    <script src="../../js/data.js"></script>
+    <script src="../../js/alternatives.js"></script>
+    <script>
+      /* ══════════════════════════════════════
+         SIDEBAR (preserved)
+         ══════════════════════════════════════ */
+      const body = document.body;
+      const toggle = document.getElementById("sidebar-toggle");
+      const overlay = document.getElementById("drawer-overlay");
+      const navItems = document.querySelectorAll(".nav-item");
+      const pageTitle = document.getElementById("page-title");
+
+      function initLayout() {
+        const w = window.innerWidth;
+        body.classList.remove("sidebar-collapsed", "mobile-open");
+        if (w >= 768 && w < 1200) body.classList.add("sidebar-collapsed");
+      }
+      initLayout();
+
+      navItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          navItems.forEach((n) => n.classList.remove("active"));
+          item.classList.add("active");
+          const label = item.querySelector(".nav-label");
+          if (label) pageTitle.textContent = label.textContent.trim();
+          if (window.innerWidth < 768) body.classList.remove("mobile-open");
+        });
+      });
+
+      toggle.addEventListener("click", () => {
+        if (window.innerWidth < 768) body.classList.toggle("mobile-open");
+        else body.classList.toggle("sidebar-collapsed");
+      });
+
+      overlay.addEventListener("click", () =>
+        body.classList.remove("mobile-open"),
+      );
+      window.addEventListener("resize", () => {
+        if (window.innerWidth >= 768) body.classList.remove("mobile-open");
+      });
+
+      /* ══════════════════════════════════════
+         DATA SETUP
+         ══════════════════════════════════════ */
+      const FLAGS = {
+        USA: "🇺🇸",
+        UK: "🇬🇧",
+        Canada: "🇨🇦",
+        Australia: "🇦🇺",
+        Germany: "🇩🇪",
+        France: "🇫🇷",
+        Japan: "🇯🇵",
+        Netherlands: "🇳🇱",
+        Switzerland: "🇨🇭",
+        Sweden: "🇸🇪",
+        "New Zealand": "🇳🇿",
+        India: "🇮🇳",
+        Nepal: "🇳🇵",
+      };
+      function getFlag(c) {
+        return FLAGS[c] || "🌍";
+      }
+
+      // Merge both datasets with origin tag
+      let ALL_UNIS = [];
+      if (typeof UNIVERSITY_DATA !== "undefined") {
+        UNIVERSITY_DATA.fields.forEach((f) => {
+          f.universities.forEach((u) => {
+            ALL_UNIS.push({ ...u, field: f.field_name, origin: "abroad" });
+          });
+        });
+      }
+      if (typeof NEPALESE !== "undefined") {
+        NEPALESE.fields.forEach((f) => {
+          f.universities.forEach((u) => {
+            ALL_UNIS.push({ ...u, field: f.field_name, origin: "nepal" });
+          });
+        });
+      }
+
+      // Populate field dropdown
+      const fields = [...new Set(ALL_UNIS.map((u) => u.field))];
+      const fieldSelect = document.getElementById("arena-field");
+      fields.forEach((f) => {
+        const opt = document.createElement("option");
+        opt.value = f;
+        opt.textContent = f;
+        fieldSelect.appendChild(opt);
+      });
+
+      /* ══════════════════════════════════════
+         STATE
+         ══════════════════════════════════════ */
+      let selectedUnis = [null, null]; // max 2
+      let currentPool = [];
+      let poolFilter = "all";
+
+      /* ══════════════════════════════════════
+         ARENA LOGIC
+         ══════════════════════════════════════ */
+      document.getElementById("arena-btn").addEventListener("click", () => {
+        const field = fieldSelect.value;
+        const budget = document.getElementById("arena-budget").value;
+        const pref = document.getElementById("arena-pref").value;
+
+        if (!field) {
+          alert("Please select a field of study first.");
+          return;
+        }
+
+        // Filter by field
+        let pool = ALL_UNIS.filter((u) => u.field === field);
+
+        // Filter by budget
+        if (budget !== "all") {
+          const [min, max] = budget.split("-").map(Number);
+          const rate =
+            parseFloat(document.getElementById("npr-rate").value) || 135;
+          pool = pool.filter((u) => {
+            const npr =
+              u.average_annual_tuition_usd * (u.origin === "abroad" ? rate : 1);
+            return npr >= min && npr <= max;
+          });
+        }
+
+        // Sort by preference
+        if (pref === "rank") pool.sort((a, b) => a.rank - b.rank);
+        else if (pref === "value")
+          pool.sort(
+            (a, b) =>
+              a.average_annual_tuition_usd - b.average_annual_tuition_usd,
+          );
+        else if (pref === "easy")
+          pool.sort(
+            (a, b) => b.acceptance_rate_percent - a.acceptance_rate_percent,
+          );
+        else if (pref === "scholarship")
+          pool.sort(
+            (a, b) =>
+              b.scholarships_and_grants.length -
+              a.scholarships_and_grants.length,
+          );
+
+        currentPool = pool;
+        renderPool();
+        document.getElementById("pool-section").style.display = "block";
+        document
+          .getElementById("pool-section")
+          .scrollIntoView({ behavior: "smooth" });
+      });
+
+      /* ══════════════════════════════════════
+         POOL RENDER
+         ══════════════════════════════════════ */
+      function renderPool() {
+        const scroll = document.getElementById("pool-scroll");
+        const rate =
+          parseFloat(document.getElementById("npr-rate").value) || 135;
+        let display = currentPool;
+
+        if (poolFilter === "nepal")
+          display = currentPool.filter((u) => u.origin === "nepal");
+        if (poolFilter === "abroad")
+          display = currentPool.filter((u) => u.origin === "abroad");
+
+        if (display.length === 0) {
+          scroll.innerHTML =
+            '<p style="color:#64748b;padding:20px;">No universities match your filters.</p>';
+          return;
+        }
+
+        scroll.innerHTML = display
+          .map((u) => {
+            const npr = Math.round(
+              u.average_annual_tuition_usd * (u.origin === "abroad" ? rate : 1),
+            );
+            const isSelected = selectedUnis.some(
+              (s) => s && s.university_name === u.university_name,
+            );
+            return `
+            <div class="pool-card ${isSelected ? "selected" : ""}" data-name="${u.university_name}">
+              <div class="check-mark">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <div class="pool-card-name">${u.university_name}</div>
+              <div class="pool-card-meta">${getFlag(u.country)} ${u.country} &bull; Rank #${u.rank}</div>
+              <div class="pool-card-stats">
+                <span class="pool-card-stat">NPR ${(npr / 100000).toFixed(1)}L/yr</span>
+                <span class="pool-card-stat">${u.acceptance_rate_percent}% accept</span>
+              </div>
+            </div>
+          `;
+          })
+          .join("");
+
+        scroll.querySelectorAll(".pool-card").forEach((card) => {
+          card.addEventListener("click", () => {
+            const name = card.dataset.name;
+            const uni = ALL_UNIS.find((u) => u.university_name === name);
+            if (!uni) return;
+
+            // Toggle selection
+            const idx = selectedUnis.findIndex(
+              (s) => s && s.university_name === name,
+            );
+            if (idx >= 0) {
+              selectedUnis[idx] = null;
+            } else {
+              // Find first empty slot
+              const emptyIdx = selectedUnis.findIndex((s) => s === null);
+              if (emptyIdx >= 0) {
+                selectedUnis[emptyIdx] = uni;
+              } else {
+                // Replace second slot
+                selectedUnis[1] = uni;
+              }
+            }
+
+            renderPool();
+            renderSlots();
+            renderComparison();
+          });
+        });
+      }
+
+      // Pool toggle
+      document.querySelectorAll(".pool-toggle button").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          document
+            .querySelectorAll(".pool-toggle button")
+            .forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+          poolFilter = btn.dataset.pool;
+          renderPool();
+        });
+      });
+
+      // Rate change
+      document.getElementById("npr-rate").addEventListener("input", () => {
+        renderPool();
+        if (selectedUnis.some((s) => s)) renderComparison();
+      });
+
+      /* ══════════════════════════════════════
+         SLOTS RENDER
+         ══════════════════════════════════════ */
+      function renderSlots() {
+        selectedUnis.forEach((uni, i) => {
+          const slot = document.getElementById("slot-" + i);
+          if (!uni) {
+            slot.className = "slot-card empty";
+            slot.innerHTML = `
+              <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/>
+              </svg>
+              <p>Select a university from above</p>
+            `;
+            return;
+          }
+
+          const rate =
+            parseFloat(document.getElementById("npr-rate").value) || 135;
+          const npr = Math.round(
+            uni.average_annual_tuition_usd *
+              (uni.origin === "abroad" ? rate : 1),
+          );
+
+          slot.className = "slot-card";
+          slot.innerHTML = `
+            <button class="slot-remove" onclick="removeSlot(${i})">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+              </svg>
+            </button>
+            <div class="slot-header">
+              <div>
+                <h4 class="slot-title">${uni.university_name}</h4>
+                <div class="slot-location">${getFlag(uni.country)} ${uni.country}</div>
+              </div>
+              <div class="slot-rank">#${uni.rank}</div>
+            </div>
+            <div class="slot-tags">
+              <span class="slot-tag blue">${uni.field}</span>
+              <span class="slot-tag ${uni.origin === "nepal" ? "green" : "orange"}">${uni.origin === "nepal" ? "🇳🇵 Nepali" : "🌍 Abroad"}</span>
+            </div>
+            <div class="card-stats" style="margin-bottom:0;">
+              <div class="card-stat">
+                <span class="card-stat-label">Tuition/Year</span>
+                <span class="card-stat-value">NPR ${(npr / 100000).toFixed(1)}L</span>
+              </div>
+              <div class="card-stat-divider"></div>
+              <div class="card-stat">
+                <span class="card-stat-label">Acceptance</span>
+                <span class="card-stat-value">${uni.acceptance_rate_percent}%</span>
+              </div>
+              <div class="card-stat-divider"></div>
+              <div class="card-stat">
+                <span class="card-stat-label">Difficulty</span>
+                <span class="card-stat-value ${uni.admission_difficulty_score >= 8 ? "red" : uni.admission_difficulty_score >= 5 ? "orange" : "green"}">${uni.admission_difficulty_score}/10</span>
+              </div>
+            </div>
+          `;
+        });
+
+        const stage = document.getElementById("compare-stage");
+        if (selectedUnis.some((s) => s)) {
+          stage.classList.add("active");
+          stage.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        } else {
+          stage.classList.remove("active");
+        }
+      }
+
+      function removeSlot(idx) {
+        selectedUnis[idx] = null;
+        renderPool();
+        renderSlots();
+        renderComparison();
+      }
+
+      /* ══════════════════════════════════════
+         COMPARISON TABLE
+         ══════════════════════════════════════ */
+      function renderComparison() {
+        const [a, b] = selectedUnis;
+        if (!a || !b) return;
+
+        const rate =
+          parseFloat(document.getElementById("npr-rate").value) || 135;
+        const pref = document.getElementById("arena-pref").value;
+
+        document.getElementById("th-0").textContent = a.university_name;
+        document.getElementById("th-1").textContent = b.university_name;
+
+        const aNpr = Math.round(
+          a.average_annual_tuition_usd * (a.origin === "abroad" ? rate : 1),
+        );
+        const bNpr = Math.round(
+          b.average_annual_tuition_usd * (b.origin === "abroad" ? rate : 1),
+        );
+
+        const metrics = [
+          {
+            label: "Annual Tuition",
+            icon: "💰",
+            a: `NPR ${(aNpr / 100000).toFixed(1)}L`,
+            b: `NPR ${(bNpr / 100000).toFixed(1)}L`,
+            lower: true,
+          },
+          {
+            label: "Acceptance Rate",
+            icon: "📊",
+            a: `${a.acceptance_rate_percent}%`,
+            b: `${b.acceptance_rate_percent}%`,
+            higher: true,
+          },
+          {
+            label: "Admission Difficulty",
+            icon: "🎯",
+            a: `${a.admission_difficulty_score}/10`,
+            b: `${b.admission_difficulty_score}/10`,
+            lower: true,
+          },
+          {
+            label: "Scholarship Options",
+            icon: "🎓",
+            a: `${a.scholarships_and_grants.length} available`,
+            b: `${b.scholarships_and_grants.length} available`,
+            higher: true,
+          },
+          {
+            label: "Global Recognition",
+            icon: "🌐",
+            a: a.origin === "abroad" ? "International" : "National",
+            b: b.origin === "abroad" ? "International" : "National",
+            custom: true,
+          },
+          {
+            label: "Living Cost",
+            icon: "🏠",
+            a: a.origin === "nepal" ? "Low" : "High",
+            b: b.origin === "nepal" ? "Low" : "High",
+            custom: true,
+          },
+        ];
+
+        let aWins = 0,
+          bWins = 0;
+
+        const tbody = document.getElementById("metrics-body");
+        tbody.innerHTML = metrics
+          .map((m) => {
+            let winner = "";
+            let aClass = "",
+              bClass = "";
+
+            if (m.custom) {
+              if (m.label === "Global Recognition") {
+                if (a.origin === "abroad" && b.origin !== "abroad") {
+                  winner = a.university_name;
+                  aClass = "winner";
+                  bClass = "loser";
+                  aWins++;
+                } else if (b.origin === "abroad" && a.origin !== "abroad") {
+                  winner = b.university_name;
+                  bClass = "winner";
+                  aClass = "loser";
+                  bWins++;
+                } else {
+                  winner = "Tie";
+                  aClass = bClass = "tied";
+                }
+              }
+              if (m.label === "Living Cost") {
+                if (a.origin === "nepal" && b.origin !== "nepal") {
+                  winner = a.university_name;
+                  aClass = "winner";
+                  bClass = "loser";
+                  aWins++;
+                } else if (b.origin === "nepal" && a.origin !== "nepal") {
+                  winner = b.university_name;
+                  bClass = "winner";
+                  aClass = "loser";
+                  bWins++;
+                } else {
+                  winner = "Tie";
+                  aClass = bClass = "tied";
+                }
+              }
+            } else {
+              const aVal = parseFloat(m.a);
+              const bVal = parseFloat(m.b);
+              if (m.lower) {
+                if (aVal < bVal) {
+                  winner = a.university_name;
+                  aClass = "winner";
+                  bClass = "loser";
+                  aWins++;
+                } else if (bVal < aVal) {
+                  winner = b.university_name;
+                  bClass = "winner";
+                  aClass = "loser";
+                  bWins++;
+                } else {
+                  winner = "Tie";
+                  aClass = bClass = "tied";
+                }
+              } else {
+                if (aVal > bVal) {
+                  winner = a.university_name;
+                  aClass = "winner";
+                  bClass = "loser";
+                  aWins++;
+                } else if (bVal > aVal) {
+                  winner = b.university_name;
+                  bClass = "winner";
+                  aClass = "loser";
+                  bWins++;
+                } else {
+                  winner = "Tie";
+                  aClass = bClass = "tied";
+                }
+              }
+            }
+
+            return `
+            <tr>
+              <td>
+                <div class="metric-label">
+                  <span>${m.icon}</span>
+                  ${m.label}
+                </div>
+              </td>
+              <td class="${aClass}">${m.a}</td>
+              <td class="${bClass}">${m.b}</td>
+              <td class="${winner === a.university_name ? "winner" : winner === b.university_name ? "winner" : "tied"}">${winner === "Tie" ? "Tie" : "✓ " + winner.split(" ").slice(0, 2).join(" ")}</td>
+            </tr>
+          `;
+          })
+          .join("");
+
+        // Verdict
+        const verdictText = document.getElementById("verdict-text");
+        const verdictWinner = document.getElementById("verdict-winner");
+        const verdictWinnerName = document.getElementById(
+          "verdict-winner-name",
+        );
+
+        if (aWins > bWins) {
+          verdictText.textContent = `Based on raw metrics, ${a.university_name} wins ${aWins}-${bWins}. However, consider your ${pref === "balanced" ? "overall goals" : pref + " priority"}.`;
+          verdictWinner.style.display = "inline-flex";
+          verdictWinnerName.textContent = a.university_name;
+        } else if (bWins > aWins) {
+          verdictText.textContent = `Based on raw metrics, ${b.university_name} wins ${bWins}-${aWins}. However, consider your ${pref === "balanced" ? "overall goals" : pref + " priority"}.`;
+          verdictWinner.style.display = "inline-flex";
+          verdictWinnerName.textContent = b.university_name;
+        } else {
+          verdictText.textContent = `It's a tie! Both universities score equally on metrics. Your decision should come down to ${pref === "balanced" ? "personal fit and location preference" : pref + " as your top priority"}.`;
+          verdictWinner.style.display = "none";
+        }
+      }
+
+      /* ══════════════════════════════════════
+         ACTIONS
+         ══════════════════════════════════════ */
+      document.getElementById("reset-btn").addEventListener("click", () => {
+        selectedUnis = [null, null];
+        document.getElementById("compare-stage").classList.remove("active");
+        document.getElementById("pool-section").style.display = "none";
+        renderPool();
+        renderSlots();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+
+      document.getElementById("save-btn").addEventListener("click", () => {
+        if (!selectedUnis[0] || !selectedUnis[1]) {
+          alert("Select two universities first.");
+          return;
+        }
+        const save = {
+          date: new Date().toISOString(),
+          unis: selectedUnis.map((u) => ({
+            name: u.university_name,
+            country: u.country,
+          })),
+          pref: document.getElementById("arena-pref").value,
+        };
+        const saved = JSON.parse(
+          localStorage.getItem("sahaj_comparisons") || "[]",
+        );
+        saved.push(save);
+        localStorage.setItem("sahaj_comparisons", JSON.stringify(saved));
+        alert("Comparison saved! You can view it later (feature coming).");
+      });
+    </script>
+    <script src="../../js/demo-auth.js"></script>
+  </body>
+</html>
