@@ -250,6 +250,11 @@ This project is part of the Team Digira Grade 11 curriculum project.
 ## 👥 Team
 
 **Team Digira** - Created as a comprehensive educational platform project
+**Divya D. Sharma** - Lead Developer
+**Bikalpa Acharya** - 
+**Shrijan Dhital**  - 
+**Oshan Neupane**   - 
+**Sukrit J. Dahal** - 
 
 ---
 
