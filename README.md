@@ -1,84 +1,89 @@
-# Sahaj Shikshya - Grade 11 Team Project
+# Sahaj Shikshya - Educational Platform
 
 **Team**: Team Digira  
-**Project Type**: Educational Platform Web Application  
-**Status**: In Development
+**Project Type**: Grade 11 Team Project - Educational Web Application  
+**Status**: 🚀 In Active Development
 
 ---
 
-## Project Overview
+## Overview
 
-**Sahaj Shikshya** is a comprehensive educational platform designed to help students with crucial life decisions regarding higher education. The platform provides tools for comparing universities, exploring scholarship opportunities, and calculating education loans. It features a modern, responsive design with advanced animations and a sleek user interface built on contemporary web technologies.
+**Sahaj Shikshya** (meaning "Easy Learning" in Nepali) is a modern educational platform that empowers students to make informed decisions about higher education. The platform offers comprehensive tools for university exploration, scholarship discovery, and education loan calculation—all wrapped in a visually stunning, responsive interface with smooth animations and glass-morphism design.
 
-### Key Features
+## ✨ Key Features
 
-- **3D Globe Animation**: Interactive Three.js visualization on the landing page showcasing global reach
-- **User Authentication**: Login and signup pages for user account management
-- **Dashboard System**: Comprehensive dashboard with collapsible sidebar navigation
-- **University Exploration**: Browse and view information about universities worldwide
-- **Scholarship Finder**: Discover available scholarships and opportunities
-- **Loan Calculator**: Calculate education loan requirements
-- **University Comparison**: Compare multiple universities side-by-side
-- **Alternative Suggestions**: Get suggestions for alternative educational paths
-- **Responsive Design**: Full mobile, tablet, and desktop responsiveness
-- **Modern UI**: Glassmorphism effects, smooth animations, and professional styling
+- **3D Globe Animation** - Interactive Three.js visualization showcasing global university reach
+- **User Authentication** - Secure login/signup system for personalized experiences
+- **Comprehensive Dashboard** - Intuitive interface with collapsible sidebar navigation
+- **University Exploration** - Browse detailed information about universities worldwide
+- **Scholarship Finder** - Discover scholarship opportunities tailored to your needs
+- **Loan Calculator** - Calculate education loan requirements with flexible parameters
+- **Comparison Tools** - Compare multiple universities side-by-side
+- **Alternative Suggestions** - Intelligent recommendations for alternative educational paths
+- **Fully Responsive** - Seamless experience on mobile, tablet, and desktop
+- **Modern Design** - Glass-morphism effects, smooth animations, and professional styling
 
 ---
 
-## Technology Stack
+## 🛠️ Technology Stack
 
 ### Frontend
-- **HTML5** - Semantic markup and structure
-- **CSS3** - Custom styling with advanced features
-- **Vanilla JavaScript** - Interactive functionality without external dependencies
-- **Tailwind CSS** - Utility-first CSS framework for rapid styling
-- **DaisyUI** - Pre-built Tailwind components for consistency
+- **HTML5** - Semantic markup and structured content
+- **CSS3** - Advanced styling with custom properties and animations
+- **Vanilla JavaScript** - Pure JS for interactive functionality (no dependencies)
 
-### Libraries & Tools
-- **Three.js** (r128) - 3D graphics and WebGL rendering for globe animation
+### Frameworks & Utilities
+- **Tailwind CSS** - Utility-first CSS framework for rapid development
+- **DaisyUI** - Pre-built Tailwind components for consistency and speed
+
+### Libraries
+- **Three.js** (r128) - 3D graphics engine for the interactive globe animation
 - **Google Fonts** - Typography (Inter, Space Grotesk, DM Sans, Sora)
 - **Animate.css** - Pre-built CSS animations
 - **Chart.js** - Data visualization (for future enhancements)
 - **AOS (Animate On Scroll)** - Scroll-triggered animations
 
-### Data Storage
+### Data & Storage
 - **JSON** - Static data storage for countries and university rankings
 
 ---
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 project/
-│
 ├── index.html                          # Landing page (main entry point)
-├── landing.html                        # Alternative landing page
-├── README.md                           # Project documentation (this file)
+├── landing.html                        # Alternative landing page variant
+├── README.md                           # Project documentation
 │
 ├── assets/
-│   └── images/                         # Image resources and graphics
+│   └── images/                         # Images and graphic resources
 │
-├── css/
+├── css/                                # Styling
 │   ├── styles.css                      # Global styles and theme configuration
-│   ├── variables.css                   # (Empty - reserved for CSS variables)
-│   ├── sidebar.css                     # Sidebar styling with blob animations
-│   ├── dashboard.css                   # Dashboard-specific styles
-│   ├── responsive.css                  # (Empty - responsive design utilities)
-│   └── (additional styling files)
+│   ├── sidebar.css                     # Sidebar and dashboard animations
+│   ├── dashboard.css                   # Dashboard-specific components
+│   ├── pages.css                       # Page-specific styles
+│   ├── responsive.css                  # Responsive design utilities
+│   ├── universities.css                # University page styles
+│   └── variables.css                   # CSS custom properties
 │
 ├── data/
-│   ├── countries.json                  # (Empty - country data storage)
-│   └── university_rankings.json        # (Empty - university ranking data)
+│   ├── countries.json                  # Country data
+│   ├── nepalese_university_rankings.json # Nepalese university rankings
+│   └── university_rankings.json        # Global university rankings
 │
 ├── documentation/
-│   └── planning.md                     # Project planning and technology stack
+│   └── planning.md                     # Project planning and specs
 │
-├── js/
-│   ├── main.js                         # (Empty - main application logic)
-│   ├── ui.js                           # UI interactions and 3D globe initialization
-│   ├── calculator.js                   # (Empty - calculator functionality)
-│   ├── data.js                         # (Empty - data management)
-│   └── storage.js                      # (Empty - local storage handling)
+├── js/                                 # JavaScript modules
+│   ├── ui.js                           # UI interactions and 3D globe
+│   ├── main.js                         # Main application logic
+│   ├── calculator.js                   # Loan calculator functionality
+│   ├── data.js                         # Data management and fetching
+│   ├── storage.js                      # Local storage handling
+│   ├── alternatives.js                 # Alternative suggestions logic
+│   └── demo-auth.js                    # Demo authentication
 │
 └── pages/
     ├── auth/
@@ -86,373 +91,172 @@ project/
     │   └── signup.html                 # User registration page
     │
     └── dashboard/
-        ├── home.html                   # Dashboard home with latest news
-        ├── universities.html           # University listing and exploration
-        ├── scholarships.html           # Scholarship opportunities
+        ├── home.html                   # Dashboard home with news feed
+        ├── universities.html           # University browser
+        ├── scholarships.html           # Scholarship explorer
         ├── loan.html                   # Education loan calculator
-        ├── comparision.html            # University comparison tool
-        └── alternatives.html           # Alternative education suggestions
+        ├── comparison.html             # University comparison tool
+        └── alternatives.html           # Alternative education paths
 ```
 
 ---
 
-## File Contents & Descriptions
+## 📄 File Details
 
-### Core HTML Files
-
-#### `index.html`
-**Purpose**: Main landing page with 3D globe animation  
-**Key Features**:
-- Tailwind CSS configuration with custom color scheme
-- Three.js integration for 3D globe visualization
-- Google Fonts: Inter (400, 500, 600), Space Grotesk (400, 500, 600, 700)
-- Custom CSS variables for theming
-- Responsive container for globe animation
-- Grain overlay effect for visual enhancement
-
-#### `landing.html`
-**Purpose**: Alternative landing page (similar to index.html)  
-**Features**: Same as index.html with identical structure and styling
-
-### Authentication Pages
-
-#### `pages/auth/login.html`
-**Purpose**: User login functionality  
-**Features**:
-- Responsive two-panel layout (left panel for branding on desktop)
-- Mobile top bar for small screens
-- Floating animations on elements
-- Fade-up animations with staggered delays
-- Google Fonts: Inter (300, 400, 500, 600), Space Grotesk (600, 700)
-- Tailwind CSS with custom color extensions
-- Dark theme on left panel with light right panel
-
-#### `pages/auth/signup.html`
-**Purpose**: User registration  
-**Features**:
-- Similar layout to login page
-- Responsive flex layout (desktop side-by-side, mobile stacked)
-- Grain texture overlay effect
-- Mobile top bar with logo and action links
-- Multiple fade-up animations with progressive delays
-- DM Sans and Sora font family integration
+### Landing & Auth Pages
+- **index.html / landing.html** - Main entry point with 3D globe animation powered by Three.js
+- **pages/auth/login.html** - User login with responsive two-panel layout and animations
+- **pages/auth/signup.html** - Registration page with grain texture and fade animations
 
 ### Dashboard Pages
+All dashboard pages include collapsible sidebar navigation with glass-morphism design:
+- **home.html** - Dashboard hub with latest news feed
+- **universities.html** - University browser with listings and details
+- **scholarships.html** - Scholarship discovery and filtering
+- **loan.html** - Interactive education loan calculator
+- **comparison.html** - Side-by-side university comparison
+- **alternatives.html** - Alternative education path suggestions
 
-#### `pages/dashboard/home.html`
-**Purpose**: Main dashboard landing page  
-**Features**:
-- Collapsible sidebar with animated blobs
-- Navigation with icons and badges
-- Latest news scrollable section
-- Dark glass-morphism effects
-- Active navigation state tracking
-- Responsive design with drawer overlay
+### Styling (CSS)
+- **styles.css** - Global theme, colors, typography, glass-morphism effects
+- **sidebar.css** - Sidebar layout, blob animations, responsive breakpoints
+- **dashboard.css** - Card styling, news feed, custom scrollbars
+- **Other CSS files** - Page-specific and responsive utilities
 
-#### `pages/dashboard/universities.html`
-**Purpose**: University exploration and listing  
-**Features**:
-- University listing interface
-- Sidebar navigation with "New" badge indicator
-- Glass-morphism design patterns
-- Icons for each navigation item
-- Responsive layout structure
+### JavaScript
+- **ui.js** - Mobile menu toggle and 3D globe initialization
+- **main.js, calculator.js, data.js, storage.js** - Feature implementations (in development)
+- **demo-auth.js, alternatives.js** - Specialized module functionality
 
-#### `pages/dashboard/scholarships.html`
-**Purpose**: Scholarship discovery and information  
-**Features**:
-- Scholarship opportunity listings
-- Sidebar navigation system
-- Money/funding icon in navigation
-- Glass-morphism card design
-- Responsive grid layout
+### Data
+- **countries.json** - Country reference data
+- **university_rankings.json** - Global university rankings
+- **nepalese_university_rankings.json** - Nepal-specific university data
 
-#### `pages/dashboard/loan.html`
-**Purpose**: Education loan calculator  
-**Features**:
-- Loan calculation interface
-- Dashboard sidebar navigation
-- Currency/loan icon in navigation
-- Input form structure for loan parameters
-- Responsive design
+## 🎨 Color Palette
 
-#### `pages/dashboard/comparision.html` (Note: Typo in filename - should be "comparison")
-**Purpose**: University comparison tool  
-**Features**:
-- Side-by-side university comparison
-- Multiple comparison parameters
-- Comparison chart visualization
-- Sidebar navigation
-- Responsive comparison grid
-
-#### `pages/dashboard/alternatives.html`
-**Purpose**: Alternative education suggestions  
-**Features**:
-- Alternative pathway suggestions
-- Recommendation interface
-- Sidebar navigation
-- Glass-morphism cards
-- Responsive layout
+| Element | Hex Code | Usage |
+|---------|----------|-------|
+| Primary Blue | `#2563eb` | Main brand color, buttons, links |
+| Primary Dark Blue | `#1d4ed8` | Darker interactive states |
+| Deep Blue | `#1e3a8a` | Text on light backgrounds |
+| Slate (Dark BG) | `#0f172a` | Dark theme backgrounds |
+| Accent Yellow | `#fcd34d` | Highlights and accents |
+| Accent Green | `#059669` | Success states, positive actions |
+| Accent Red | `#dc2626` | Errors, warnings, alerts |
+| Light Gray | `#f1f5f9` | Light backgrounds |
+| Gray | `#cbd5e1` | Borders and dividers |
+| Dark Gray | `#94a3b8` | Secondary text |
 
 ---
 
-## CSS Files
+## 🔤 Typography
 
-### `css/styles.css`
-**Purpose**: Global styles and theme configuration  
-**Contents**:
-- CSS custom properties (variables) for colors:
-  - Primary: `#2563eb` (Blue)
-  - Primary Dark: `#1d4ed8`
-  - Accent Yellow: `#fcd34d`
-  - Accent Green: `#059669` (with dark variant)
-  - Accent Red: `#dc2626`
-  - Gray scale: 100, 300, 400, 900
-- Shadow definitions (green, large)
-- Transition timing and easing functions
-- Body background color and overflow settings
-- Grain overlay effect (fixed, full-screen, pointer-events: none)
-- Glass-morphism card classes (`.glass-card`, `.dark-glass-card`)
-- Text highlight with accent yellow
-- Scroll indicator with bounce animation
-- Service card hover effects
-- Canvas container positioning
-- Utility classes for consistent styling
-
-### `css/sidebar.css`
-**Purpose**: Sidebar and dashboard styling  
-**Contents**:
-- Reset styles (margin, padding, box-sizing)
-- Font smoothing for cross-browser consistency
-- CSS custom properties:
-  - Colors: Blue, Dark Blue, Deep Blue, Slate
-  - Dimensions: Sidebar width (264px), collapsed width (76px), topbar height (60px)
-  - Border radius: XL, LG, MD
-  - Glass-morphism properties (background, border, shadow)
-  - Topbar styling
-- Body background with radial gradient overlays
-- Blob canvas animations and positioning
-- Blob element styling (5 blobs with different animations)
-- Complex animations (blob1, blob2, blob3, blob4, blob5)
-- Sidebar layout with glass effect
-- Navigation item styling with hover effects
-- Responsive breakpoints for sidebar collapse
-- Dark glass card styling
-
-### `css/dashboard.css`
-**Purpose**: Dashboard-specific component styles  
-**Contents**:
-- News/content card styling (`.latest-news`)
-- Scrollable section styling with custom scrollbar
-- Webkit scrollbar styling (track, thumb, hover states)
-- Firefox scrollbar color configuration
-- News item cards (`.news-home`) with:
-  - Gradient backgrounds
-  - Subtle top border effect
-  - Hover animations and transformations
-  - Shadow effects on hover
-  - Gradient background transitions
-- Typography for news items
-- Spacing and layout utilities
-- Transitions and animations for interactive elements
-
-### `css/variables.css`
-**Status**: Currently empty - reserved for CSS variable definitions
-
-### `css/responsive.css`
-**Status**: Currently empty - reserved for responsive design utilities
+- **Body**: Inter (300, 400, 500, 600) - Clean, modern readability
+- **Headings**: Space Grotesk (400, 500, 600, 700) - Bold, distinctive display
+- **Dashboard**: DM Sans (400, 500, 600) + Sora (600, 700, 800) - Professional interface
 
 ---
 
-## JavaScript Files
-
-### `js/ui.js`
-**Purpose**: User interface interactions and animations  
-**Current Contents**:
-- Navbar menu toggle functionality:
-  - `openMenu` button event listener
-  - `closeMenu` button event listener
-  - Class manipulation for mobile menu show/hide
-  - Uses Tailwind utility classes (max-md:w-0, max-md:w-full)
-
-- 3D Globe Animation (`initHeroGlobe` function):
-  - Three.js scene initialization
-  - WebGL renderer setup with antialiasing
-  - Dynamic pixel ratio for device optimization
-  - Three-light system (ambient, directional, point)
-  - Sphere geometry for globe (64 segments)
-  - Phong material with transparency and shininess
-  - Wireframe overlay for visual effect
-  - Particle system for "student" representation
-  - Connecting lines (pathways) between points
-  - Camera setup with perspective projection
-  - Responsive canvas sizing
-  - Particle material with opacity and size attenuation
-
-### `js/main.js`
-**Status**: Currently empty - reserved for main application logic
-
-### `js/calculator.js`
-**Status**: Currently empty - reserved for loan calculator functionality
-
-### `js/data.js`
-**Status**: Currently empty - reserved for data fetching and processing
-
-### `js/storage.js`
-**Status**: Currently empty - reserved for local storage/session management
-
----
-
-## Data Files
-
-### `data/countries.json`
-**Status**: Currently empty - reserved for country data storage
-
-### `data/university_rankings.json`
-**Status**: Currently empty - reserved for university ranking data
-
----
-
-## Documentation
-
-### `documentation/planning.md`
-**Purpose**: Project planning and technical requirements  
-**Contents**:
-- **Technologies to be Used**:
-  - Programming Languages: HTML, CSS, Vanilla JavaScript, JSON
-  - Frameworks: Tailwind CSS, DaisyUI
-  - Libraries: Chart.js, Animate on Scroll (AOS), Animate.css, Three.js
-
----
-
-## Color Scheme
-
-The project uses a modern blue-based color palette:
-
-| Color Name | Hex Code | Usage |
-|-----------|----------|-------|
-| Primary Blue | #2563eb | Main brand color, buttons |
-| Primary Dark Blue | #1d4ed8 | Darker variant for contrast |
-| Deep Blue | #1e3a8a | Text and shadows |
-| Slate (Dark BG) | #0f172a | Dark backgrounds |
-| Accent Yellow | #fcd34d | Highlights, accents |
-| Accent Green | #059669 | Success, positive actions |
-| Accent Green Dark | #047857 | Darker variant |
-| Accent Red | #dc2626 | Errors, warnings |
-| White | #ffffff | Light backgrounds, text |
-| Gray 100 | #f1f5f9 | Light backgrounds |
-| Gray 300 | #cbd5e1 | Borders, dividers |
-| Gray 400 | #94a3b8 | Secondary text |
-| Gray 900 | #0f172a | Dark text |
-
----
-
-## Typography
-
-The project uses carefully selected Google Fonts:
-
-- **Body Font**: Inter (weights: 300, 400, 500, 600)
-- **Display Font**: Space Grotesk (weights: 400, 500, 600, 700)
-- **Dashboard Font**: DM Sans (weights: 400, 500, 600)
-- **Dashboard Display**: Sora (weights: 600, 700, 800)
-
----
-
-## Key Design Patterns
+## 🎯 Design Patterns
 
 ### Glass-morphism
-The UI extensively uses glass-morphism effects with:
-- Semi-transparent backgrounds with blur filters
-- Subtle borders with low opacity
-- Layered shadow effects for depth
+Semi-transparent backgrounds with blur effects, subtle borders, and layered shadows create a modern, frosted glass appearance throughout the UI.
 
 ### Blob Animations
-The sidebar features animated blob shapes:
-- 5 animated blobs with different timings
-- Radial gradients for depth
-- Blur filters for softness
-- Complex keyframe animations (22s duration)
+Five animated blob shapes in the sidebar with radial gradients and blur filters create organic movement (22s duration animations).
 
 ### Responsive Design
-All pages are fully responsive with:
-- Mobile-first approach
-- Tailwind CSS media queries (max-md, md, lg, xl)
-- Flexible layouts
-- Touch-friendly interface
+Mobile-first approach with Tailwind CSS breakpoints ensuring smooth experiences across all device sizes—no media queries needed for core layouts.
 
-### Animations
-- Floating animations (4s duration)
-- Fade-up animations with staggered delays (0.1s increments)
-- Hover state transitions
-- Scroll indicator bounce effect
-- Blob morphing animations
+### Animation System
+- Floating animations (4s)
+- Fade-up staggered delays (0.1s increments)
+- Hover transitions and transformations
+- Scroll-triggered effects
 
 ---
 
-## Getting Started
+## 🚀 Getting Started
 
-1. **Open the project** in a web browser by opening `index.html` or `landing.html`
-2. **Navigate to pages** using the provided links
-3. **Login/Signup** using the authentication pages
-4. **Access dashboard** features through the sidebar navigation
-5. **Explore features** like university listings, scholarships, and calculators
+### Quick Start
 
----
+1. **Clone or download** the project to your local machine
+2. **Open `index.html`** in your web browser
+3. **Explore** the landing page with 3D globe animation
+4. **Navigate** using links to auth pages, dashboard, and features
 
-## Dependencies
-
-All dependencies are loaded via CDN:
-- **Tailwind CSS**: cdn.tailwindcss.com
-- **Three.js**: cdnjs.cloudflare.com/ajax/libs/three.js/r128
-- **Google Fonts**: fonts.googleapis.com
+### Browser Requirements
+- Chrome/Edge (latest) ✓
+- Firefox (latest) ✓
+- Safari (latest) ✓
+- Modern browsers with ES6 support
 
 ---
 
-## Browser Support
+## 💡 Development Workflow
 
-The project uses modern web standards and is best viewed on:
-- Chrome/Chromium (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
+### Current Implementation
+- ✅ Frontend UI/UX complete
+- ✅ 3D globe animation (Three.js)
+- ✅ Responsive layouts
+- ✅ Animation framework
 
----
+### In Development
+- 🔄 JavaScript feature implementations
+- 🔄 Data integration and APIs
+- 🔄 User authentication
+- 🔄 Calculator algorithms
 
-## Future Enhancements
-
-- [ ] Complete JavaScript functionality for all features
-- [ ] Implement data storage and retrieval
-- [ ] Add loan calculator algorithm
-- [ ] Implement university comparison logic
-- [ ] Add scholarship filtering and sorting
-- [ ] User authentication backend
-- [ ] Database integration
-- [ ] Admin dashboard for content management
-- [ ] More data visualization with Chart.js
-- [ ] Multilingual support
+### Setup for Development
+1. Open project files in your code editor
+2. Use a local server (e.g., `python -m http.server 8000`)
+3. Make changes and test in browser
+4. No build step required (vanilla JavaScript)
 
 ---
 
-## Notes for Development
+## 📋 Project Checklist
 
-1. **Empty Files**: Several files are currently empty and reserved for future functionality (main.js, calculator.js, data.js, storage.js, countries.json, university_rankings.json, responsive.css, variables.css)
-2. **Styling**: The project primarily uses Tailwind CSS with custom CSS for specialized components
-3. **3D Graphics**: The globe animation in ui.js is the most complex feature and uses Three.js
-4. **Responsive**: The dashboard uses a collapsible sidebar pattern that adapts to screen size
-
----
-
-## Project Status
-
-- ✅ Landing page with 3D globe animation
-- ✅ Authentication pages (UI only)
-- ✅ Dashboard layout and navigation
-- ✅ Multiple dashboard pages structure
-- ✅ Responsive design implementation
-- ⏳ Backend functionality (in development)
-- ⏳ Database integration (pending)
-- ⏳ Feature completion (in progress)
+- ✅ Landing page with 3D globe
+- ✅ Authentication page layouts
+- ✅ Dashboard with sidebar navigation
+- ✅ Multiple feature pages
+- ✅ Responsive design system
+- ✅ Glass-morphism design implementation
+- ⏳ JavaScript functionality
+- ⏳ Backend APIs
+- ⏳ Database integration
+- ⏳ Advanced features (filters, sorting, etc.)
 
 ---
 
-*Last Updated: April 27, 2026*
+## 🔗 Dependencies (CDN)
+
+All libraries loaded from trusted CDNs:
+- **Tailwind CSS** - css.tailwindcss.com
+- **Three.js r128** - cdnjs.cloudflare.com
+- **Google Fonts** - fonts.googleapis.com
+- No npm/build tools required
+
+---
+
+## 📝 License
+
+This project is part of the Team Digira Grade 11 curriculum project.
+
+---
+
+## 👥 Team
+
+**Team Digira** - Created as a comprehensive educational platform project
+
+---
+
+## 📧 Support & Feedback
+
+For questions, feedback, or contributions, please reach out to the Team Digira development group.
+
+---
+
+*Last Updated: April 28, 2026*
